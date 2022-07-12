@@ -1,0 +1,87 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "VisitId": {
+        "type": "number"
+      },
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "VisitTechnicalSpecialistId": {
+        "type": [ "number", "null" ]
+      },
+      "ExpenseDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ChargeExpenseType": {
+        "type": "string"
+      },
+      "ChargeDescription": {
+        "type": [ "string", "null" ]
+      },
+      "IsInvoicePrintChargeDescription": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "PayExpenseType": {
+        "type": "string"
+      },
+      "PayRateDescription": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeTotalUnit": {
+        "type": [ "number", "null" ]
+      },
+      "ChargeRate": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayUnit": {
+        "type": [ "number", "null" ]
+      },
+      "PayRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayRate": {
+        "type": [ "number", "null" ]
+      },
+      "ContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+
+    },
+    "required": [
+      "VisitId",
+      "AssignmentId",      
+      "ExpenseDate",
+      "ChargeExpenseType",
+      "PayExpenseType",
+      "PayUnit",
+      "RecordStatus"
+    ]
+  }
+}

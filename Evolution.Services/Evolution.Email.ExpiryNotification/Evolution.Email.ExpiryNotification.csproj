@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Common\Evolution.Common.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Domain\Evolution.Email.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Notification\Evolution.Email.Notification.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Infrastructure\Evolution.Security.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Core\Evolution.TechnicalSpecialist.Core.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Domain\Evolution.TechnicalSpecialist.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Infrastructure\Evolution.TechnicalSpecialist.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.dependencyinjection.abstractions\2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

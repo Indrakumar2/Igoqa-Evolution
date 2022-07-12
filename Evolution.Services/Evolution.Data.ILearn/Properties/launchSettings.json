@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Evolution.Data.ILearn": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

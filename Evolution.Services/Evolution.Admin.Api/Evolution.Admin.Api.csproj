@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Admin.Core\Evolution.Admin.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Admin.Infrastructure\Evolution.Admin.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Common\Evolution.Common.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Core\Evolution.Company.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Infrastructure\Evolution.Company.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.DbRepository\Evolution.DbRepository.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Core\Evolution.Document.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Infrastructure\Evolution.Document.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Core\Evolution.Security.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Infrastructure\Evolution.Security.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Model\Evolution.Security.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.ValidationService\Evolution.ValidationService.csproj" />
+  </ItemGroup>
+
+</Project>

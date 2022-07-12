@@ -1,0 +1,50 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "ApplicationName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "ActivityCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 15
+      },
+      "ActivityName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "ActivityId": {
+        "type": "integer"
+
+      },
+      "Description": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [ "ApplicationName", "ActivityCode", "ActivityName", "RecordStatus", "ActivityId" ]
+  }
+}

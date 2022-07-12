@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Admin.Domain\Evolution.Admin.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Contract.Core\Evolution.Contract.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Contract.Domain\Evolution.Contract.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+  </ItemGroup>
+
+</Project>

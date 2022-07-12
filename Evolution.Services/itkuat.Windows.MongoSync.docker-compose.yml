@@ -1,0 +1,33 @@
+version: '3.5'
+
+services:
+    evolution.evo2build:
+        environment:
+            - COMPOSE_PROJECT_NAME=evolution
+        build:
+            context: .
+            dockerfile: evo2build.Dockerfile
+        image: evolution/evo2build:${TAG:-R3.0.1}
+        networks:
+        - nat
+
+    itkuat.evolution.document.mongosync:
+      build:
+        context: .
+        dockerfile: Windows.Evolution.Document.MongoSync.Dockerfile
+      image: evolution_itkuat/document.mongosync:${TAG:-R3.0.1} 
+      networks:
+        - nat
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s 
+
+networks:
+    nat:
+        external: true
+
+volumes:
+    named_vol:

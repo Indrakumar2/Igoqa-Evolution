@@ -1,0 +1,45 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "TaxonomyCategory": {
+        "type": "string"
+      },
+      "TaxonomySubCategory": {
+        "type": "string"
+      },
+      "TaxonomyService": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [
+      "AssignmentId",
+      "TaxonomyCategory",
+      "TaxonomySubCategory",
+      "TaxonomyService",
+      "RecordStatus"
+    ]
+  }
+  
+}

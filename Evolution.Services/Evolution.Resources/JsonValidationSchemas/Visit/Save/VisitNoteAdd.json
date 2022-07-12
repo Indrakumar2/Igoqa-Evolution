@@ -1,0 +1,31 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "Note": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 4000
+      },
+      "VisibleToCustomer": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "VisibleToSpecialist": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "CreatedBy": { "type": "string" },
+      "CreatedOn": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "VisitId": { "type": "number" }
+    },
+    "RecordStatus": {
+      "enum": [ "N" ]
+    },
+    "required": [ "VisitId", "CreatedBy", "CreatedOn", "Note" ]
+  }
+}

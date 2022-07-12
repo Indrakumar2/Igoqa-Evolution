@@ -1,0 +1,61 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "CustomerContact": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "IsSendInspectionReleaseNotesNotification": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "IsSendFlashReportingNotification": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "IsSendNCRReportingNotification": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "IsSendCustomerReportingNotification": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "IsSendCustomerDirectReportingNotification": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [
+      "CustomerContact",
+      "IsSendInspectionReleaseNotesNotification",
+      "IsSendFlashReportingNotification",
+      "IsSendNCRReportingNotification",
+      "IsSendCustomerReportingNotification",
+      "IsSendCustomerDirectReportingNotification",
+      "RecordStatus"
+    ]
+  }
+}

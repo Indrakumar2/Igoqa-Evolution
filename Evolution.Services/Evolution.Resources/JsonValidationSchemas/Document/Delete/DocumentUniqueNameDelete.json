@@ -1,0 +1,37 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "ModuleCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "ModuleCodeReference": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "DocumentName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "UniqueName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "Status": {
+        "type": "integer",
+        "enum": [ 0, 1, 2, 3, 4 ]
+      }
+    },
+    "required": [
+      "UniqueName"
+    ]
+  }
+}

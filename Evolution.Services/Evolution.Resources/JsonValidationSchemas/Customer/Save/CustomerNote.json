@@ -1,0 +1,48 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Note": {
+        "type": "string"
+      },
+      "CreatedBy": {
+        "type": "string"
+      },
+      "CreatedOn": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "CustomerNoteId": {
+        "type": "integer"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "LastModifiedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N", "M", "D" ]
+      }
+    },
+    "required": [
+      "Note",
+      "CreatedBy",
+      "RecordStatus"
+    ]
+  }
+}

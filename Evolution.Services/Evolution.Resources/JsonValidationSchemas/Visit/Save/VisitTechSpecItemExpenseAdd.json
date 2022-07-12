@@ -1,0 +1,94 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "VisitId": {
+        "type": "number"
+      },
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "VisitTechnicalSpecialistId": {
+        "type": [ "number", "null" ]
+      },
+      "ExpenseDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ChargeExpenseType": {
+        "type": "string"
+      },
+      "ExpenseDescription": {
+        "type": [ "string", "null" ]
+      },
+      "Currency": {
+        "type": [ "string", "null" ]
+      },
+      "IsContractHolderExpense": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "ChargeUnit": {
+        "type": [ "number", "null" ]
+      },
+      "ChargeRate": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeRateExchange": {
+        "type": [ "number", "null" ]
+      },
+      "PayUnit": {
+        "type": [ "number", "null" ]
+      },
+      "PayRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayRate": {
+        "type": [ "number", "null" ]
+      },
+      "PayRateTax": {
+        "type": [ "number", "null" ]
+      },
+      "PayRateExchange": {
+        "type": [ "number", "null" ]
+      },
+      "ContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+
+    },
+    "required": [
+      "VisitId",
+      "AssignmentId",
+      "ExpenseDate",
+      "ChargeExpenseType",
+      "PayUnit",
+      "PayRate",
+      "PayRateTax",
+      "RecordStatus"
+    ]
+  }
+}

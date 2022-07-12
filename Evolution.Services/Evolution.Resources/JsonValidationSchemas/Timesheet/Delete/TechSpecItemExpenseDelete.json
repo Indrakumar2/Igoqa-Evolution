@@ -1,0 +1,101 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "TimesheetTechnicalSpecialistAccountExpenseId": {
+        "type": "integer"
+      },
+      "TimesheetId": {
+        "type": "integer"
+      },
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "TimesheetTechnicalSpecialistId": {
+        "type": "integer"
+      },
+      "ExpenseDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ChargeExpenseType": {
+        "type": "string"
+      },
+      "ExpenseDescription": {
+        "type": [ "string", "null" ]
+      },
+      "Currency": {
+        "type": [ "string", "null" ]
+      },
+      "IsContractHolderExpense": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "ChargeUnit": {
+        "type": [ "number", "null" ]
+      },
+      "ChargeRate": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeRateExchange": {
+        "type": [ "number", "null" ]
+      },
+      "PayUnit": {
+        "type": [ "number" ]
+      },
+      "PayRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayRate": {
+        "type": [ "number" ]
+      },
+      "PayRateTax": {
+        "type": [ "number" ]
+      },
+      "PayRateExchange": {
+        "type": [ "number", "null" ]
+      },
+      "ContractNumber": {
+        "type": [ "string" ]
+      },
+      "ProjectNumber": {
+        "type": [ "integer" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "D" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+
+    },
+    "required": [
+      "TimesheetTechnicalSpecialistAccountExpenseId",
+      "TimesheetId",
+      "AssignmentId",
+      "TimesheetTechnicalSpecialistId",
+      "ExpenseDate",
+      "ChargeExpenseType",
+      "PayUnit",
+      "PayRate",
+      "PayRateTax",
+      "ContractNumber",
+      "ProjectNumber",
+      "RecordStatus"
+    ]
+  }
+}

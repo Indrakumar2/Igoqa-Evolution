@@ -1,0 +1,32 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "ApplicationName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "UserLogonName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "RoleName": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "CompanyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      }
+    },
+    "required": [ "ApplicationName", "RoleName", "UserLogonName", "CompanyCode", "RecordStatus" ]
+  }
+}

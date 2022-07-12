@@ -1,0 +1,41 @@
+﻿ {
+    "type": "array",
+    "items": {
+      "type": [
+        "object"
+      ],
+      "properties": {
+        "CompanyQualificationId": {
+          "type": [ "integer", "null" ]
+        },
+        "CompanyCode": {
+          "type": [ "string", "null" ],
+          "minLength": 2,
+          "maxLength": 6
+        },
+        "Qualification": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 6
+        },
+        "UpdateCount": {
+          "type": [ "integer", "null" ]
+        },
+        "RecordStatus": {
+          "enum": [ "N"]
+        },
+        "LastModification": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "ModifiedBy": {
+          "type": [ "string", "null" ]
+        }
+      },
+      "required": [
+        "CompanyCode",
+        "Qualification",
+        "RecordStatus"
+      ]
+    }
+  }

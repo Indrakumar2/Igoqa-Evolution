@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+	 <!--<ServerGarbageCollection>true</ServerGarbageCollection>
+  <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Admin.Core\Evolution.Admin.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Admin.Infrastructure\Evolution.Admin.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.AuditLog.Core\Evolution.AuditLog.Core.csproj" />
+    <ProjectReference Include="..\Evolution.AuditLog.Infrastructure\Evolution.AuditLog.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Core\Evolution.Company.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Infrastructure\Evolution.Company.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.DbRepository\Evolution.DbRepository.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Core\Evolution.Document.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Domain\Evolution.Document.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Infrastructure\Evolution.Document.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Core\Evolution.Email.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Infrastructure\Evolution.Email.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Home.Core\Evolution.Home.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Home.Infrastructure\Evolution.Home.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Core\Evolution.Master.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Infrastructure\Evolution.Master.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Core\Evolution.Security.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Infrastructure\Evolution.Security.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Core\Evolution.TechnicalSpecialist.Core.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Domain\Evolution.TechnicalSpecialist.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Infrastructure\Evolution.TechnicalSpecialist.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Visit.Core\Evolution.Visit.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Visit.Infrastructure\Evolution.Visit.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="web.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

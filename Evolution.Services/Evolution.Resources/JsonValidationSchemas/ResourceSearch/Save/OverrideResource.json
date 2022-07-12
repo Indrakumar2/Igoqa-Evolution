@@ -1,0 +1,72 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "definitions": {
+    "TechnicalSpecialist": {
+      "$id": "#techSpecialist",
+      "type": "object",
+      "properties": {
+        "Epin": {
+          "type": "integer"
+        },
+        "LastName": {
+          "type": [ "string", "null" ]
+        },
+        "FirstName": {
+          "type": [ "string", "null" ]
+        },
+        "ProfileStatus": {
+          "type": [ "string", "null" ]
+        }
+      },
+      "required": [
+        "Epin"
+      ]
+    }
+  },
+
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "IsApproved": {
+        "type": [ "boolean", "null" ]
+      },
+      "ResourceSearchId": {
+        "type": [ "integer", "null" ]
+      },
+      "TechSpecialist": {
+        "allOf": [
+          { "$ref": "#/definitions/TechnicalSpecialist" }
+        ]
+      },
+      "CreatedBy": {
+        "type": [ "string", "null" ]
+      },
+      "CreatedDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "TechSpecialist",
+      "RecordStatus"
+    ]
+  }
+}

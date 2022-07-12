@@ -1,0 +1,54 @@
+{
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "CompanyDivisionCostCenterId": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "CompanyCode": {
+        "type": "string",
+        "maxLength": 6
+      },
+      "Division": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "CostCenterCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 20
+      },
+      "CostCenterName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      }
+    },
+    "required": [
+      "CompanyDivisionCostCenterId",
+      "CompanyCode",
+      "Division",
+      "CostCenterCode",
+      "CostCenterName",
+      "RecordStatus",
+      "UpdateCount"
+    ]
+  }
+}

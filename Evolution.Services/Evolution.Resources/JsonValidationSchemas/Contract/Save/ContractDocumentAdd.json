@@ -1,0 +1,59 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "IsOutOfCompanyVisible": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "Name": {
+        "type":"string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "DocumentType": {
+        "type":"string",
+        "minLength": 0,
+        "maxLength": 100
+      },
+      "IsVisibleToTS": {
+        "type":"boolean",
+        "enum": [ true, false ]
+      },
+      "IsVisibleToCustomer": {
+        "type":"boolean",
+        "enum": [ true, false ]
+      },
+      "DocumentSize": {
+        "type":"integer"
+      },
+      "UploadedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UploadDataId": {
+        "type": [ "string", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      }
+    },
+    "required": [ "Name", "DocumentType", "RecordStatus" ]
+  }
+}
+
+

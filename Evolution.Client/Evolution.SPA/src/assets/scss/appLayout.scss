@@ -1,0 +1,1311 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 0.91rem;
+}
+body{
+    font-family: $calibri-regular;
+    background-color: #ebebeb;
+    div#root{
+        width: 100%;
+       // height: 100%;
+        float: left;
+        background-color: #ebebeb;       
+    
+    .wrapper{
+        width: 100%;
+        float: left;
+        height: 100%;
+        background-color: #ebebeb;
+        .customNav.header-panel{
+            .nav-wrapper{
+                .dropdown-content.notifications{
+                    width:auto!important;
+                }
+                .badge.notificationbadge{
+                    background-color: #21B6D7;
+                }
+                .badge.notificationbadge.active{
+                    background-color: #e84d4c;
+                }
+            }
+        }
+        .modelShow{
+            h6{
+                .iconWidth {
+                    width:25px;
+                }
+            }
+            
+        }
+        .main-panel {
+            width: calc(100% - 50px);
+            float: right;
+            margin-top:50px;
+            
+            .scrollableTabs{
+                padding: 0;
+                white-space: nowrap;
+                position: static;
+                background-color: #fff;
+                width: 95%;
+                border: 0;
+                float: left;
+               
+            }
+            ul.horizontalMenu li.collection-item.active {
+                border-left: none;
+                border-bottom: 5px solid #21B6D7;
+                color: #21B6D7;                        
+            }
+            .tabControls{
+                position: static;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+                float: left;
+                width:100%;
+                background-color: #fff;
+                            
+            }
+            .tabPrevBtn{
+                height: 48px;
+                width: 15px;
+                background: $nav-color;               
+                padding-top: 11px;
+                float: left;
+            }
+            .tabNextBtn{
+                height: 48px;
+                width: 15px;
+                background: $nav-color;               
+                padding-top: 11px;
+                float: left;
+            }
+            .saveBar_fixed{
+                position: fixed;
+                top: 41px;
+                z-index: 9;
+                width: 96.5%;
+                box-shadow: none;
+                border-bottom: 1px solid #ccc;
+                margin-left: 0;
+                margin-right: 0;
+                border-top: 1px solid #ccc;
+              .listOfTM_Width{
+                //width:19%!important;
+                    .listOfTMSelect{
+                        margin-bottom:0!important;
+                        select{
+                            width: 48%;
+                            display: inline-block;
+                            }  
+                    }
+                }
+                .sendtoSelect{
+                    margin-bottom:0!important;
+                    select{
+                        width: 62%;
+                        display: inline-block;
+                         }  
+                }
+                
+                .sendtoLabel{
+                    padding-right: 2px;
+                    line-height: 34px;
+                    color: #130C0E;
+                }
+                .buttonWidth{
+                    width:24%!important;
+                }
+                .pinWidth{
+                    width:14%!important;
+                }
+            }
+            .verticalTabs {
+                margin-top: 50px;
+                width:99.5%;
+                .react-tabs__tab-list {
+                    width: 235px;
+                    float: left;
+                    border-bottom: 1px solid #e0e0e0;
+                    margin: 8px 0 10px;
+                    padding: 0;
+                    position: fixed;
+                    left: 58px;
+                    top: 105px;
+                    .react-tabs__tab {
+                        display: inline-block;
+                        border: 1px solid #e0e0e0;
+                        border-bottom: none;
+                        bottom: 0px;
+                        position: relative;
+                        list-style: none;
+                        padding: 6px 12px;
+                        cursor: pointer;
+                        /* border-left: 5px solid #fff; */
+                        width: 100%;
+                        background: #fff;
+                        line-height: 1.5rem;
+                        padding: 10px 10px;
+                    }
+                     .customCard {
+                        margin-right: 0 !important;
+                        margin-top: 0.05rem !important;
+                        margin-bottom: 0 !important;
+                        margin-left: 0 !important;
+                    }
+                    .react-tabs__tab--selected {
+                        border-color: #e0e0e0;
+                        color: black;
+                        border-radius: 0;
+                        border-left: 5px solid #21B6D7;
+                    }                   
+                }
+                
+                .react-tabs__tab-panel--selected {
+                    display: block;
+                    position: relative;
+                    right: 0;
+                    left: 4px;
+                    top: 3px;
+                    width: calc(100% - 230px);
+                    float: right;
+                    .customCard.customMargin{
+                        margin-left:8px!important;
+                    }
+                }
+                .tab-list-open{
+                    width: 207px;
+                    float: left;
+                    border-bottom: 1px solid #e0e0e0;
+                    margin: 8px 0 10px;
+                    padding: 0;
+                    position: fixed;
+                    opacity:1;
+                    left: 58px;
+                    top: 105px;                   
+                }
+                .tab-list-Close{
+                    width: 1px;
+                    float: left;
+                    border-bottom: 1px solid #e0e0e0;
+                    margin: 8px 0 10px;
+                    padding: 0;
+                    position: fixed;
+                    left: -25px;
+                    top: 105px;
+                    opacity:0;                    
+                }
+                .react-tabs__tab-panel--selected.tab-panel-Open {
+                    display: block;
+                    position: relative;
+                    right: 0;
+                    left: 4px;
+                    top: 3px;
+                    width: calc(100% - 245px);
+                    float: right;
+                    .customCard.customMargin{
+                        margin-left:8px!important;
+                    }
+                }
+                .react-tabs__tab-panel--selected.tab-panel-Close {
+                    display: block;
+                    position: relative;
+                    right: 0;
+                    left: 4px;
+                    top: 3px;
+                    width: calc(100% - 30px);
+                    float: right;
+                    .customCard.customMargin{
+                        margin-left:8px!important;
+                    }
+                }
+            }
+            .verticalTabs.customSavebarPosition,.verticalTabs.customSavebarPositionViewMode{
+                margin-top: 76px;
+                .react-tabs__tab-list{
+                    top:132px;
+                }
+                .horizontalTabs  {
+                    .react-tabs__tab-list{
+                        margin-bottom: 0;
+                        position: static;
+                        top: 0;
+                        width: 100%;
+                        left: 0;
+                        float: inherit;
+                        li{
+                            width:auto;
+                        }
+            
+                        li.react-tabs__tab.time{
+                            background-color: #a1d4e7 ;
+                            border-bottom: 5px solid #80d8ff;
+                        }
+                        li.react-tabs__tab.expenses{
+                            background-color: #ffc700;
+                            border-bottom: 5px solid #ffd180;
+                        }
+                        li.react-tabs__tab.travel{
+                            background-color: #6D7780;
+                            border-bottom: 5px solid #888686;               
+                        }
+                        li.react-tabs__tab.equipment{                
+                                background-color: #C3C7CA;
+                                border-bottom: 5px solid #9e9e9e;
+                        }
+                        .react-tabs__tab--selected{
+                            border-left:none;
+                        }
+                    }
+                    div[title='Travel'].react-tabs__tab-panel{
+                        background-color: #6D7780;
+                        padding-top: 0.95rem;
+                        .ag-header-group-cell.ag-header-group-cell-no-group{
+                            .ag-header-cell-resize::after{
+                                border:none;
+                            }
+                         }
+                    }
+                    div[title='Expenses'].react-tabs__tab-panel{
+                        background-color: #ffc700;
+                        padding-top: 0.95rem;
+                        .ag-header-group-cell.ag-header-group-cell-no-group{
+                            .ag-header-cell-resize::after{
+                                border:none;
+                            }
+                         }
+                    }
+                    div[title='Time'].react-tabs__tab-panel{
+                        background-color: #a1d4e7;
+                        padding-top: 0.95rem;
+                        .ag-header-group-cell.ag-header-group-cell-no-group{
+                           .ag-header-cell-resize::after{
+                               border:none;
+                           }
+                        }
+                    }
+                    div[title='Consumable and Equipment'].react-tabs__tab-panel{
+                        background-color: #C3C7CA;
+                        padding-top: 0.95rem;
+                        .ag-header-group-cell.ag-header-group-cell-no-group{
+                           .ag-header-cell-resize::after{
+                               border:none;
+                           }
+                        }
+                    }
+            .react-tabs__tab-panel{
+                padding-right: 8px;
+            }
+                }
+            }
+            .verticalTabs.customSavebarPositionViewMode{
+                margin-top: 46px;
+                .react-tabs__tab-list{
+                    top:102px;
+                }
+            }
+
+            .verticalTabs.Grm{
+                margin-top: 60px;
+                .react-tabs__tab-list{
+                    top:116px;
+                }
+            }
+           
+            .modal {
+                max-height: inherit!important;
+                h6{
+                    margin:0.76667rem 0 0.46rem 0;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 1.04rem;
+                    font-family: calibribold;
+                    margin-bottom: 1rem;
+                    margin-left: 0.8rem;
+                    .pointer{
+                        cursor: pointer;
+                    }
+                    .iconWidth{
+                        width:45px;
+                    }
+                 }
+                span.boldBorder {
+                    width: 100%;
+                    background-color: #d2d2d2;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    top: 40px;
+                    /* bottom: -10px; */
+                    /* display: none; */
+                    background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#ccc), color-stop(#ccc), to(#fff));
+                    background-image: -webkit-linear-gradient(left, white, #ccc, #ccc, #fff);
+                    background-image: -o-linear-gradient(left, white, #ccc, #ccc, #fff);
+                    background-image: linear-gradient(to right, white, #ccc, #ccc, #fff);
+                }
+                label{
+                    //font-size:1rem;
+                     font-family:$calibri-bold !important;                   
+                     font-size: 0.9rem;
+                     line-height: 2rem; 
+                                    
+                 }
+                 .modal-content {
+                    padding: 10px !important;
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    //overflow:inherit;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    max-height:525px;
+                    .uploadedText{
+                       .uploaedTextLimit {
+                            width: auto;
+                            max-height: 250px;
+                            float: left;
+                            overflow: auto;
+                        }
+                    }
+                    .setConfirmationBodyText { //Changes for 789 - Confirmation Modal(duplicate schedule check)
+                        max-height: 300px;
+                        overflow-y: scroll;
+                    }   
+
+                    ul.knowledgeNote{
+                        margin: 0;
+                        li{
+                            width: auto;
+                            margin-right: 2rem;
+                            float: left;                          
+                            color: #111110;//D424
+                        }
+
+                    }
+                    
+                 }
+                 .modalMaxHeight{
+                    max-height: 490px;
+                    overflow-y: auto!important;
+                    overflow-x: hidden!important;
+                }
+            }            
+            .modelShow.contractModal {
+                top:2%;                
+                .modal-content{
+                    max-height: 520px;
+                }
+            }
+            .modelShow.announcementModal {
+                width: 35%;
+                left: 2%;
+                h6{
+                    margin:0.76667rem 0 0.46rem 0;
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 1.04rem;
+                    font-family: calibribold;
+                    margin-bottom: 1rem;
+                    margin-left: 0.8rem; 
+                 }
+                span.boldBorder {
+                    width: 100%;
+                    background-color: #d2d2d2;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    top: 40px;
+                    /* bottom: -10px; */
+                    /* display: none; */
+                    background-image: -webkit-gradient(linear, left top, right top, from(white), color-stop(#ccc), color-stop(#ccc), to(#fff));
+                    background-image: -webkit-linear-gradient(left, white, #ccc, #ccc, #fff);
+                    background-image: -o-linear-gradient(left, white, #ccc, #ccc, #fff);
+                    background-image: linear-gradient(to right, white, #ccc, #ccc, #fff);
+                }
+            }
+            .modelShow.arsSearchModal,.dashboardaArsSearchModal {
+                //max-height: inherit!important;
+                height: 720px; //Fixing the ARS Window
+                overflow-y:auto!important;
+                span.boldBorder{
+                    top: 50px;
+                }
+                .card-panel,.collapsible-body{
+                    padding:10px; 
+                    .customerSearchButton {
+                        button.btn-lineHeight{
+                            margin-top: 1.98rem!important; 
+
+                        }
+                    }
+                }
+                .modal-content {
+                    padding: 10px !important;
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    // overflow-y: auto; //To remove internal scroll for Assigned Resource
+                    // overflow-x: hidden;
+                    max-height: 573px; 
+                    h6 {
+                        margin-top: 0;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                    .file-field {
+                        input.file-path{
+                            width: 99%;
+                        }
+                        .btn{
+                            height: 2.35rem;
+                            line-height: 1.3rem;
+                            padding: 10px;
+                        }
+                       
+                    }
+                    .collapsible{
+                        .collapsible-body{
+                            .reactAgGrid {
+                                .ag-root-wrapper{
+                                    .ag-root-wrapper-body{
+                                        .ag-root{
+                                            .ag-body{
+                                                .ag-body-viewport-wrapper{
+                                                    //height: 55vh!important;
+                                                    width: 100%;
+                                                    min-width: 100%;
+                                                    -ms-flex: 1;
+                                                    flex: 1 1;
+                                                    overflow-y:hidden!important;
+                                                    max-height: 21vh!important;
+                                                    .ag-body-viewport {
+                                                        overflow-x: auto;
+                                                        overflow-y: auto;
+                                                        max-height: 21vh;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }       
+                            }
+                        }
+                    }
+                }
+                
+                .modalMaxHeight{
+                    max-height: 435px;
+                    overflow-y: auto!important;
+                    overflow-x: hidden!important;
+                }
+                .modal-footer{
+                    padding: 4px 15px;
+                    float: left;
+                    width: 100%;
+                }
+                .modalRateScheduleMaxHeight {
+                    max-height: 400px;
+                    overflow-y: auto!important;
+                    overflow-x: hidden!important;
+                }
+               
+                
+            }
+///ARS popup Resize class changes
+            .modelShow.arsMaxModal{
+                max-height: 645px!important;
+                .reactAgGrid {
+                    .ag-root-wrapper{
+                        .ag-root-wrapper-body{
+                            .ag-root{
+                                .ag-body{
+                                    .ag-body-viewport-wrapper{
+                                        width: 100%;
+                                        min-width: 100%;
+                                        -ms-flex: 1;
+                                        flex: 1 1;
+                                        overflow-y: hidden!important;
+                                        max-height: 21vh!important; 
+                                        .ag-body-viewport {
+                                            overflow-x: auto;
+                                            overflow-y: auto;
+                                            max-height: 21vh;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }       
+                }
+            }
+            .modelShow.modalSearchException{
+                width:90%;
+                top: 3%;
+                left: 3%;                
+                max-height: 750px!important;
+                overflow-y: auto;
+                overflow-x: hidden;
+                .modal-content{
+                    padding: 10px !important;
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    max-height: 750px;
+                    overflow-y: auto; 
+                }
+            }
+
+            .modelShow.nestedModal{
+                z-index:1052;
+            }
+            .nestedOverlay{
+                z-index:1051 !important;
+            }
+            .modelShow.ApprovelModal{
+                top:3%;
+                .modal-content{
+                    max-height: 470px;
+                    overflow-y: auto;
+                    .quill {
+                        .ql-container{
+                            height: 215px!important;
+                            overflow-y: auto!important;
+                        }
+                    }
+                }
+
+            }
+
+            .modelShow.contribution{
+                width:97%;
+                max-height: 615px!important;
+                overflow-y:auto!important;
+                left: 0;
+
+                .modal-content {
+                    padding: 10px !important;
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    max-height: 700px; 
+                    h6 {
+                        margin-top: 0;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                    
+
+                    .reactAgGrid .ag-root-wrapper{
+                        .ag-root-wrapper-body{
+                            .ag-root{
+                                .ag-body {
+                                    .ag-body-viewport-wrapper {
+                                        width: 100%;
+                                        min-width: 100%;
+                                        flex: 1 1;
+                                        overflow-y: auto !important;
+                                        max-height: 16vh !important;
+                                    }
+                                }
+                            } 
+                        } 
+                    }
+            }
+            .modal-footer{
+                padding: 4px 15px;
+                float: left;
+                width: 100%;
+            }
+        }
+
+            .modelShow.contractModal {
+                top:0%;                
+                .modal-content{
+                    max-height: 580px;                    
+                }
+            }
+            .modelShow.subSupplierPopup{
+                max-height: 580px; 
+                .modal-content{                   
+                    .modelShow.contractModal{
+                     max-height: 580px!important;
+                     width:100%;
+                        .reactAgGrid {
+                            .ag-root {
+                                .ag-body {
+                                    .ag-body-viewport-wrapper {
+                                        max-height: 40vh !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }            
+            .modelShow.searchTechSpecModal{
+                top: 1% !important;
+                left: 4% !important;
+                width: 95% !important;
+                max-height: 700px!important;
+                overflow-y:auto!important;
+                left: 0;
+
+                .modal-content {
+                    padding: 10px !important;
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    max-height: 575px; 
+                    h6 {
+                        margin-top: 0;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                    
+
+                    .reactAgGrid .ag-root-wrapper{
+                        .ag-root-wrapper-body{
+                            .ag-root{
+                                .ag-body {
+                                    .ag-body-viewport-wrapper {
+                                        width: 100%;
+                                        min-width: 100%;
+                                        flex: 1 1;
+                                        overflow-y: auto !important;
+                                        max-height: 50vh !important;
+                                    }
+                                }
+                            } 
+                        } 
+                    }
+            }
+            .modal-footer{
+                padding: 4px 15px;
+                float: left;
+                width: 100%;
+            }
+        }
+            .modelShow.chargescheduleModal{
+                .modal-content.modalRateScheduleMaxHeight{
+                    max-height: 460px;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                }
+            }
+            
+            #googlePopup.modal{
+                width: 99%;
+                left: 0%;
+                top: 1%;
+                max-height:750px!important;
+                h6{margin-top:5px;}
+                .extranetModalContent{
+                    max-height: 750px!important;
+                    overflow: hidden;
+                }
+                .closeIcon{
+                    font-size: 22px;
+                    margin-right: 15px;
+                    cursor: pointer;
+                }
+                .minMaxIcon{ 
+                    font-size: 22px;
+                    margin-right: 15px;
+                    cursor: pointer;
+                }
+                #floating-panel {
+                    position: absolute;
+                    top: 20px;
+                    left: 25%;
+                    z-index: 5;
+                    background-color: #fff;
+                    padding: 5px;
+                    text-align: center;
+                    font-family: 'Roboto','sans-serif';
+                    line-height: 30px;
+                    padding-left: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+                    width:55%;
+                    select {
+                        display:block!important;
+                      &#start, &#end {
+                          //width: 120px;
+                          width: 83%;
+                          float: left;
+                        text-align: center;
+                        height: 34px;
+                        vertical-align: middle;
+                        position: relative;
+                        color: rgb(86, 86, 86);
+                        font-family: Roboto, Arial, sans-serif;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        user-select: none;
+                        font-size: 13px;
+                        background-color: rgb(255, 255, 255);
+                        padding: 0px 10px;
+                        border-bottom-right-radius: 2px;
+                        border-top-right-radius: 2px;
+                        background-clip: padding-box;
+                        /* box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; */
+                        min-width: 65px;
+                        margin-right: 5px;
+                        border: 1px solid #ccc;
+                      }
+                    }
+                    select#start{display:none!important}
+                  }
+              }
+              #googlePopup.windowMinRestoreIcon{
+                width: 60%;
+              }
+              #googlePopup.windowMaxRestoreIcon{
+                width: 98%;
+              }
+              
+        }
+        .haff-wdith{
+            width: calc(100% - 300px);
+            .verticalTabs {
+            .react-tabs__tab-list {
+                width: 235px;
+                float: left;
+                border-bottom: 1px solid #e0e0e0;
+                margin: 8px 0 10px;
+                padding: 0;
+                position: fixed;
+                left: 300px;
+                top: 105px;
+            }
+            .verticalTabs.Grm {
+                .react-tabs__tab-list {
+                    width: 235px;
+                    float: left;
+                    border-bottom: 1px solid #e0e0e0;
+                    margin: 8px 0 10px;
+                    padding: 0;
+                    position: fixed;
+                    left: 280px;
+                    top: 110px;
+                }
+            }
+        }
+        
+
+        }
+        .main-panel.haff-wdith {
+            .verticalTabs {
+                .react-tabs__tab-panel--selected.tab-panel-Open {
+                    width: calc(100% - 272px);
+                }
+            }
+        }
+        .header-panel {
+            width: calc(100% - 50px);
+            float: right;
+            
+        }
+        .headerHaff-wdith{
+            width: calc(100% - 300px);
+        }
+
+        .customNav{
+            position: fixed;
+            right:0;
+            z-index:10;
+            .nav-wrapper{               
+                a.menuIcon{
+                    color:#107bb4;
+                    width: auto;
+                    float: left;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 0px;
+                    cursor: pointer;
+                    float: left;
+                    width: 38px;
+                    text-align: center;
+                }
+                ul{
+                    li{
+                        span.calenderIcon{
+                            color: #A3A6A9;
+                            -webkit-transition: background-color .3s;
+                            transition: background-color .3s;
+                            font-size: 1rem;
+                            display: block;
+                            padding: 0 15px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .customCard{
+            margin: .5rem;
+            background-color: $bg-default-color;
+            -webkit-transition: -webkit-box-shadow .25s;
+            transition: -webkit-box-shadow .25s;
+            -o-transition: box-shadow .25s;
+            transition: box-shadow .25s;
+            transition: box-shadow .25s, -webkit-box-shadow .25s;
+            border-radius: 2px;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+            padding:0.5rem;
+            position: relative;
+            float: left;
+            width:99%;
+            .customLabel{
+                font-size: $medium-font;
+            }
+            > h6{
+                font-size: 1.06rem;
+                margin: .5rem;
+                margin-left: 0;
+               //margin-top:0.8rem;
+                //margin-bottom:0rem;
+                //font-family:$roboto-bold;
+                //font-weight: 600;   
+    
+            }
+            p{
+                span.bold{
+                    font-size: 1.06rem;
+                    margin: .5rem;
+                    margin-left: 0;
+                }
+                
+            }
+            p.bold{
+                font-size: 1.06rem;
+                    margin: .5rem;
+                    margin-left: 0;
+            }
+           
+            .card-panel{
+                margin-top:0;
+                padding:8px;
+                label{
+                   //font-size:1rem;
+                    font-family:$calibri-bold;                   
+                    font-size: 0.9rem;
+                    line-height: 2rem; 
+                                   
+                }
+                .lh-inherit{
+                    line-height: inherit;
+                 }  
+            }
+    
+            /* assignment instruction textarea class added */
+            .instruction{
+                textarea {
+                    height: 11rem !important;
+                }
+            }
+             /* assignment instruction textarea class added */
+             .collapsible{
+                 li.active{
+                    .collapsible-body{
+                        h6{
+                            font-size:1rem;
+                            line-height: 110%;
+                            margin: .5rem;
+                            margin-left: 0.8rem;
+                            margin-top:0.8rem;
+                            margin-bottom:0.8 rem;
+                            float: left;
+                            width: 100%;
+                        }
+                        hr{
+                            color: #ccc;
+                            margin-top: 1rem;
+                            border-style: inherit;
+                        }
+                        .modal {
+                            h6{
+                                margin:0.76667rem 0 0.46rem 0;
+                                font-weight: 400;
+                                font-style: normal;
+                                font-size: 1.04rem;
+                                font-family: calibribold;
+                                margin-bottom: 1rem;
+                                margin-left: 0.8rem;
+                             }
+                        }
+                       
+                     }
+                 }
+                 
+             }
+             
+             
+             .dashboardInfo{
+                font-size: 0.9rem;
+                color: #e84d4c;
+                margin-top: 10px;
+                margin-right: 20px;
+             }
+        }
+        .customCard.singleCardTopPosition{
+            margin-top:55px;
+        }
+        .datePickerHolder {
+            .react-datepicker-wrapper{
+                .react-datepicker__input-container{
+                    input{
+                        width: 100%;
+                        padding-left: 2px;    
+                        background-size: 20px;
+                        background-repeat: no-repeat;
+                        background-position-x: 98.5%;
+                        background-position-y: 5px;
+                        height: 2.2rem;
+                        float: left;
+                        margin-bottom: 0px;
+                        cursor: pointer;
+                        border: 1px solid #dee0e2;}
+                }
+                input.customInputs.inputHighlight{//Changes for D556
+                    // background-color: #ffd06ad1;
+                    // border: 1px solid #ffe49d!important;
+                    background-color: #f8ad0a;
+                    border-bottom: 1px solid #ffe49d;
+                    border-top: 1px solid #ffe49d;
+                }                    
+                
+            } 
+        }
+        .topSectionMargin {
+            margin-top: 3.7rem;
+        }
+        .customCard.searchParams{
+            .collapsible{
+                li.active{
+                   .collapsible-body{
+                    h6{                
+                        width:calc(100% - 0.8rem)!important;
+                    }
+                    label{
+                           //font-size:1rem;
+                            font-family:$calibri-bold !important;                   
+                            font-size: 0.9rem;
+                            line-height: 2rem; 
+                                           
+                        }
+                       
+                    }
+                   
+                }
+            }
+        } 
+        .toggleSliderOpen,.toggleSliderClose{
+            width: 26px;
+            height: 26px;
+            background-color: #21b6d7;
+            display: inline-block;
+            line-height: 29px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            margin-left:0px;
+        }
+        .toggleSliderClose{
+        margin-left:4px;
+        }
+        //General Class
+            label {
+            
+                //font-family: $roboto-light;          
+                color: rgba(0, 0, 0, 0.87)!important;              
+                //letter-spacing: 0.65px;               
+                font-size: 1rem!important;
+                line-height: 2rem;
+                font-family:$calibri-bold !important; 
+                
+                [type="checkbox"].filled-in:checked + span:not(.lever):after{
+                    top: 5px;
+                }              
+                [type="checkbox"].filled-in:checked + span:not(.lever):before {
+                    top: 5px;
+                }
+                [type="checkbox"].filled-in:not(:checked) + span:not(.lever):after
+                {
+                    top: 5px;
+                }
+                [type="checkbox"].filled-in:not(:checked) + span:not(.lever):before{
+                    top: 5px;
+                }
+             }
+             .black-text{
+                color: rgba(0, 0, 0, 0.87)!important;
+             }
+             button, input, optgroup, select, textarea{
+                font-family:$calibri-regular;
+             }
+             .label-bold{
+                font-family:$calibri-bold;
+                font-size: 0.9rem;
+                line-height: 2rem;
+             }
+             .lh-inherit{
+                line-height: inherit;
+             }
+             .react-datepicker__input-container{
+                input[disabled] {
+                    color:  rgba(0, 0, 0, 1)!important;
+                    background-color:#dfdfdf  !important;
+                }
+             }
+             .file-field{
+                 .file-path-wrapper{
+                        input[disabled] {
+                         background-color:#dfdfdf  !important;
+                         border:1px solid #dfdfdf!important;
+                    }
+                 }
+             }
+             .rbc-toolbar button:active:hover, 
+             .rbc-toolbar button:active:focus, 
+             .rbc-toolbar button.rbc-active:hover, 
+             .rbc-toolbar button.rbc-active:focus {
+                color: #fff;
+                background-color: #21B6D7;
+                border-color: #8c8c8c;
+            }
+            .rbc-toolbar button:active, .rbc-toolbar button.rbc-active {
+                background-image: none;
+                box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+                background-color: #21B6D7;
+                border-color: #adadad;
+                color: #fff;
+            }  
+            .rbc-toolbar button:hover {
+                color: #fff;
+                background-color: #21B6D7;
+                border-color: #adadad;
+            } 
+    }
+    
+    #drop-area {
+        border: 2px dashed #ccc;
+        border-radius: 20px;
+        width: 100%;
+        margin: 10px auto;
+        padding: 0px;
+      }
+      #drop-area.highlight {
+        border-color: purple;
+      }
+     
+    
+      .my-form {
+        margin-bottom: 10px;
+        text-align: center;        
+        padding-top: 0;
+        position: relative;
+        top: 0px;
+        i{
+            font-size: 3rem;          
+            color: #c3c3c3;
+        }
+        p{
+            font-size: 0.91rem;
+        }
+        label{
+            line-height:0;
+            position: absolute;
+            top:0;
+        }
+      }
+      
+      #gallery {
+        margin-top: 10px;
+      }
+      #gallery img {
+        width: 150px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px;
+        background: #ccc;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        visibility: hidden;
+      }
+      .button:hover {
+        background: #ddd;
+      }
+      #fileElem {
+        display: none;
+        position: absolute;
+        top: 0;
+      }
+    
+    
+}
+    
+    
+    .pageContainer{
+        width: calc(100% - 50px);
+        left: 50px;
+        position: relative;
+        .contentSection{
+            position: fixed;
+            overflow-y: auto;
+            height: calc(100% - 65px);
+            width: 96.3%;
+            background-color: $light-grey-4;
+            z-index: -1;
+           
+        }
+        .scrollableTabs{
+            padding: 0 25px 0 25px;
+            white-space: nowrap;
+        }
+        .tabControls{
+            position: absolute;
+            z-index: 1;
+            top: 10px;
+        }
+        .tabPrevBtn{
+            height: 48px;
+            width: 30px;
+            background: $nav-color;
+            top: 2px;
+            left: 0;
+            padding-top: 9px;
+        }
+        .tabNextBtn{
+            height: 48px;
+            width: 30px;
+            background: $nav-color;
+            top: 2px;
+            right: 0;
+            padding-top: 9px;
+        }
+        .confimationBodyText{
+            font-size: 14px;
+            font-family: $calibri-bold;
+        }
+    }
+    a[disabled] {
+        color: rgba(0, 0, 0, 0.42) !important;
+        cursor:not-allowed !important;
+    }
+    [disabled] { 
+        pointer-events: none;
+    }
+    [disabled] { 
+        select{
+            background-color: #ebebe4;
+        }
+    }
+    textarea {
+        resize: none;
+        height:unset !important;
+        box-shadow: none;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $input-placeholder-color;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $input-placeholder-color;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $input-placeholder-color;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: $input-placeholder-color;
+      }
+      
+[type="radio"]:not(:checked), 
+[type="radio"]:checked{
+        position: relative; 
+        opacity: 1; 
+        pointer-events: auto !important; 
+        cursor: pointer;
+    }
+    button, input, optgroup, select, textarea{font-size:0.9rem!important;}
+    .card-panel{
+        // padding: 15px 0px 0px 0px !important;
+        margin-bottom: 0;
+    }
+    
+    .dashboard.customCard{
+        padding:5px;
+    }
+    .modal {
+        overflow-y: inherit !important;
+        max-height:inherit!important;
+        }
+    .react-datepicker-popper{
+        z-index: 10000;       
+    }
+    .ag-theme-material{
+        .ag-cell{
+            padding-left: 10px;
+            padding-right: 12px;
+        }
+        .ag-header-cell{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+     .react-datepicker-popper{
+         z-index: 10000;
+        left:-60px!important;
+         .react-datepicker__triangle{
+             left: 75px;
+         }
+     }
+}
+@media only screen and (max-width: 992px){
+    .pageContainer{
+        width: 100% !important;
+        position: static !important;
+        left: 0 !important;
+    }
+    .sidenav > a {
+        padding: 0 0px!important
+    }
+}
+
+//Remove this later
+#create-division,#createCostcenter{
+    min-height: 160px;
+}
+
+.modelShow.detailPayRateScheduleModal{
+    width:300px;
+}
+
+.modelShow.myTaskAssignUsersModal{
+    width:550px;
+}
+ul.knowledgeNote{
+    margin: 0;
+    li{
+        width: auto;
+        margin-right: 2rem;
+        float: left;                          
+        color: #111110; //D424
+    }
+}
+.marginRight{
+    margin-right: 48.5em;
+}
+.marginRightTS{
+    margin-right: 48em;
+}

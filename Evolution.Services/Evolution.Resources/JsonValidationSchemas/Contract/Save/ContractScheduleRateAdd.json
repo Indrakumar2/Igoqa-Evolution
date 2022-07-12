@@ -1,0 +1,86 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "ScheduleName": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 200
+      },
+      "ChargeType": {
+        "type": "string"
+
+      },
+      "StandardValue": {
+        "type": "number"
+      },
+      "ChargeValue": {
+        "type": "string"
+      },
+      "Description": {
+        "type": [ "string", "null" ],
+        "maxLength":100
+      },
+      "DiscountApplied": {
+        "type": [ "string"]
+      },
+      "Percentage": {
+        "type": "number"
+      },
+      "IsDescriptionPrintedOnInvoice": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "EffectiveFrom": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+
+      },
+      "EffectiveTo": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "StandardChargeSchedule": {
+        "type": [ "string", "null" ]
+      },
+      "StandardChargeScheduleInspectionGroup": {
+        "type": [ "string", "null" ]
+      },
+      "StandardChargeScheduleInspectionType": {
+        "type": [ "string", "null" ]
+      },
+      "StandardInspectionTypeChargeRateId": {
+        "type": [ "integer", "null" ]
+      },
+      "BaseScheduleName": {
+        "type": [ "string", "null" ]
+      },
+      "BaseRateId": {
+        "type": [ "integer", "null" ]
+      },
+      "IsActive": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": ["ChargeType","ChargeValue","EffectiveFrom","ScheduleName","RecordStatus"]
+  }
+
+}

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Assignment.Domain\Evolution.Assignment.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Core\Evolution.Company.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Domain\Evolution.Company.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Infrastructure\Evolution.Company.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Core\Evolution.Customer.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Domain\Evolution.Customer.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Infrastructure\Evolution.Customer.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Automapper.Resolver\Evolution.Automapper.Resolver.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Domain\Evolution.Email.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Google.Model\Evolution.Google.Model.csproj" />
+    <ProjectReference Include="..\Evolution.Home.Domain\Evolution.Home.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+    <ProjectReference Include="..\Evolution.ResourceSearch.Domain\Evolution.ResourceSearch.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Model\Evolution.Security.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Domain\Evolution.TechnicalSpecialist.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Timesheet.Domain\Evolution.Timesheet.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

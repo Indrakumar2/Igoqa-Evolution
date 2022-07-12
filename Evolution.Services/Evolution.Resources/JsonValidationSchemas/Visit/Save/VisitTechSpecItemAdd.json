@@ -1,0 +1,38 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "VisitId": {
+        "type": "number"
+      },
+      "TechnicalSpecialistName": {
+        "type": [ "string", "null" ]
+      },
+      "GrossMargin": {
+        "type": "integer"
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [ "RecordStatus", "VisitId" ]
+  }
+}

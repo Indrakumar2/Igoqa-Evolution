@@ -1,0 +1,77 @@
+﻿  {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": [ "integer", "null" ]
+        },
+        "DocumentName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255,
+          "pattern": "^(.*)+(.doc|.docx|.pdf|.txt|.msg|.xls|.xlsx|.jpg|.jpeg|.png|.bmp|.gif|.csv|.zip|.rar|.DOC|.DOCX|.PDF|.TXT|.MSG|.XLS|.XLSX|.JPG|.JPEG|.PNG|.BMP|.GIF|.CSV|.ZIP|.RAR|.PPT|.ppt|.PPTX|.pptx|.MP4|.mp4|.MP3|.mp3|.AVI|.avi|.MVI|.mvi|.WMV|.wmv|.MPEG|.mpeg|.html|.HTML|.HTM|.htm)$"
+        },
+        "DocumentType": {
+          "type": [ "string", "null" ],
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "DocumentSize": {
+          "type": [ "integer", "null" ]
+        },
+        "IsVisibleToTS": {
+          "type": [ "boolean", "null" ],
+          "enum": [ true, false, null ]
+        },
+        "IsVisibleToCustomer": {
+          "type": [ "boolean", "null" ],
+          "enum": [ true, false, null ]
+        },
+        "IsVisibleOutOfCompany": {
+          "type": [ "boolean", "null" ],
+          "enum": [ true, false, null ]
+        },
+        "Status": {
+          "type": [ "string" ],
+          "enum": [ "CR", "IN", "C", "CL", "F","APP","R" ]
+        },
+        "DocumentUniqueName": {
+          "type": "string"
+        },
+        "ModuleCode": {
+          "type": [ "string" ],
+          "enum": [ "None", "ASGMNT", "CNT", "COMP", "CUST", "PRJ", "SUP", "SUPPO", "TS", "VST", "TIME" ]
+        },
+        "ModuleRefCode": {
+          "type": [ "string", "null" ]
+        },
+        "SubModuleRefCode": {
+          "type": [ "string", "null" ]
+        },
+        "CreatedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "UpdateCount": {
+          "type": [ "integer", "null" ]
+        },
+        "RecordStatus": {
+          "enum": [ "N" ]
+        },
+        "LastModification": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "ModifiedBy": {
+          "type": [ "string", "null" ]
+        },
+        "CreatedBy": {
+          "type": [ "string", "null" ]
+        }
+
+      },
+      "required": [ "DocumentUniqueName", "DocumentName", "RecordStatus", "ModuleCode", "Status" ]
+    }
+  }
+

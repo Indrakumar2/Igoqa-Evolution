@@ -1,0 +1,40 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "SupplierId": {
+        "type": "integer"
+      },
+      "SubSupplierName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 60
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [
+      "SupplierId",
+      "SubSupplierName",
+      "RecordStatus"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "SupplierPOId": {
+        "type": "integer"
+      },
+      "SupplierPOBudget": {
+        "type": "number"
+      },
+      "SupplierPOBudgetHours": {
+        "type": "number"
+      },
+      "SupplierPOBudgetWarning": {
+        "type":  [ "number","null"]
+      },
+      "SupplierPOBudgetHoursWarning": {
+        "type":  [ "number","null"]
+      },
+      "SupplierPOMaterialDescription": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "SupplierPOMainSupplierId": {
+        "type": "integer"
+      },
+      "SupplierPONumber": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "SupplierPOMainSupplierName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 60
+      },
+      "SupplierPOStatus": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1
+      },
+      "SupplierPODeliveryDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "SupplierPOCompletedDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "SupplierPOId",
+      "SupplierPOBudget",
+      "SupplierPOBudgetHours",
+      "SupplierPOMaterialDescription",
+      "SupplierPOMainSupplierId",
+      "SupplierPONumber",
+      "SupplierPOMainSupplierName",
+      "SupplierPOStatus",
+      "SupplierPODeliveryDate",
+      "SupplierPOCompletedDate",
+      "RecordStatus",
+      "UpdateCount"
+    ]
+  }
+}

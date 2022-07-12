@@ -1,0 +1,63 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5103",
+      "sslPort": 0
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "AssignmentRecordSize": "1500",
+        "LdapUrl": "192.168.50.16",
+        "IsSandBoxEnvironment": "true",
+        "AbsoluteExpiration": "1",
+        "ApplicationGatewayURL": "http://localhost:5100/",
+        "ChunkSize": "20000",
+        "ProjectRecordSize": "1500",
+        "SlidingExpiration": "30",
+        "ResourceExtranetURL": "https://evolution.moodyint.com/Test/Extranet/Login.aspx",
+        "VisitRecordSize": "1500",
+        "SQLMaxPoolSize": "500",
+        "LdapServiceAccountDn": "OU=service_accounts,OU=Netserv,DC=netserv,DC=local",
+        "SQLDatabase": "Evo2DecUAT",
+        "Evolution2_SPA_Client_Audience_code": "Evo2SPA",
+        "SecurityAppName": "Evolution2",
+        "MongoDbName": "EvolutionDocuments",
+        "MongoDbPort": "27017",
+        "TimesheetRecordSize": "1500",
+        "SQLConnectionTimeout": "180",
+        "LdapServerPort": "389",
+        "ApplicationURL": "http://localhost:3000/",
+        "GoogleApiKey": "AIzaSyCQzyRlp5GL2AOv4HnL2LWpaPuXKUT2rNA",
+        "LdapUser": "poadmin",
+        "SupplierPORecordSize": "1500",
+        "SQLServer": "192.168.54.108",
+        "LdapPswd": "pad1234",
+        "MongoDbIp": "192.168.54.108",
+        "ExtranetURL": "https://evolution.moodyint.com/Test/extranet/Client/Visit.aspx?Id=",
+        "LdapDomainName": "netserv",
+        "EnableSecureSocketLayer": "false",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SQLUser": "sa",
+        "SQLPassword": "Ev02sql16",
+        "LdapSearchBase": "DC=netserv,DC=local"
+      }
+    },
+    "Evolution.Admin.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}

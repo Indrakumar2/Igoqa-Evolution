@@ -1,0 +1,68 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "CompanyTaxId": {
+        "type": [ "integer" ]
+      },
+      "CompanyCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 6
+      },
+      "TaxName": {
+        "type": "string",
+        "maxLength": 50
+      },
+      "TaxType": {
+        "type": "string",
+        "maxLength": 1
+
+      },
+      "TaxRate": {
+        "type": "number",
+        "maxLength": 9
+      },
+      "TaxCode": {
+        "type": "string",
+        "maxLength": 15
+
+      },
+      "IsIcInv": {
+        "enum": [ true, false, null ]
+      },
+      "IsActive": {
+        "enum": [ true, false, null ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "CompanyTaxId",
+      "CompanyCode",
+      "TaxName",
+      "TaxType",
+      "TaxRate",
+      "TaxCode",
+      "UpdateCount",
+      "RecordStatus",
+      "LastModification",
+      "ModifiedBy"
+    ]
+  }
+}

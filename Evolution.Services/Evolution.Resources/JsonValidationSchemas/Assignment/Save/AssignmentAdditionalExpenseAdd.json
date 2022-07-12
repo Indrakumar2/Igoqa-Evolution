@@ -1,0 +1,46 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "Description": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "CurrencyCode": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 10
+      },
+      "ExpenseType": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "PerUnitRate": {
+        "type": [ "number" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "TotalUnit": {
+        "type": [ "number" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "IsAlreadyLinked": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "AssignmentId": { "type": [ "integer"] },
+      "CompanyName": { "type": [ "string" ] },
+      "CompanyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 6
+      }
+    },
+    "required": ["Description", "CurrencyCode", "ExpenseType", "PerUnitRate", "TotalUnit", "CompanyCode", "AssignmentId"]
+  }
+}
+

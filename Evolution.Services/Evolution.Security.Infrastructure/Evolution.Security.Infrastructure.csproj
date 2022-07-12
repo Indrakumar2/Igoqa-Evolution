@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Security.Model\Evolution.Security.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.ValidationService\Evolution.ValidationService.csproj" />
+  </ItemGroup>
+
+</Project>

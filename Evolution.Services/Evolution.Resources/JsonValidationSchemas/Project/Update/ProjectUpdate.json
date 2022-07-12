@@ -1,0 +1,158 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ProjectNumber": { "type": "number" },
+      "ContractNumber": { "type": "string" },
+      "ProjectStartDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ProjectEndDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ProjectStatus": {
+        "type": "string",
+        "enum": [ "C", "O" ]
+      },
+      "CustomerProjectName": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "CustomerProjectNumber": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 40
+      },
+      "ProjectBudgetValue": {
+        "type": "number"
+      },
+      "ProjectBudgetWarning": {
+        "type": [ "integer", "null" ]
+      },
+      "ProjectBudgetHoursUnit": {
+        "type": "number"
+      },
+      "ProjectBudgetHoursWarning": {
+        "type": [ "integer", "null" ]
+      },
+      "WorkFlowType": {
+        "type": "string",
+        "enum": [ "M", "V", "N", "S" ]
+      },
+      "ProjectCoordinatorName": {
+        "type": "string"
+      },
+      "ManagedServiceCoordinatorName": {
+        "type": [ "string", "null" ]
+      },
+      "IsManagedServices": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "IndustrySector": {
+        "type": "string"
+      },
+      "IsEReportProjectMapped": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "IsExtranetSummaryVisibleToClient": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "IsProjectForNewFacility": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "LogoText": {
+        "type": [ "string", "null" ]
+      },
+      "ProjectType": {
+        "type": "string"
+      },
+      "ProjectClientReportingRequirement": {
+        "type": [ "string", "null" ]
+      },
+      "ProjectAssignmentOperationNotes": {
+        "type": [ "string", "null" ]
+      },
+      "ProjectInvoicePaymentTerms": { "type": "string" },
+      "ProjectCustomerContact": { "type": "string" },
+      "ProjectCustomerContactAddress": { "type": "string" },
+      "ProjectCustomerInvoiceContact": { "type": "string" },
+      "ProjectCustomerInvoiceAddress": { "type": "string" },
+      "ProjectInvoiceRemittanceIdentifier": { "type": "string" },
+      "ProjectSalesTax": { "type": "string" },
+      "ProjectWithHoldingTax": { "type": [ "string", "null" ] },
+      "ProjectInvoicingCurrency": {
+        "type": "string",
+        "maxLength": 50
+      },
+      "ProjectInvoiceGrouping": {
+        "type": "string",
+        "enum": [ "Project", "Assignment", "Reference" ]
+      },
+      "ProjectInvoiceFooterIdentifier": { "type": "string" },
+      "ProjectInvoiceInstructionNotes": { "type": [ "string", "null" ] },
+      "ProjectInvoiceFreeText": { "type": [ "string", "null" ] },
+      "IsRemittanceText": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "ContractHoldingCompanyCode": { "type": "string" },
+      "ContractHoldingCompanyName": { "type": "string" },
+      "ContractCustomerCode": { "type": "string" },
+      "ContractCustomerName": { "type": "string" },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "CustomerProjectNumber",
+      "CustomerProjectName",
+      "ContractNumber",
+      "ContractHoldingCompanyCode",
+      "ContractCustomerCode",
+      "ProjectStartDate",
+      "ProjectStatus",
+      "ProjectBudgetValue",
+      "ProjectBudgetHoursUnit",
+      "IsManagedServices",
+      "ProjectInvoicePaymentTerms",
+      "ProjectCustomerContact",
+      "ProjectCustomerContactAddress",
+      "ProjectCustomerInvoiceContact",
+      "ProjectCustomerInvoiceAddress",
+      "ProjectInvoiceRemittanceIdentifier",
+      "ProjectSalesTax",
+      "ProjectWithHoldingTax",
+      "ProjectInvoicingCurrency",
+      "ProjectInvoiceGrouping",
+      "ProjectInvoiceFooterIdentifier",
+      "CompanyOffice",
+      "CompanyDivision",
+      "ProjectType",
+      "WorkFlowType",
+      "IndustrySector",
+      "CompanyCostCenterCode",
+      "RecordStatus",
+      "IsProjectForNewFacility",
+      "ProjectCoordinatorName"
+    ]
+  }   
+}

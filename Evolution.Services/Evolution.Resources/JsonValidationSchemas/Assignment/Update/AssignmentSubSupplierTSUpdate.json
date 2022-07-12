@@ -1,0 +1,37 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "AssignmentSubSupplierTSId": {
+        "type": [ "integer" ]
+      },
+      "AssignmentSubSupplierId": {
+        "type": [ "integer" ]
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "isAssignedToThisSubSupplier": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+
+
+    },
+    "required": [ "AssignmentSubSupplierTSId", "Epin", "AssignmentSubSupplierId", "RecordStatus" ]
+  }
+}

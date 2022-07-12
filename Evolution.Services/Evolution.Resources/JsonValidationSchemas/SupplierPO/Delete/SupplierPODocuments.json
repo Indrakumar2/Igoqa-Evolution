@@ -1,0 +1,58 @@
+{
+  "type": "array",
+  "items": {
+    "type":  "object" ,
+    "properties": {
+      "SupplierPODocumentId": {
+        "type": "integer"
+      },
+      "Name": {
+        "type": "string"
+      },
+      "DocumentType": {
+        "type": "string"
+      },
+      "IsVisibleToTS": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "IsVisibleToCustomer": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "DocumentSize": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "UploadedOn": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      }
+    },
+    "required": [
+      "SupplierPODocumentId",
+      "RecordStatus"
+    ]
+  }
+}

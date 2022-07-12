@@ -1,0 +1,67 @@
+﻿{
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "CompanyPayrollPeriodId": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "CompanyCode": {
+        "type": "string",
+        "maxLength": 6
+      },
+      "PayrollType": {
+        "type": "string",
+        "maxLength": 200
+      },
+      "PeriodName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "StartDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "EndDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "PeriodStatus": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10
+      },
+      "IsActive": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": ["M"]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "CompanyPayrollPeriodId",
+      "CompanyCode",
+      "PayrollType",
+      "PeriodName",
+      "StartDate",
+      "EndDate",
+      "PeriodStatus",
+      "UpdateCount",
+      "RecordStatus"
+    ]
+  }
+}

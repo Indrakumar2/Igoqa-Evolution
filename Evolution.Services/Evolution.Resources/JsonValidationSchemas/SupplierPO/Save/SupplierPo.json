@@ -1,0 +1,82 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "SupplierPOBudget": {
+        "type": "number"
+      },
+      "SupplierPOBudgetHours": {
+        "type": "number"
+      },
+      "SupplierPOBudgetWarning": {
+        "type": [ "number","null"]
+      },
+      "SupplierPOBudgetHoursWarning": {
+        "type": [ "number","null"]
+      },
+      "SupplierPOMaterialDescription": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "SupplierPOMainSupplierId": {
+        "type": "integer"
+      },
+      "SupplierPONumber": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      },
+      "SupplierPOMainSupplierName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 60
+      },
+      "SupplierPOStatus": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1
+      },
+      "SupplierPODeliveryDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "SupplierPOCompletedDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "SupplierPOBudget",
+      "SupplierPOBudgetHours",
+      "SupplierPOMaterialDescription",
+      "SupplierPOMainSupplierId",
+      "SupplierPONumber",
+      "SupplierPOMainSupplierName",
+      "SupplierPOStatus",
+      "SupplierPODeliveryDate",
+      "SupplierPOCompletedDate",
+      "RecordStatus"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "CompanyExpectedMarginId": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "CompanyCode": {
+        "type": "string",
+        "maxLength": 6
+      },
+      "MarginType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "MinimumMargin": {
+        "type": "number"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      }
+    },
+    "required": [
+      "CompanyExpectedMarginId",
+      "CompanyCode",
+      "MarginType",
+      "MinimumMargin",
+      "RecordStatus",
+      "UpdateCount"
+    ]
+  }
+}

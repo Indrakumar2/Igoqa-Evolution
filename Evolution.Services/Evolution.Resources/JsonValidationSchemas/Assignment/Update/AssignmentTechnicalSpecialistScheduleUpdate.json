@@ -1,0 +1,78 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "AssignmentTechnicalSpecialistScheduleId": {
+        "type": "integer"           
+      },
+      "ContractScheduleId": {
+        "type": "integer"
+      },
+      "ContractScheduleName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "AssignmentTechnicalSpecilaistId": {
+        "type": "integer"
+      },
+      "TechnicalSpecialistEpin": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "TechnicalSpecialistName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "TechnicalSpecialistPayScheduleId": {
+        "type": "integer"
+      },
+      "TechnicalSpecialistPayScheduleName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "ScheduleNoteToPrintOnInvoice": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 30
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "AssignmentTechnicalSpecialistScheduleId",
+      "ContractScheduleId",
+      "AssignmentTechnicalSpecilaistId",
+      "TechnicalSpecialistPayScheduleId",
+      "UpdateCount",
+      "RecordStatus"
+    ]
+  }
+}

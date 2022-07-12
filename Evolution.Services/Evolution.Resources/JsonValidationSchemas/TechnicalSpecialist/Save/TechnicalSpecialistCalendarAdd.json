@@ -1,0 +1,59 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "TechnicalSpecialistId": {
+        "type": "integer"
+      },
+      "CompanyId": {
+        "type": [ "integer","null" ]
+      },
+      "CalendarType": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 10
+      },
+      "CalendarStatus": {
+        "type": [ "string" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "CalendarRefCode": {
+        "type": "integer"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 150
+      },
+      "StartDateTime": {
+        "type": [ "string" ],
+        "minLength": 0,
+        "maxLength": 150
+      },
+      "EndDateTime": {
+        "type": [ "string" ],
+        "minLength": 0,
+        "maxLength": 150
+      },
+      "IsActive": {
+        "type": "boolean"
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [ "RecordStatus" ]
+  }
+}

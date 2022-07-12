@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Evolution.Email.ExpiryNotification": {
+      "commandName": "Project",
+      "environmentVariables": { 
+        "SQLDatabase": "Evolution2_QA",
+        "SQLServer": "192.168.54.36",
+        "SQLUser": "sa",
+        "SQLPassword": "Ev02sql16"
+      }
+    }
+  }
+}

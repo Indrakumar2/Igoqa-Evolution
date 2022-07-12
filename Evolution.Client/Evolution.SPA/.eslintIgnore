@@ -1,0 +1,6 @@
+__mocks__
+build
+coverage
+node_modules
+webpack.*.js
+web-ui-env-dev.list

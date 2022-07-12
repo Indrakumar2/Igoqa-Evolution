@@ -1,0 +1,66 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": [ "integer" ]
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "PayScheduleName": {
+        "type": [ "string", "null" ]
+      },
+      "ExpenseType": {
+        "type": [ "string" ]
+      },
+      "Description": {
+        "type": [ "string", "null" ]
+      },
+      "Rate": {
+        "type": [ "number" ],
+        "minimum": 0,
+        "pattern": "^[0-9]{0,8}[.]?[0-9]{0,4}$",
+        "maximum": 99999999.9999
+      },
+      "IsDefaultPayRate": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "IsHideOnTsExtranet": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "IsActive": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "EffectiveFrom": {
+        "type": [ "string" ],
+        "format": "date-time"
+      },
+      "EffectiveTo": {
+        "type": [ "string" ],
+        "format": "date-time"    
+      },
+      "DisplayOrder": {
+        "type": [ "integer", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [ "Id", "Epin", "Rate", "ExpenseType", "EffectiveFrom", "EffectiveTo", "RecordStatus" ]
+  }
+}

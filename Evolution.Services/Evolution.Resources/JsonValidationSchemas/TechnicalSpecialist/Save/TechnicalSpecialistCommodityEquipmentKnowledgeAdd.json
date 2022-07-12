@@ -1,0 +1,42 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "EquipmentKnowledge": {
+        "type": [ "string" ],
+        "minLength": 1
+      },
+      "EquipmentKnowledgeLevel": {
+        "type": [ "integer", "null" ]
+      },
+      "DispalyOrder": {
+        "type": [ "integer", "null" ]
+      },
+      "Commodity": {
+        "type": [ "string" ],
+        "minLength": 1
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [ "Epin", "EquipmentKnowledge", "Commodity", "RecordStatus" ]
+  }
+}

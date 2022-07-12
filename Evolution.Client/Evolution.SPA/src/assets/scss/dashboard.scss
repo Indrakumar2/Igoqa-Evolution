@@ -1,0 +1,30 @@
+.dashboardInfo{
+    font-size: $small-font;
+    color: $font-danger-color;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.leftBorder{
+    border-left: solid 1px $input-border-color;
+}
+
+.dashboardOtherUser.customCard{
+        padding: 2.5rem;
+        >h6{
+                font-size: 1.3rem;
+                line-height: 110%;
+                margin: .5rem;
+                margin-left: 0;
+                margin-top: 0.8rem;
+                margin-bottom: 0rem;
+        }
+        .small{
+            font-size: 15px;
+    font-style: italic;
+    color: #928d8d;
+        }
+        .links{
+            float: left;
+            width: 100%;
+        }
+    }

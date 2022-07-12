@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "Evolution.TechSpecialist.GeoCoordinate.Extractor": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SQLDatabase": "Evolution2_Dev",
+        "SQLServer": "192.168.54.108",
+        "SQLUser": "sa",
+        "SQLPassword": "sa123",
+        "MongoDbName": "EvolutionDocuments",
+        "MongoDbPort": "5300",
+        "GoogleApiKey": "AIzaSyCQzyRlp5GL2AOv4HnL2LWpaPuXKUT2rNA",
+        "TaskRunIntervalInMinute": "10",
+        "MongoDbIp": "192.168.54.118",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

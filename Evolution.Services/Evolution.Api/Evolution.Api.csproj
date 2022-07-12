@@ -1,0 +1,138 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+	 <!--<ServerGarbageCollection>true</ServerGarbageCollection>
+  <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Admin\**" />
+    <Compile Remove="Controllers\Master\**" />
+    <Compile Remove="Controllers\Security\**" />
+    <Compile Remove="Controllers\TechnicalSpecialist\**" />
+    <Content Remove="Controllers\Admin\**" />
+    <Content Remove="Controllers\Master\**" />
+    <Content Remove="Controllers\Security\**" />
+    <Content Remove="Controllers\TechnicalSpecialist\**" />
+    <EmbeddedResource Remove="Controllers\Admin\**" />
+    <EmbeddedResource Remove="Controllers\Master\**" />
+    <EmbeddedResource Remove="Controllers\Security\**" />
+    <EmbeddedResource Remove="Controllers\TechnicalSpecialist\**" />
+    <None Remove="Controllers\Admin\**" />
+    <None Remove="Controllers\Master\**" />
+    <None Remove="Controllers\Security\**" />
+    <None Remove="Controllers\TechnicalSpecialist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\Assignment\AssignmentCheckController.cs" />
+    <Compile Remove="Controllers\Assignment\AssignmentContributionRevenueCostController.cs" />
+    <Compile Remove="Controllers\Document\DocumentApprovalController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistCalendarController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistCertificationController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistCodeAndStandardController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistCommodityEquipKnowledgeController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistCompetencyController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistComputerElectronicKnowledgeController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistContactController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistCustomerApprovalController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistDetailController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistDraftController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistEducationalQualificationController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistInternalTrainingController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistLanguageCapabilitiesController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistNotesController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistPayRateController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistPayRateScheduleController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistStampController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistTaxonomyController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistTimeOffRequestController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistTrainingAndCompetencyTypeController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistTrainingController.cs" />
+    <Compile Include="Controllers\TechnicalSpecialist\TechnicalSpecialistWorkHistoryController.cs" />
+  </ItemGroup>
+ <!--<ItemGroup>
+    <Compile Remove="ServiceRegistraionwwew.cs" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\netcoreapp2.1\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Admin.Core\Evolution.Admin.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Admin.Domain\Evolution.Admin.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Admin.Infrastructure\Evolution.Admin.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Assignment.Core\Evolution.Assignment.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Assignment.Domain\Evolution.Assignment.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Assignment.Infrastructure\Evolution.Assignment.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.AuditLog.Core\Evolution.AuditLog.Core.csproj" />
+    <ProjectReference Include="..\Evolution.AuditLog.Domain\Evolution.AuditLog.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.AuditLog.Infrastructure\Evolution.AuditLog.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Core\Evolution.Company.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Domain\Evolution.Company.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Infrastructure\Evolution.Company.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Contract.Core\Evolution.Contract.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Contract.Domain\Evolution.Contract.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Contract.Infrastructure\Evolution.Contract.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Core\Evolution.Customer.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Domain\Evolution.Customer.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Infrastructure\Evolution.Customer.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.DbRepository\Evolution.DbRepository.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Core\Evolution.Document.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Domain\Evolution.Document.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Infrastructure\Evolution.Document.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Draft.Core\Evolution.Draft.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Draft.Domain\Evolution.Draft.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Draft.Infrastructure\Evolution.Draft.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Core\Evolution.Email.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Infrastructure\Evolution.Email.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Google.Core\Evolution.Google.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Home.Infrastructure\Evolution.Home.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Core\Evolution.Master.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Domain\Evolution.Master.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Infrastructure\Evolution.Master.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Project.Core\Evolution.Project.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Project.Domain\Evolution.Project.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Project.Infrastructure\Evolution.Project.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Reports.Core\Evolution.Reports.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Reports.Domain\Evolution.Reports.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Reports.Infrastructure\Evolution.Reports.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.ResourceSearch.Core\Evolution.ResourceSearch.Core.csproj" />
+    <ProjectReference Include="..\Evolution.ResourceSearch.Domain\Evolution.ResourceSearch.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.ResourceSearch.Infrastructure\Evolution.ResourceSearch.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Core\Evolution.Security.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Infrastructure\Evolution.Security.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Model\Evolution.Security.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Supplier.Core\Evolution.Supplier.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Supplier.Domain\Evolution.Supplier.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Supplier.Infrastructure\Evolution.Supplier.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.SupplierPO.Core\Evolution.SupplierPO.Core.csproj" />
+    <ProjectReference Include="..\Evolution.SupplierPO.Domain\Evolution.SupplierPO.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.SupplierPO.Infrastructure\Evolution.SupplierPO.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Core\Evolution.TechnicalSpecialist.Core.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Domain\Evolution.TechnicalSpecialist.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Infrastructure\Evolution.TechnicalSpecialist.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Timesheet.Core\Evolution.Timesheet.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Timesheet.Domain\Evolution.Timesheet.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Timesheet.Infrastructure\Evolution.Timesheet.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.ValidationService\Evolution.ValidationService.csproj" />
+    <ProjectReference Include="..\Evolution.Visit.Core\Evolution.Visit.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Visit.Domain\Evolution.Visit.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Visit.Infrastructure\Evolution.Visit.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

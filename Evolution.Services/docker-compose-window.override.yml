@@ -1,0 +1,179 @@
+version: '3.5'
+
+x-aspnetcore-variables: &aspnetcore-variables
+    ASPNETCORE_ENVIRONMENT : IGOQA
+    ASPNETCORE_URLS : https://0.0.0.0:443
+    ASPNETCORE_Kestrel__Certificates__Default__Password : ${ASPNETCORE_KESTREL_CERTIFICATE_PASSWORD}
+    ASPNETCORE_Kestrel__Certificates__Default__Path : ${ASPNETCORE_KESTREL_CERTIFICATE_PATH}
+    
+x-sqldb-variables: &sql-database-connection
+    SQLDatabase : Evolution2Dec
+    SQLServer : 172.22.6.2
+    SQLUser : otr
+    SQLPassword : otrmi
+    SQLMaxPoolSize : 500
+    SQLConnectionTimeout : 180
+    
+x-mongodb-variables: &mongo-database-connection
+    MongoDbIp : 172.22.6.15
+    MongoDbPort : 27017
+    MongoDbName : EvolutionDocuments
+
+x-ldap-variables: &ldap-connection
+    IsSandBoxEnvironment : "false"
+    LdapUrl : otr-dc.otr-ict.chn 
+    LdapServerPort : 389
+    LdapDomainName : otr-ict.chn
+    LdapUser : test2
+    LdapPswd : dummy@123 
+    LdapServiceAccountDn : CN=Users,DC=otr-ict,DC=chn
+    LdapSearchBase : DC=otr-ict,DC=chn
+    EnableSecureSocketLayer : "false"
+    IsIpValidationRequire : "true"
+    LockUserAfterFailedAttemptCount : 3
+
+x-smtp-variables: &smtp-connection
+    EmailServerName : igosolutions-eu.mail.protection.outlook.com
+    EmailServerPort : 25
+    EmailUsername : donotreply-IGOQA@igosolutions.eu
+    EmailUserPassword : no@need
+    IsEmailUseSslWrappedConnection : "false"
+    IsSandBoxEnvironment : "false"
+    SandBoxEnvirnonmentTOEmail : toevo2test@gmail.com
+    SandBoxEnvirnonmentCCEmail : ccevo2igo@gmail.com
+    SyncIntervalInMinutes : 5
+    IsAuthenticationRequired : "false"
+
+x-app-security-code-variables: &app-security-code-variables
+    SecurityAppName : Evolution2
+    Evolution2_SPA_Client_Audience_code : Evo2SPA 
+
+x-app-url-variables: &app-url-variables
+    ApplicationURL : https://172.22.6.15:6200/
+    ApplicationGatewayURL : https://172.22.6.15:8080/
+
+x-google-service-key-variables: &google-service-key
+    GoogleApiKey : AIzaSyCQzyRlp5GL2AOv4HnL2LWpaPuXKUT2rNA 
+
+x-dependent-resource-variables: &dependent-resource-variables 
+    ExtranetURL : https://evolution.moodyint.com/DLive/extranet/Client/Visit.aspx?Id= 
+    ResourceExtranetURL : https://evolution.moodyint.com/Test/Extranet/Login.aspx
+
+x-app-pagination-variables: &app-pagination-variables
+    AbsoluteExpiration : 1
+    SlidingExpiration : 30
+    VisitRecordSize : 1500
+    TimesheetRecordSize : 1500
+    AssignmentRecordSize : 1500
+    ProjectRecordSize : 1500
+    SupplierPORecordSize : 1500
+    ChunkSize : 20000
+
+services: 
+    evolution.api.gateway:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *google-service-key
+            <<: *sql-database-connection
+            ASPNETCORE_HTTPS_PORT : 8080 
+            AllowedOrigins : https://172.22.6.15:6200 
+            # Use Respective Environment UI URL for example https://evolution2-qa.moodyint.com;https://evolution2-qa2.moodyint.com;https://evolution2-uat.moodyint.com
+            # If more that one exists use comma seperated as shown above example
+        ports:
+            - "8080:443" 
+            
+    evolution.api:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+            <<: *app-security-code-variables
+            <<: *mongo-database-connection
+            <<: *dependent-resource-variables
+            <<: *google-service-key
+            <<: *app-url-variables
+            <<: *app-pagination-variables
+            <<: *ldap-connection
+            ASPNETCORE_HTTPS_PORT : 6101
+        ports:
+            - "6101:443"
+            
+    evolution.api1:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+            <<: *app-security-code-variables
+            <<: *mongo-database-connection
+            <<: *dependent-resource-variables
+            <<: *google-service-key
+            <<: *app-url-variables
+            <<: *app-pagination-variables
+            <<: *ldap-connection
+            ASPNETCORE_HTTPS_PORT : 6102
+        ports:
+            - "6102:443"
+            
+    evolution.api2:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+            <<: *app-security-code-variables
+            <<: *mongo-database-connection
+            <<: *dependent-resource-variables
+            <<: *google-service-key
+            <<: *app-url-variables
+            <<: *app-pagination-variables
+            <<: *ldap-connection
+            ASPNETCORE_HTTPS_PORT : 6103
+        ports:
+            - "6103:443"
+ 
+    evolution.authorizationservice:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+            <<: *ldap-connection
+            ASPNETCORE_HTTPS_PORT : 6105
+        ports:
+            - "6105:443"
+    alert.email:
+        environment: 
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection 
+            <<: *smtp-connection
+            <<: *app-url-variables 
+            
+    evolution.email.expiry_notification:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+            
+    evolution.document.deleteorphandocument:
+        stdin_open: true
+        tty: true
+        environment:             
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+            <<: *app-url-variables
+            TaskRunIntervalInMinute : 1
+            
+    evolution.document.mongosync.new:
+        stdin_open: true
+        tty: true
+        environment:             
+            <<: *sql-database-connection            
+            <<: *mongo-database-connection
+            TaskRunIntervalInMinute : 1
+            ApplicationGatewayURL : https://192.168.54.222:8080/
+            DocumentTitle : EvolutionLiveDocuments2017JantoMar
+            ModifiedBy : Migration
+            
+    evolution.document.mongosync.failed:
+        stdin_open: true
+        tty: true
+        environment:             
+            <<: *sql-database-connection            
+            <<: *mongo-database-connection
+            TaskRunIntervalInMinute : 1
+            ApplicationGatewayURL : https://192.168.54.222:8080/
+            DocumentTitle : EvolutionLiveDocuments2017JantoMar
+            ModifiedBy : Migration

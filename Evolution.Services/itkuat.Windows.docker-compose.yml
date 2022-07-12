@@ -1,0 +1,131 @@
+version: '3.5'
+
+services:
+    evolution.evo2build:
+        environment:
+            - COMPOSE_PROJECT_NAME=evolution
+        build:
+            context: .
+            dockerfile: Windows.evo2build.Dockerfile
+        image: evolution/evo2build:${TAG:-R3.0.1}
+        networks:
+        - nat
+
+    itkuat.evolution.authorizationservice:
+        build:
+            context: .
+            dockerfile: Windows.Evolution.AuthorizationService.Dockerfile
+        image: evolution_itkuat/authorizationservice:${TAG:-R3.0.1}
+        networks:
+        - nat
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+            resources:
+                limits:
+                    memory: 2g
+
+    itkuat.evolution.api:
+        build:
+            context: .
+            dockerfile: Windows.Evolution.Api.Dockerfile
+        image: evolution_itkuat/api:${TAG:-R3.0.1}
+        networks:
+        - nat
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+            resources:
+                limits:
+                    memory: 3g
+
+    itkuat.evolution.admin.api:
+        build:
+            context: .
+            dockerfile: Windows.Evolution.Admin.Api.Dockerfile
+        image: evolution_itkuat/admin.api:${TAG:-R3.0.1}
+        networks:
+        - nat
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+            resources:
+                limits:
+                    memory: 2g
+
+    itkuat.evolution.api.gateway:
+        build:
+            context: .
+            dockerfile: Windows.Evolution.Web.Gateway.Dockerfile
+        image: evolution_itkuat/api.gateway:${TAG:-R3.0.1}
+        networks:
+        - nat
+        volumes:
+        - D:/Evolution2Gatewaylog:C:/app/logs
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+            resources:
+                limits:
+                    memory: 2g
+
+    itkuat.evolution.email:
+        build:
+            context: .
+            dockerfile: Windows.Evolution.Email.Notification.Dockerfile
+        image: alert_itkuat/email.console:${TAG:-R3.0.1}
+        networks:
+        - nat
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+
+    itkuat.evolution.email.expiry_notification: 
+        build:
+            context: .
+            dockerfile: Windows.Evolution.Email.ExpiryNotification.Dockerfile
+        image: alert_itkuat/email.expirynotification:${TAG:-R3.0.1}
+        networks:
+        - nat
+        deploy:
+            restart_policy:
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+                window: 120s
+                
+    itkuat.evolution.document.deleteorphandocument:
+      build:
+        context: .
+        dockerfile: Windows.Evolution.Document.DeleteOrphanDocument.Dockerfile
+      image: evolution_itkuat/document.deleteorphandocument:${TAG:-R3.0.1}
+      networks:
+        - nat
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+            
+networks:
+    nat:
+        external: true
+
+volumes:
+    named_vol:

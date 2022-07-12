@@ -1,0 +1,35 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type":"integer"
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "CodeStandardName": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 200
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 150
+      }
+    },
+    "required": [ "Id", "Epin", "CodeStandardName", "RecordStatus" ]
+  }
+}

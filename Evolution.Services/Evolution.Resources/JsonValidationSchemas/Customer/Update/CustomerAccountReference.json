@@ -1,0 +1,38 @@
+﻿{
+  "type": "object",
+  "properties": {
+    "CustomerCompanyAccountReferenceId": {
+      "type": "integer"
+    },
+    "AccountReferenceValue": {
+      "type": "string"
+    },
+    "CompanyCode": {
+      "type": "string"
+    },
+    "UpdateCount": {
+      "type": [ "integer", "null" ]
+    },
+    "ModifiedBy": {
+      "type": "string"
+    },
+    "LastModifiedOn": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "RecordStatus": {
+      "enum": [ "N", "M", "D" ]
+    }
+  },
+  "required": [
+    "CustomerCompanyAccountReferenceId",
+    "AccountReferenceValue",
+    "CompanyCode",
+    "UpdateCount",
+    "ModifiedBy",
+    "RecordStatus"
+  ]
+}

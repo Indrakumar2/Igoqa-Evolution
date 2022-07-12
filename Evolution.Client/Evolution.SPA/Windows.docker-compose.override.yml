@@ -1,0 +1,15 @@
+version: '3.5'
+
+services: 
+    igoqa.evolution.spa:
+        environment:
+            - REACT_APP_API_BASE_URL=https://10.1.1.100:8080/
+            - REACT_APP_REPORT_URL=http://sysadmin_otr:Sys0tr0109@10.10.11.130/evo2sql01reportserver?/Evolution/QA/
+            - REACT_APP_UPLOAD_FILE_LIMIT=16384
+            - REACT_APP_IDLE_TIMEOUT_IN_SECONDS=1800
+            - REACT_APP_IDLE_WAITING_TIME_IN_MILLISECONDS=60000
+            - REACT_APP_GOOGLE_API_KEY=AIzaSyCQzyRlp5GL2AOv4HnL2LWpaPuXKUT2rNA
+            - REACT_APP_EXTRANET_URL=https://evolution.moodyint.com/DLive/extranet/Client/Visit.aspx?Id=
+            - REACT_APP_APPLICATION_VERSION_NUMBER=3.0.D.017
+        ports:
+            - "6200:443"

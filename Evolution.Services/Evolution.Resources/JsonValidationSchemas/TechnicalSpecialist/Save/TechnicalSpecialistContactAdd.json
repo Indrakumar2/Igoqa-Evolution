@@ -1,0 +1,67 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Epin": {
+        "type": "integer",
+        "minLength": 0,
+        "maxLength": 100
+      },
+      "Address": {
+        "type": [ "string", "null" ],
+        "maxLength": 200
+      },
+      "Country": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "County": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "City": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "PostalCode": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "MobileNumber": {
+        "type": [ "string", "null" ],
+        "maxLength": 60
+      },
+      "TelephoneNumber": {
+        "type": [ "string", "null" ],
+        "maxLength": 60
+      },
+      "EmergencyContactName": {
+        "type": [ "string", "null" ],
+        "maxLength": 250
+      },
+      "EmailAddress": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [
+      "RecordStatus",
+      "Epin"
+    ]
+    }
+  }

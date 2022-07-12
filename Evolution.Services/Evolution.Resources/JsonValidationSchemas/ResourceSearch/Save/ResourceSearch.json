@@ -1,0 +1,81 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "SearchAction": {
+        "type": "string"
+      },
+      "SearchType": {
+        "type": "string"
+      },
+      "Description": {
+        "type": [ "string", "null" ]
+      },
+      "DispositionType": {
+        "type": [ "string", "null" ]
+      },
+      "AssignedBy": {
+        "type": [ "string", "null" ]
+      },
+      "AssignedTo": {
+        "type": [ "string", "null" ]
+      },
+      "CreatedBy": {
+        "type": [ "string", "null" ]
+      },
+      "CustomerCode": {
+        "type": [ "string", "null" ]
+      },
+      "CompanyCode": {
+        "type": [ "string", "null" ]
+      },
+      "CategoryName": {
+        "type": [ "string", "null" ]
+      },
+      "SubCategoryName": {
+        "type": [ "string", "null" ]
+      },
+      "ServiceName": {
+        "type": [ "string", "null" ]
+      },
+      "AssignedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "createdOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "SearchAction",
+      "SearchType",
+      "CustomerCode",
+      "CompanyCode",
+      "RecordStatus"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "CustomerAssignmentReferenceId": {
+        "type": "integer"
+      },
+      "AssignmentRefType": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": "string"
+      },
+      "LastModifiedOn": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N", "M", "D" ]
+      }
+    },
+    "required": [
+      "CustomerAssignmentReferenceId",
+      "AssignmentRefType",
+      "UpdateCount",
+      "ModifiedBy",
+      "RecordStatus"
+    ]
+  }
+}

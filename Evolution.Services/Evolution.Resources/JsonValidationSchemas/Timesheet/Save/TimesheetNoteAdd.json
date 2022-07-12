@@ -1,0 +1,24 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "Note": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 4000
+      },
+      "CreatedBy": { "type": "string" },
+
+      "CreatedOn": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "AssignmentId": { "type": "integer" }
+    },
+    "RecordStatus": {
+      "enum": [ "N" ]
+    },
+    "required": [ "TimesheetId", "CreatedBy", "CreatedOn", "Note" ]
+  }
+}

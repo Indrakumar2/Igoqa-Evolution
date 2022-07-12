@@ -1,0 +1,1 @@
+Scaffold-DbContext "Server=192.168.50.172;Database=Evolution2_Test3;user=sa;password=sa123;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models/SqlDatabaseContext -Schemas "security" -Context SecuritySqlDbContext -Force

@@ -1,0 +1,22 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "ApplicationName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "RoleName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      }
+    },
+    "required": [ "ApplicationName", "RoleName", "RecordStatus" ]
+  }
+}

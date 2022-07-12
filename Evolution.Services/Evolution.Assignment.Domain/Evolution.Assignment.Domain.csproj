@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Enum\AssignmentInterCompanyDiscountType.cs" />
+    <Compile Remove="Interfaces\Assignments\IAssignmentContributionRevenueCostService.cs" />
+    <Compile Remove="Models\Assignments\AssignmentContributionRevenueCost.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Common\Evolution.Common.csproj" />
+    <ProjectReference Include="..\Evolution.DbRepository\Evolution.DbRepository.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Domain\Evolution.Document.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.ResourceSearch.Domain\Evolution.ResourceSearch.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Validations\" />
+  </ItemGroup>
+
+</Project>

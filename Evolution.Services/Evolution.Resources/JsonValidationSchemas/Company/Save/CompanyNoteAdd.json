@@ -1,0 +1,51 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+
+      "CompanyNoteId": {
+        "type": "integer"
+      },
+      "CompanyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 2,
+        "maxLength": 6
+      },
+
+      "Notes": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 4000
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "CreatedBy": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [
+      "Notes",
+      "CreatedBy",
+      "CreatedOn",
+      "RecordStatus"
+    ]
+  }
+}

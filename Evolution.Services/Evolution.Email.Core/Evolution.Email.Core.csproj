@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Cryptography\Evolution.Cryptography.csproj" />
+    <ProjectReference Include="..\Evolution.Draft.Domain\Evolution.Draft.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Email.Domain\Evolution.Email.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Domain\Evolution.Master.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

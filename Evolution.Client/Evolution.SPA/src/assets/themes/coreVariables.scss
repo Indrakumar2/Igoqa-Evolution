@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'calibribold';
+    src: url('../fonts/Calibri-Bold.woff') format('woff'),
+         url('../fonts/Calibri-Bold.ttf') format('truetype'),
+         url('../fonts/Calibri-Bold.svg#Calibri-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'calibriRegular';
+    src: url('../fonts/Calibri.woff') format('woff'),
+         url('../fonts/Calibri.ttf') format('truetype'),
+         url('../fonts/Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),  
+         url('../fonts/Roboto-Light.woff') format('woff'), 
+         url('../fonts/Roboto-Light.ttf')  format('truetype'), 
+         url('../fonts/Roboto-Light.svg#Roboto-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  src: url('../fonts/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'),  
+       url('../fonts/RobotoCondensed-Bold.woff') format('woff'), 
+       url('../fonts/RobotoCondensed-Bold.ttf')  format('truetype'), 
+       url('../fonts/RobotoCondensed-Bold.svg#RobotoCondensed-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+  
+
+@font-face {
+  font-family: 'RobotoCondensed-Light';
+  src: url('../fonts/RobotoCondensed-Light.eot?#iefix') format('embedded-opentype'), 
+     url('../fonts/RobotoCondensed-Light.woff') format('woff'),
+    url('../fonts/RobotoCondensed-Light.ttf')  format('truetype'), 
+    url('../fonts/RobotoCondensed-Light.svg#RobotoCondensed-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$calibri-regular:calibriRegular;
+$calibri-bold:calibribold;
+
+//$calibri-regular:Roboto-Light;
+//$calibri-bold:RobotoCondensed-Bold;
+//calibri-bold:RobotoCondensed-Light;
+//$roboto-bold:RobotoCondensed-Bold;
+//$roboto-light:RobotoCondensed-Light;
+
+// core overrides
+//--------------------------------------------------
+//          Custom SCSS Reset
+//--------------------------------------------------
+
+//Color Codes
+$white: #fff;
+$lavender : #e1edf4;
+$blue : rgba(16, 123, 180, 1);
+$interaction-blue :#21B6D7;
+$black :  rgba(0, 0, 0, 0.87);
+$black-lighten-1:#130C0E;
+$black-dark :  #1f1f1f;
+$black-light:#212B36;
+$light-black : rgba(74, 74, 74, 1);
+$whitesmoke:#f7f7f7;
+$grey : #A3A6A9;
+$light-grey:$whitesmoke;
+$light-grey-1:#eeeeee ;
+$light-grey-2:#c3c3c3 ;
+$light-grey-3:#ededed;
+$light-grey-4:#ebebeb;
+$light-grey-5:#dee0e2;
+$grey-darken-1:#757575;
+$grey-darken-3:#424242;
+$grey-1:#9B9B9B;
+$grey-2:rgb(204,204,204);
+$orange:#ef7f41;
+$light-orange:#f5b14b;
+$light-blue:#f0f7ff;
+$red:#f55;
+$pink:#e3355d;
+$midnight-blue:#00395e;
+$Ocean-Boat-Blue:rgba(16, 123, 180, 1);
+$body-bg:#fff;
+$shadow:rgba(0, 0, 0, 0.1);
+$black-1 : rgb(0,0,0);
+$success: rgb(7, 188, 12);
+$info: #0098f7;
+$warning: #f8c41c;
+$error: #e84d4c;
+//Bg-Grey
+$bg-grey:color("grey", "lighten-4") !default;
+//SVG Color
+$SVGColor:color("blue-grey", "lighten-1") !default;
+
+//Page Default Settings
+$base-font-size: 12px;
+
+
+//Nav Bar 
+$nav-bg:$blue;
+$nav-color:$white;
+$side-menu-background:$black-light;
+
+//Spacer
+$spacer-x:1rem;
+$spacer-y:1rem;
+
+//Page Style
+$default-bg-color:$whitesmoke;
+$default-font-color:$black-light;
+$font-title-color:$black-lighten-1;
+
+$small-font:12px;
+$medium-font:14px;
+$large-font:16px;
+
+$primary-color:$blue;
+$secondary-color:$orange;
+$default-color : $white;
+$bg-primary-color: $lavender; 
+$bg-default-color: $white;
+$interaction-color: $interaction-blue; 
+$base-border-color:$interaction-blue;
+
+//Element Style
+$tab-primary-color : $black; 
+$tab-secondary-color: $orange;
+$tabs-text-color:$black;
+$tab-active:$black-dark;
+$tabs-underline-color:$black-dark;
+$tabs-bg-color:$bg-default-color;
+//Table Header Style
+$table-header-WOBG-iconColor:$secondary-color;
+$table-header-WBG-iconColor:$white;
+
+
+//Button Style
+$primary-button-color:$orange;
+$primary-button-hover-color:$light-orange;
+$secondary-button-color:$blue;
+$secondary-button-hover-color:$light-blue;
+
+//Font-Style
+$font-primary-color: $light-black; 
+$font-secondary-color : $white;
+$font-highlight-color:$blue;
+$label-primary-color: $grey; 
+$label-secondary-color: $light-grey;
+$font-danger-color: $error;
+
+//Card Style
+$card-header-font-size : 1.38rem;
+
+$link-color:$Ocean-Boat-Blue;
+$footer-background:$grey-2;
+
+//checkbox style
+$secondary-color:$info;
+
+//FromAbdhul
+
+//Brand Color
+$brand-color:#FFC700;
+
+//Login inputs
+$input-border-color:$light-grey-5;
+$input-placeholder-color:$grey-darken-1;
+
+//Scrollbar Color
+
+$handler:$whitesmoke;
+$track:$grey-darken-1;
+
+//GridColors
+$oddRowBackground:$light-grey;
+
+

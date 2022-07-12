@@ -1,0 +1,43 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "TimesheetTechnicalSpecialistId": {
+        "type": "integer"
+      },
+      "TimesheetId": {
+        "type": "integer"
+      },
+      "TechnicalSpecialistName": {
+        "type": [ "string", "null" ]
+      },
+      "Pin": {
+        "type": "integer"
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "RecordStatus": {
+          "enum": [ "N", "M", "D" ]
+        }
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [ "RecordStatus", "TimesheetId", "TimesheetTechnicalSpecialistId", "Pin" ]
+  }
+}

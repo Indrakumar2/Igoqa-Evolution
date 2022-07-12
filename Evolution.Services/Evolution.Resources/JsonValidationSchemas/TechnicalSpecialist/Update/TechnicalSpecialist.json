@@ -1,0 +1,122 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Epin": {
+        "type": "integer",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "Salutation": {
+        "type": [ "string", "null" ],
+        "maxLength": 20
+      },
+      "FirstName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 30 
+      },
+      "LastName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 30 
+      },
+      "MiddleName": {
+        "type": [ "string", "null" ], 
+        "maxLength": 100
+      },
+      "DateOfBirth": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "DrivingLicenseNo": {
+        "type": [ "string", "null" ], 
+        "maxLength": 120
+      },
+      "PassportNo": {
+        "type": [ "string", "null" ], 
+        "maxLength": 120
+      },
+      "ModeOfCommunication": {
+        "type": [ "string", "null" ], 
+        "maxLength": 40
+      },
+      "CompanyName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      },
+      "CompanyDivisionName": {
+        "type": [ "string", "null" ], 
+        "maxLength": 100
+      },
+      "SubDivisionName": {
+        "type": [ "string" ], 
+        "maxLength": 100
+      },
+      "StartDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "EndDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ProfileStatus": {
+        "type": [ "string" ], 
+        "maxLength": 1000
+      },
+      "EmploymentType": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "ProfileAction": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "TaxReference": {
+        "type": [ "string", "null" ], 
+        "maxLength": 60
+      },
+      "PassportCountryName": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 60
+      },
+      "companyPayrollName": {
+        "type": [ "string", "null" ], 
+        "maxLength": 60
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "CompanyName",
+      "SubDivisionName",
+      "ProfileStatus",
+      "FirstName",
+      "LastName",
+      "RecordStatus",
+      "ProfileAction"
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "TaxonomyCategoryName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10000
+      },
+      "TaxonomySubCategoryName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10000
+      },
+      "TaxonomyServices": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10000
+      },
+      "ApprovalStatus": {
+        "enum": [ "Approve", "Provisional", "Reject", "approve", "provisional", "reject" ]
+      },
+      "Interview": {
+        "type": [ "string", "null" ]
+      },
+      "Comments": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 10000
+      },
+      "FromDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ToDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "Epin": {
+        "type": "integer",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "TaxonomyCategoryName",
+      "TaxonomySubCategoryName",
+      "TaxonomyServices", 
+      "Id",
+      "RecordStatus"
+    ]
+  }
+}

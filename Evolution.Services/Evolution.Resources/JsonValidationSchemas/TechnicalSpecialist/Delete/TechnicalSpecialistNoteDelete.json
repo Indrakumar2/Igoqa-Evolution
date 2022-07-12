@@ -1,0 +1,55 @@
+﻿{
+  {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "Epin": {
+          "type": "integer"
+        },
+        "CreatedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "CreatedBy": {
+          "type": "string"
+        },
+        "Note": {
+          "type": "string"
+        },
+        "NoteType": {
+          "type": [ "string", "null" ],
+          "enum": [
+            "Internal Training Details ",
+            "Competency Details",
+            "Certificate Details",
+            "Training Details",
+            "PayRoll Notes",
+            null
+          ]
+        },
+        "UpdateCount": {
+          "type": [ "integer", "null" ]
+        },
+        "RecordStatus": {
+          "enum": [ "D" ]
+        },
+        "LastModification": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "ModifiedBy": {
+          "type": [ "string", "null" ]
+        }
+
+      },
+      "required": [ "CreatedBy", "CreatedOn", "Epin", "RecordStatus","id" ]
+
+    }
+  }
+
+}
+}

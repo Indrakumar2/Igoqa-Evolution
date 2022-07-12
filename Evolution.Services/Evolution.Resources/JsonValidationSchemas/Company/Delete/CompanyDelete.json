@@ -1,0 +1,162 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object",
+      "null"
+    ],
+    "properties": {
+      "CompanyCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 6
+      },
+      "CompanyName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "CompanyInvoiceName": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 100
+      },
+      "Status": {
+        "type": [ "string", "null" ],
+        "enum": [ "YES", "NO", null ]
+      },
+      "Currency": {
+        "type": "string",
+        "minLength": 3,
+        "maxLength": 3
+      },
+      "SalesTax": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 20
+
+      },
+      "WithHoldingTax": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 20
+
+      },
+      "InterCompanyExpenseAcRef": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 20
+      },
+      "InterCompanyRateAcRef": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "InterCompanyRoyaltyAcRef": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 20
+      },
+      "MIIWAID": {
+        "type": "integer"
+      },
+      "UseICTMS": {
+        "type": [ "string", "null" ],
+        "enum": [ "YES", "NO", null ]
+      },
+      "FullUse": {
+        "type": [ "string", "null" ],
+        "enum": [ "YES", "NO", null ]
+      },
+      "Region": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 100
+      },
+      "CostOfSaleEmailOverridable": {
+        "type": [ "string", "null" ],
+        "enum": [ "YES", "NO", null ]
+      },
+      "AvgTechSpecialistHrCost": {
+        "type": [ "number", "null" ]
+      },
+      "VatRegistrationNo": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 60
+      },
+      "EUVatPrefix": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 6
+      },
+      "IARegion": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 100
+      },
+      "CognosNo": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "maxLength": 10
+      },
+      "OperatingCountryName": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "OperatingCountry": {
+        "type": [ "integer", "null" ] 
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": "string",
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "CompanyCode",
+      "CompanyName",
+      "Currency",
+      "Region",
+      "OperatingCountry",
+      "RecordStatus",
+      "UpdateCount",
+      "LastModification",
+      "ModifiedBy"
+    ]
+  }
+}

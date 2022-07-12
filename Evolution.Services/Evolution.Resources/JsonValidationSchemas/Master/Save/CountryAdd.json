@@ -1,0 +1,49 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Name": {
+        "type": "string"
+      },
+      "EUVatPrefix": {
+        "type": [ "string", "null" ]
+      },
+      "Code": {
+        "type": "string"
+      },
+      "Region": {
+        "type": [ "string", "null" ]
+      },
+      "IsEuMember": {
+        "type": [ "boolean", "null" ]
+      },
+      "IsGCCMember": {
+        "type": [ "boolean", "null" ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "LastModifiedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": ["Code","Name","RecordStatus"]
+  }
+}

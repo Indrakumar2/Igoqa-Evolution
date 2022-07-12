@@ -1,0 +1,36 @@
+﻿
+  {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Id": { "type": "integer" },
+        "Epin": {
+          "type": "integer"
+        },
+        "ComputerKnowledge": {
+          "type": "string"
+        },
+        "UpdateCount": {
+          "type": [ "integer", "null" ]
+
+        },
+        "RecordStatus": {
+          "enum": [ "M" ]
+        },
+        "LastModification": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "ModifiedBy": {
+          "type": [ "string", "null" ]
+
+        }
+      },
+      "required": [ "ComputerKnowledge", "Epin", "RecordStatus", "Id"]
+    }
+  }
+
+
+
+

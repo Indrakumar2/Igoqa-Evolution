@@ -1,0 +1,19 @@
+{
+  "profiles": {
+    "Evolution.Document.MongoSync": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SQLDatabase": "Evolution2Dec",
+        "SQLServer": "10.10.11.131",
+        "SQLUser": "eReporting",
+        "SQLPassword": "Sys0tr0109",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MongoDbIp": "192.168.54.118",
+        "MongoDbPort": "5300",
+        "MongoDbName": "EvolutionDocuments",
+        "MongoSyncTypes": ".pdf,.doc,.docx,.txt,.msg,.xls,.xlsx",
+        "MongoSyncIntervalInMinute": "5"
+      }
+    }
+  }
+}

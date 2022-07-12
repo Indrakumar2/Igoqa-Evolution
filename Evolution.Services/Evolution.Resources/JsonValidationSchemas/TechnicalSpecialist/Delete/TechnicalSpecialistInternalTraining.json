@@ -1,0 +1,51 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": [ "integer" ]
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "Score": {
+        "type": [ "string", "null" ]
+      },
+      "Competency": {
+        "type": [ "string", "null" ]
+      },
+      "Notes": {
+        "type": [ "string", "null" ]
+      },
+      "RecordType": {
+        "type": [ "string", "null" ]
+      },
+      "DateofTraining": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "Expiry": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "DisplayOrder": {
+        "type": [ "integer", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": ["Id", "RecordStatus" ]
+  }
+}

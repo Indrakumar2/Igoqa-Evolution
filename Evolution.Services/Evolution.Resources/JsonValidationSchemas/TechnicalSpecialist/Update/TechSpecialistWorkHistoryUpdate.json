@@ -1,0 +1,64 @@
+﻿{
+  
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "integer"
+        },
+        "Epin": {
+          "type": "integer"
+        },
+        "ClientName": {
+          "type": [ "string" ],
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "ProjectName": {
+          "type": [ "string", "null" ]
+        },
+        "JobTitle": {
+          "type": [ "string", "null" ]
+        },
+        "IsCurrentCompany": {
+          "type": [ "boolean", "null" ],
+          "enum": [ true, false, null ]
+        },
+        "Responsibility": {
+          "type": [ "string", "null" ]
+        },
+
+        "Description": {
+          "type": [ "string", "null" ]
+        },
+        "FromDate": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "ToDate": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "DisplayOrder": {
+          "type": [ "integer", "null" ]
+        },
+        "UpdateCount": {
+          "type": [ "integer", "null" ]
+        },
+        "RecordStatus": {
+          "enum": [ "M" ]
+        },
+        "LastModification": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "ModifiedBy": {
+          "type": [ "string", "null" ]
+        }
+      },
+      "required": [ "Epin", "ClientName", "IsCurrentCompany", "DisplayOrder", "RecordStatus", "Id" ]
+    }
+  }
+
+

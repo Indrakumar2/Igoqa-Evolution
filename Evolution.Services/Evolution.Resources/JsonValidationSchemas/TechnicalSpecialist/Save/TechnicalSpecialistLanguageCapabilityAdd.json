@@ -1,0 +1,57 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Epin": {
+        "type":  "integer" 
+      },
+      "Language": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "SpeakingCapabilityLevel": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "enum": [ "Fair", "Fluent", "Good" ]
+      },
+      "WritingCapabilityLevel": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "enum": [ "Basic", "Excellent", "Good" ]
+      },
+      "ComprehensionCapabilityLevel": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "enum": [ "Basic", "Excellent", "Good" ]
+      },
+      "DisplayOrder": {
+        "type": [ "integer", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [
+      "Language",
+      "SpeakingCapabilityLevel",
+      "WritingCapabilityLevel",
+      "ComprehensionCapabilityLevel",
+      "RecordStatus"
+    ]
+  }
+}
+

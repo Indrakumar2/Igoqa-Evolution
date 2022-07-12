@@ -1,0 +1,31 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "UserLogonName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "UserType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "CompanyCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "IsActive": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      }
+    },
+    "required": [ "UserType", "UserLogonName", "CompanyCode", "IsActive", "RecordStatus" ]
+  }
+}

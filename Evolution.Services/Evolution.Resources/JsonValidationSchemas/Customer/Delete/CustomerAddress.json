@@ -1,0 +1,20 @@
+﻿{
+  "type": "array", 
+  "items": {
+    "type": "object",
+    "properties": {
+      "AddressId": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      }
+    },
+    "required": [
+      "AddressId",
+      "RecordStatus"
+    ],
+    "additionalProperties": true
+  }
+}

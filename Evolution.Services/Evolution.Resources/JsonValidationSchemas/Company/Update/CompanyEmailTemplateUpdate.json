@@ -1,0 +1,48 @@
+{
+  "type": "object",
+  "properties": {
+    "CompanyCode": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 5
+    },
+    "CustomerReportingNotificationEmailText": {
+      "type": "string",
+      "maxLength": 4000
+    },
+    "CustomerDirectReportingEmailText": {
+      "type": "string",
+      "maxLength": 4000
+    },
+    "RejectVisitTimesheetEmailText": {
+      "type": "string",
+      "maxLength": 4000
+    },
+    "VisitCompletedCoordinatorEmailText": {
+      "type": "string",
+      "maxLength": 4000
+    },
+    "InterCompanyOperatingCoordinatorEmail": {
+      "type": "string",
+      "maxLength": 4000
+    },
+    "UpdateCount": {
+      "type": [ "integer", "null" ]
+    },
+    "ModifiedBy": {
+      "type": [ "string", "null" ],
+      "maxLength": 50
+    },
+    "LastModification": {
+      "type": [ "string", "null" ],
+      "format": "date-time"
+    },
+    "RecordStatus": {
+      "enum": [ "M" ]
+    }
+  },
+  "required": [
+    "CompanyCode",
+    "RecordStatus"
+  ]
+}

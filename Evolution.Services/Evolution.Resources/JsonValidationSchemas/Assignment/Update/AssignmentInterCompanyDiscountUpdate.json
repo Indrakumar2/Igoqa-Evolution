@@ -1,0 +1,96 @@
+﻿{
+  "type": "object",
+  "properties": {
+    "ParentContractHoldingCompanyName": {
+      "type": [ "string", "null" ]
+    },
+    "ParentContractHoldingCompanyCode": {
+      "type": [ "string", "null" ]
+    },
+    "ParentContractHoldingCompanyDiscount": {
+      "type": [ "number", "null" ]
+    },
+    "ParentContractHoldingCompanyDescription": {
+      "type": [ "string", "null" ],
+      "maxLength": 20
+    },
+    "AssignmentContractHoldingCompanyName": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentContractHoldingCompanyCode": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentContractHoldingCompanyDiscount": {
+      "type": [ "number", "null" ]
+    },
+    "AssignmentContractHoldingCompanyDescription": {
+      "type": [ "string", "null" ],
+      "maxLength": 20
+    },
+    "AssignmentOperatingCompanyCode": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentOperatingCompanyName": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentOperatingCompanyDiscount": {
+      "type": [ "number", "null" ]
+    },
+    "AssignmentAdditionalIntercompany1_Name": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentAdditionalIntercompany1_Code": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentAdditionalIntercompany1_Discount": {
+      "type": [ "number", "null" ]
+    },
+    "AssignmentAdditionalIntercompany1_Description": {
+      "type": [ "string", "null" ],
+      "maxLength": 20
+    },
+    "AssignmentAdditionalIntercompany2_Name": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentAdditionalIntercompany2_Code": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentAdditionalIntercompany2_Discount": {
+      "type": [ "number", "null" ]
+    },
+    "AssignmentAdditionAlIntercompany2_Description": {
+      "type": [ "string", "null" ],
+      "maxLength": 20
+    },
+    "AssignmentHostcompanyName": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentHostcompanyCode": {
+      "type": [ "string", "null" ]
+    },
+    "AssignmentHostcompanyDiscount": {
+      "type": [ "number", "null" ]
+    },
+    "AssignmentHostcompanyDescription": {
+      "type": [ "string", "null" ],
+      "maxLength": 20
+    },
+    "RecordStatus": {
+      "enum": [ "M" ]
+    },
+    "UpdateCount": {
+      "type": [ "integer", "null" ]
+    },
+    "LastModification": {
+      "type": [ "string", "null" ],
+      "format": "date-time"
+    },
+    "ModifiedBy": {
+      "type": [ "string", "null" ],
+      "maxLength": 50
+    }
+  },
+  "required": [
+    "RecordStatus"
+  ]
+}

@@ -1,0 +1,95 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "TimesheetId": {
+        "type": "integer"
+      },
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "TimesheetTechnicalSpecialistId": {
+        "type": [ "integer", "null" ]
+      },
+      "ExpenseDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ChargeExpenseType": {
+        "type": "string"
+      },
+      "ChargeDescription": {
+        "type": [ "string", "null" ]
+      },
+      "IsInvoicePrintChargeDescription": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "PayType": {
+        "type": "string"
+      },
+      "PayRateDescription": {
+        "type": ["string", "null" ]
+      },
+      "ChargeUnit": {
+        "type": [ "number", "null" ]
+      },
+      "ChargeRate": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayUnit": {
+        "type": [ "number" ]
+      },
+      "PayRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayRate": {
+        "type": [ "number", "null" ]
+      },
+      "PayRateTax": {
+        "type": [ "number" ]
+      },
+      "PayRateExchange": {
+        "type": [ "number", "null" ]
+      },
+      "ContractNumber": {
+        "type": [ "string" ]
+      },
+      "ProjectNumber": {
+        "type": [ "integer" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+
+    },
+    "required": [
+      "TimesheetId",
+      "AssignmentId",
+      "ExpenseDate",
+      "ChargeExpenseType",
+      "PayType",
+      "PayUnit",
+      "ContractNumber",
+      "ProjectNumber",
+      "RecordStatus"
+    ]
+  }
+}

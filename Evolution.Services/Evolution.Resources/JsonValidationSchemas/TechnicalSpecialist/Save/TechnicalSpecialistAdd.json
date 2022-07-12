@@ -1,0 +1,120 @@
+{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Salutation": {
+        "type": [ "string", "null" ],
+        "maxLength": 20
+      },
+      "FirstName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 30
+      },
+      "MiddleName": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "LastName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 30
+      },
+      "DateOfBirth": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "DrivingLicenseNo": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "PassportNo": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "ModeOfCommunication": {
+        "type": [ "string", "null" ],
+        "maxLength": 20
+      },
+      "CompanyCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 6
+      },
+      "SubDivisionName": {
+        "type": [ "string" ],
+        "maxLength": 100
+      },
+      "StartDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "EndDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ProfileStatus": {
+        "type": [ "string" ],
+        "maxLength": 50
+      },
+      "EmploymentType": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "TaxReference": {
+        "type": [ "string", "null" ],
+        "maxLength": 15
+      },
+      "companyPayrollName": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "PayrollReference": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "PayrollNotes": {
+        "type": [ "string", "null" ],
+        "maxLength": 2000
+      },
+      "ProfessionalAfiliation": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "ProfessionalSummary": {
+        "type": [ "string", "null" ],
+        "maxLength": 4000
+      },
+      "BusinessInformationComment": {
+        "type": [ "string", "null" ],
+        "maxLength": 4000
+      },
+      "ProfileAction": {
+        "type": [ "string" ],
+        "maxLength": 50
+      },
+      "DrivingLicenseExpiryDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "PassportExpiryDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "PassportCountryName": {
+        "type": [ "string", "null" ],
+        "maxLength": 60
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [ "FirstName", "LastName", "CompanyName", "SubDivisionName", "ProfileStatus", "RecordStatus", "ProfileAction" ]
+  }
+}

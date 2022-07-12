@@ -1,0 +1,43 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "ApplicationName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "RoleName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "RoleId": {
+        "type": "integer"
+      },
+      "Description": {
+        "type": [ "string", "null" ],
+        "maxLength": 200
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [ "ApplicationName", "RoleName", "RoleId", "RecordStatus" ]
+  }
+}

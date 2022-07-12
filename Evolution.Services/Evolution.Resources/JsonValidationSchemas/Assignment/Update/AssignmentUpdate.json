@@ -1,0 +1,134 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "AssignmentId": {
+        "type": [ "integer" ]
+      },
+      "AssignmentCustomerCode": {
+        "type": [ "string" ]
+      },
+      "AssignmentContractNumber": {
+        "type": [ "string" ]
+      },
+      "IsAssignmentComplete": {
+        "type": [ "boolean" ],
+        "enum": [ true, false ]
+      },
+      "AssignmentProjectNumber": {
+        "type": [ "integer" ]
+      },
+      "AssignmentReference": {
+        "type": [ "string", "null" ]
+      },
+      "AssignmentCompleted": {
+        "type": [ "integer", "null" ]
+      },
+      "AssignmentStatus": {
+        "type": [ "string" ],
+        "enum": [ "C", "P" ]
+      },
+      "AssignmentType": {
+        "type": [ "string" ],
+        "enum": [ "R", "A" ,"I"]
+      },
+      "AssignmentSupplierPurchaseOrderNumber": {
+        "type": [ "string", "null" ]
+      },
+      "AssignmentContractHoldingCompanyCode": {
+        "type": [ "string" ]
+      },
+      "AssignmentOperatingCompanyCode": {
+        "type": [ "string" ]
+      },
+      "AssignmentContractHoldingCompanyCoordinator": {
+        "type": [ "string" ]
+      },
+      "AssignmentOperatingCompanyCoordinator": {
+        "type": [ "string","null" ]
+      },
+      "AssignmentBudgetValue": {
+        "type": "number"
+      },
+      "AssignmentBudgetCurrency": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "AssignmentBudgetWarning": {
+        "type": [ "integer", "null" ]
+      },
+      "AssignmentBudgetHours": {
+        "type": "number"
+      },
+      "AssignmentBudgetHoursWarning": {
+        "type": [ "integer", "null" ]
+      },
+      "AssignmentLifecycle": {
+        "type": [ "string" ]
+      },
+      "IsAssignmentCustomerFormatReportRequired": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "AssignmentCustomerAssigmentContact": {
+        "type": [ "string" ]
+      },
+      "AssignmentCompanyAddress": {
+        "type": [ "string" ]
+      },
+      "AssignmentReviewAndModerationProcess": {
+        "type": [ "string", "null" ],
+        "enum": [ "None", "Technical Review", "Capability Review", null ]
+      },
+      "VisitStatus": {
+        "type": [ "string", "null" ],
+        "enum": [ "Q", "C", "U", "T","A","J","N","O","R","S","W", null ]
+      },
+      "TimesheetStatus": {
+        "type": [ "string", "null" ]
+      },
+      "FromDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ToDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "AssignmentCustomerCode",
+      "AssignmentContractNumber",
+      "AssignmentProjectNumber",
+      "AssignmentContractHoldingCompanyCode",
+      "AssignmentOperatingCompanyCode",
+      "AssignmentContractHoldingCompanyCoordinator",
+      "AssignmentBudgetValue",
+      "AssignmentBudgetHours",
+      "AssignmentLifecycle",
+      "AssignmentCustomerAssigmentContact",
+      "AssignmentCompanyAddress",
+      "RecordStatus"
+    ]
+  }
+}

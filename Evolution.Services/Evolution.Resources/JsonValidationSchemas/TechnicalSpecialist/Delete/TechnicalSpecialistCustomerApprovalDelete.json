@@ -1,0 +1,58 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": "integer"
+      },
+      "Epin": {
+        "type": [ "integer" ]
+      },
+      "CustomerCode": {
+        "type": [ "string", "null" ]
+      },
+      "CustomerName": {
+        "type": [ "string", "null" ]
+      },
+      "CustomerSap": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "CustCodes": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "FromDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ToDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "Comments": {
+        "type": [ "string", "null" ]
+      },
+      "DispalyOrder": {
+        "type": [ "integer", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [ "RecordStatus", "Id", "Epin" ]
+  }
+}

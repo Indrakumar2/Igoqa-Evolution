@@ -1,0 +1,37 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContractInvoiceAttachmentId": {
+        "type": "integer"
+      },
+      "ContractNumber": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 12
+      },
+      "DocumentType": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 200
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+     
+    },
+    "required": [ "DocumentType", "RecordStatus", "ContractInvoiceAttachmentId" ]
+  }
+
+}

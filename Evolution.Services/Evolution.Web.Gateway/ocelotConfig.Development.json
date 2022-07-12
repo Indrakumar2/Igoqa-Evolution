@@ -1,0 +1,4726 @@
+﻿{
+  "ReRoutes": [
+    //Authentication & Authorization
+    {
+      "DownstreamPathTemplate": "/api/account/authenticate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/authenticate",
+      "a": null,
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "Authenticate"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/authenticate/question",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/authenticate/byquestion",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "SignInByQuestionAnswer"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/token/renew",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/token/renew",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "TokenRenew"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/token/refresh/revoke",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/token/refresh/revoke",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "RevokeRefreshToken"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/token/access/revoke",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/token/access/revoke",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "RevokeAccessToken"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/security/question",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/user/security/question",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetUserSecurityQuestion"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/security/answer/validate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/user/security/answer/validate",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "ValidateUserAnswer"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/security/user/sendpassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/security/user/sendpassword",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "SendUserPassword"
+    },
+    {
+      "DownstreamPathTemplate": "/api/announcements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/announcements",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Announcement"
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/authenticate/resetpassword",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5102
+        }
+      ],
+      "UpstreamPathTemplate": "/authenticate/resetpassword",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "Resetpassword"
+    },
+
+    //Security
+    {
+      "DownstreamPathTemplate": "/api/activities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/activities",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SecurityActivity"
+    },
+    {
+      "DownstreamPathTemplate": "/api/modules",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/modules",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SecurityModule"
+    },
+    {
+      "DownstreamPathTemplate": "/api/moduleactivities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/module/activities",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SecurityModuleActivities"
+    },
+    {
+      "DownstreamPathTemplate": "/api/roleactivities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/role/activities",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SecurityRoleActivities"
+    },
+    {
+      "DownstreamPathTemplate": "/api/roles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/roles",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SecurityRole"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/users",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SecurityUser"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/BasicInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/userBasicInfo",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SecurityUserBasicInfo"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/GetViewAllAssignments?samAccountName={samAccountName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/users/GetViewAllAssignments?samAccountName={samAccountName}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "Key": "ViewAllAssignments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/userdetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/userdetails",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SecurityUserDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/userdetails/{userSamaName}/menulist",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{userSamaName}/menu",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "UserMenu"
+    },
+    {
+      "DownstreamPathTemplate": "/api/userdetails/{userSamaName}/usertypelist",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/user/{userSamaName}/usertype",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "UserType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/{userName}/usercompanyroles/{menuname}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/user/{userName}/usercompanyroles/{menuname}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "Key": "UserCompanyRolesMenu"
+    },
+    {
+      "DownstreamPathTemplate": "/api/userdetails/rolecompany",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/user/rolecompany",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "UserRoleCompany"
+    },
+    {
+      "DownstreamPathTemplate": "/api/userdetails/{userSamaName}/permission",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/security/user/{userSamaName}/permission",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetUserPermission"
+    },
+    //Master
+    {
+      "DownstreamPathTemplate": "/api/master/cities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/cities",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "City"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/assignments/lifecycles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/lifecycles",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Assignment_LifeCycle"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/assignments/referencetypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/referencetypes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Assignment_ReferenceType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/expensetypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/expense/types",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ExpenseType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/countries",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/countries",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Country"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/module/documenttypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/module/document/types",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Modle_Document_Type"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/currencies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/currencies",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Currency"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/states",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/states",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "State"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/taxes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/taxes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Tax"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/salutations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/salutations",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Salutation"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/TechSpechStampCountryCodes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/TechSpechStampCountryCodes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechSpechStampCountryCode"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/dispositionTypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/dispositionTypes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "DispositionType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/EUVATPrefixes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/euvatprefixes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "EUVatPrefix"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/email/placeholders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/email/placeholders",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "EmailPlaceholder"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/companymargintypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/company/margintypes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyMarginType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/invoice/paymentterms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/paymentterms",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "PaymentTerms"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/chargeschedules",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/chargeschedules",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ChargeSchedules"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/payroll/types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/payrolls",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Payrolls"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/divisions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/divisions",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Divisions"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/payroll/exportprefixes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/payroll/exportprefixes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "PayrollExportPrefixes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/companyCharge/schedules",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/charges/schedules",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyChargeSchedules"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/charges/schedules/inspection/groups",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/charges/schedules/inspection/groups",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyChargeScheduleInspectionGroup"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/master/charges/schedules/inspection/types",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/charges/schedules/inspection/types",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyChargeScheduleInspectionTypes"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/master/charges/inspection/types/rates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/charges/inspection/types/rates",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyChargeScheduleInspectionRates"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/industrysectors",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/industrysectors",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "IndustrySectors"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/logo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/logo",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "EvolutionLogo"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/M/data/systemSetting",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/systemSetting",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "SystemSetting"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/{MasterType}/data",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/master/{MasterType}/data",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "Data"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/users",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/users",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "EvolutionUser"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/users/micoordinators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/users/micoordinators",
+      "UpstreamHttpMethod": [ "post" ],
+      "Key": "EvolutionMIUsers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/users/micoordinators/status",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/users/micoordinators/status",
+      "UpstreamHttpMethod": [ "post" ],
+      "Key": "EvolutionMIUsers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/users/coordinators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/users/coordinators",
+      "UpstreamHttpMethod": [ "post" ],
+      "Key": "Coordinators"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/users/reportCoordinators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/users/reportCoordinators",
+      "UpstreamHttpMethod": [ "post" ],
+      "Key": "ReportCoordinators"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/managedservicetypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/managedservicetypes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "EvolutionManagedService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/projecttype",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/projecttype",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ProjectType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/employmenttype",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/employmenttype",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "EmploymentType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/leavecategorytype",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/leavecategorytype",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "LeaveCategoryType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/timeoffrequest/category",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/timeoffrequest/category",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TimeOffRequestCategory"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/profilestatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/profilestatus",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ProfileStatus"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/codeStandard",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/codeStandard",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CodeStandard"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/commodity",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/commodity",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Commodity"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/equipment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/equipment",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Equipment"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/trainings",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/trainings",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Trainings"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/certificates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/certificates",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Certificate"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/computerKnowledge",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/computerKnowledge",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ComputerKnowledge"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/TaxonomyCategory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/TaxonomyCategory",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TaxonomyCategory"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/TaxonomySubCategory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/TaxonomySubCategory",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TaxonomySubCategory"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/TaxonomyServices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/TaxonomyServices",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TaxonomyServices"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/Languages",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/Languages",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Languages"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Report/DownloadReport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.22.6.2",
+          "Port": 6105
+        }
+      ],
+      "UpstreamPathTemplate": "/Report/DownloadReport",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Key": "DownloadReport",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "DownstreamPathTemplate": "/api/Batch/GetGeneratedReport",
+      "DownstreamScheme": "http",
+      "/api/Batch/GetGeneratedReport": null,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Batch/GetGeneratedReport",
+      "UpstreamHttpMethod": [ "GET" ],
+      "Key": "GetGeneratedReport",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "DownstreamPathTemplate": "/api/Batch/DeleteReportFiles",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Batch/DeleteReportFiles",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Key": "DeleteReportFiles",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "DownstreamPathTemplate": "/api/UserReport/DownloadServerFile",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.22.6.2",
+          "Port": 6105
+        }
+      ],
+      "UpstreamPathTemplate": "/UserReport/DownloadServerFile",
+      "UpstreamHttpMethod": [ "POST" ],
+      "Key": "DownloadServerFile",
+      "DangerousAcceptAnyServerCertificateValidator": true
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/Competency",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/Competency",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Competency"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/Internaltrainings",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/Internaltrainings",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Internaltrainings"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/CustomerCommodities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/CustomerCommodities",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerCommodities"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/commodityequipment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/CommodityEquipment",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CommodityEquipment"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/TechnicalSpecialistCustomers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialistCustomers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechnicalSpecialistCustomers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/SubDivision",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/SubDivision",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SubDivision"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/audit/search?ModuleName={moduleName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/master/audit/search?ModuleName={moduleName}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "MasterAuditSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/moduletype",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/master/moduletype",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "MasterModuleType"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/assignment/status",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/AssignmentStatus",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentStatus"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/assignment/type",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/AssignmentType",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/visitstatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/visitstatus",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "VisitStatus"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/unusedreason",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/unusedreason",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "UnusedReason"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/reviewandmoderation/process",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/reviewandmoderation/process",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ReviewAndModeration"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/taxonomyBusinessUnits",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/TaxonomyBusinessUnits",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TaxonomyBusinessUnit"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/profileaction",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/master/profileaction",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ProfileAction"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/documentation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/master/documentation",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Documentation"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/supplierperformancetype",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/supplierperformancetype",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SupplierPerformanceType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/master/currency/exchangerates/GetExchangeRates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/GetExchangeRates",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "GetExchangeRates"
+    },
+
+    //Company
+    {
+      "DownstreamPathTemplate": "/api/companies?CompanyCode={companyCode}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies?CompanyCode={companyCode}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Company"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/GetCompanyList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/GetCompanyList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyList"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "Companies"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/offices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/offices",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyOffices"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/divisions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/divisions",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyDivisions"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/divisions/{divisionName}/costcenters",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/divisions/{divisionName}/costcenters",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyDivisionCostCenters"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/divisions/ /costcenters",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/costcenters",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyCostCenters"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=COMP&moduleRefCode={companyCode}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/CompanyDocuments?moduleCode=COMP&moduleRefCode={companyCode}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/email/template",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/email/templates",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyEmailTemplates"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/expectedMargins",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/expectedMargins",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyExpectedMargins"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/invoicedetail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/invoicedetail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyInvoiceInfo"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/notes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/payrolls",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/payrolls",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyPayrolls"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/payrolls/ /periods",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/periods",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CompanyPeriods"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/payrolls/{payrollName}/periods",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/payrolls/{payrollName}/periods",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyPayrollPeriods"
+    },
+    //{
+    //  "DownstreamPathTemplate": "/api/companies/{companyCode}/qualifications",
+    //  "DownstreamScheme": "http",
+    //  "DownstreamHostAndPorts": [
+    //    {
+    //      "Host": "localhost",
+    //      "Port": 5101
+    //    }
+    //  ],
+    //  "UpstreamPathTemplate": "/companies/{companyCode}/qualifications",
+    //  "UpstreamHttpMethod": [ "Get" ],
+    //  "Key": "CompanyQualifications"
+    //},
+    {
+      "DownstreamPathTemplate": "/api/companies/{companyCode}/taxes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/taxes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CompanyTaxes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companies/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companies/detail",
+      "UpstreamHttpMethod": [ "Put", "Post" ],
+      "Key": "CompanyDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{customerCode}/addresses/GetAddress",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{customerCode}/addresses/GetAddress",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerGetContact"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{customerCode}/GetContacts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{customerCode}/GetContacts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerGetContact"
+    },
+
+    //Customer :  Don't Change the sequence/insert as Customer Aggrgator using this sequence
+    {
+      "DownstreamPathTemplate": "/api/customers?customerCode={customerCode}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers?code={customerCode}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Customer"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{customerCode}/addresses",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{customerCode}/addresses",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerAddress"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{customerCode}/contacts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{customerCode}/contacts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerContact"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{customerCode}/accountreferences",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{customerCode}/accountreferences",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerAccReference"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{customerCode}/assignmentreferences",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{customerCode}/assignmentreferences",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerAssignmentReference"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=CUST&moduleRefCode={customerCode}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/CustomerDocuments?moduleCode=CUST&moduleRefCode={customerCode}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "CustomerDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{customerCode}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{customerCode}/notes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerNote"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers",
+      "UpstreamHttpMethod": [ "Get" ],
+      //"DelegatingHandlers": [ "CustomerDecompositionHandler" ],
+      "Key": "Customers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers",
+      "UpstreamHttpMethod": [ "Put", "Post" ],
+      "Key": "CustomerDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/iconnect",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/iconnect",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "CustomerIConnect"
+    },
+
+
+    //Contract
+    {
+      "DownstreamPathTemplate": "/api/contracts/searchContracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/searchContracts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "searchContracts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/searchCompanyContracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/searchCompanyContracts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "searchCompanyContracts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Contract"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "Contracts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/exchangerates?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/exchangerates?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ContractExchangeRates"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/invoice/attachments?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/invoice/attachments?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ContractInvoiceAttachments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/referencetypes?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/referencetypes?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ContractReferenceTypes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/schedules/CopyCStoRFC",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/schedules",
+      "UpstreamHttpMethod": [ "Put" ],
+      "Key": "AddIFContractSchedules"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/contracts/schedules/RFCExists?contractId={contractId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/RFCExists?contractId={contractId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "IsRFCExists"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/contracts/schedules/DuplicateFrameworkSchedules?contractId={contractId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/DuplicateFrameworkSchedules?contractId={contractId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "DuplicateFrameworkSchedules"
+    },
+
+    // Batch Process
+    {
+      "DownstreamPathTemplate": "/api/Batch",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/batch",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "Key": "AddBatch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Batch/GeBatchStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/getBatchStatus",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "Key": "GeBatchStatus"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Batch/GetBatch",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/getBatch",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "Key": "GetBatch"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/contracts/schedules?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/schedules?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ContractSchedules"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/schedules/{scheduleName}/rates?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/schedules/{scheduleName}/rates?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ContractScheduleRates"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/schedules/ /rates?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/rates?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ContractRates"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/schedules/rates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/schedules/rates",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ContractRateSchedules"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=CNT&moduleRefCode={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/ContractDocuments?moduleCode=CNT&moduleRefCode={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ContractDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/documents/GetContractSpecificDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/documents/GetContractSpecificDocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "ContractSpecificDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/documents/GetCustomerContractDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/documents/GetCustomerContractDocuments",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerContractDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/notes?ContractNumber={contractNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/notes?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "ContractNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/detail",
+      "UpstreamHttpMethod": [ "Put", "Post", "Delete" ],
+      "Key": "ContractDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/budgets",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/budgets",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ContractBudgets"
+    },
+
+    //Project
+    {
+      "DownstreamPathTemplate": "/api/projects",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Projects"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/GetSelectiveProjectData",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/GetSelectiveProjectData",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ProjectSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects?projectNumber={projectNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects?projectNumber={projectNumber}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Project"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/projects/GetProject",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/GetProject",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetProjects"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/projects/{projectNumber}/invoice/attachments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/{projectNumber}/invoice/attachments",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ProjectInvoiceAttachments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/{projectNumber}/invoice/referencetypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/{projectNumber}/invoice/referencetypes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ProjectInvoiceReferences"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=PRJ&moduleRefCode={projectNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/ProjectDocuments?moduleCode=PRJ&moduleRefCode={projectNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ProjectDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/documents/GetProjectSpecificDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/documents/GetProjectSpecificDocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "ProjectSpecificDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/documents/GetContractProjectDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/documents/GetContractProjectDocuments",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ContractProjectDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/documents/GetCustomerProjectDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/documents/GetCustomerProjectDocuments",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "CustomerProjectDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/{projectNumber}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/{projectNumber}/notes",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "ProjectNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/{projectNumber}/notifications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/{projectNumber}/notifications",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ProjectClientNotifications"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/{projectNumber}/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/{projectNumber}/detail",
+      "UpstreamHttpMethod": [ "Put", "Post", "Delete" ],
+      "Key": "ProjectDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/budgets",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/budgets",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ProjectBudgets"
+    },
+
+    //Supplier
+    {
+      "DownstreamPathTemplate": "/api/suppliers?supplierId={supplierNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/suppliers?supplierId={supplierNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "Supplier"
+    },
+    {
+      "DownstreamPathTemplate": "/api/suppliers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/suppliers",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SupplierSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/suppliers/{supplierNumber}/contacts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/suppliers/{supplierNumber}/contacts",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SupplierContacts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=SUP&moduleRefCode={supplierNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/SupplierDocuments?moduleCode=SUP&moduleRefCode={supplierNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SupplierDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/suppliers/{supplierNumber}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/suppliers/{supplierNumber}/notes",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "SupplierNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/suppliers/performancereport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/suppliers/performancereport",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SupplierPerformanceReport"
+    },
+    {
+      "DownstreamPathTemplate": "/api/suppliers/{supplierNumber}/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/suppliers/{supplierNumber}/detail",
+      "UpstreamHttpMethod": [ "Put", "Post", "Delete" ],
+      "Key": "SupplierDetail"
+    },
+    //Supplier PO
+    //Added for AssignmentSupplier PO
+    {
+      "DownstreamPathTemplate": "/api/supplierPOs/GetAssignmentSupplierPO?SupplierPOProjectNumber={supplierPOProjectNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/GetAssignmentSupplierPO?SupplierPOProjectNumber={supplierPOProjectNumber}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentSupplierPO"
+    },
+
+    //Added to get Assignment for DocumentApproval
+    {
+      "DownstreamPathTemplate": "/api/assignments/DocumentApproval",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/DocumentApproval",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "DocumentApprovalAssignment"
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplierPOs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/supplierPOs",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SupplierPOSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplierPOs?SupplierPOId={SupplierPOId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/supplierPOs?SupplierPOId={SupplierPOId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SupplierPO"
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplierPOs/GetSupplierPO?SupplierPOId={SupplierPOId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/GetSupplierPO?SupplierPOId={SupplierPOId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SupplierPOs"
+    },
+    //Added for Supplier PO Assignment tab
+    {
+      "DownstreamPathTemplate": "/api/assignments?AssignmentSupplierPurchaseOrderId={assignmentSupplierPurchaseOrderId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments?AssignmentSupplierPurchaseOrderId={assignmentSupplierPurchaseOrderId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SupplierPOAssignment"
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplierPOs?SupplierPOProjectNumber={ProjectNumber}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/supplierPOs?SupplierPOProjectNumber={ProjectNumber}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SupplierPOProjectNumber"
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplierpos/{SupplierPOId}/subsuppliers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/supplierpos/{SupplierPOId}/subsuppliers",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SupplierPOSubSupplier"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=SUPPO&moduleRefCode={SupplierPOId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/SupplierPODocuments?moduleCode=SUPPO&moduleRefCode={SupplierPOId}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "SupplierPODocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplierpos/{SupplierPOId}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/supplierpos/{SupplierPOId}/notes",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "SupplierPONotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/supplierPOs/{SupplierPOId}/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/supplierPOs/{SupplierPOId}/detail",
+      "UpstreamHttpMethod": [ "Put", "Post", "Delete" ],
+      "Key": "SupplierPODetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/SupplierPO/documents/GetAssignmentSupplierPOocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/SupplierPO/documents/GetAssignmentSupplierPOocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "AssignmentSupplierPODocument"
+    },
+
+    //TS
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/Search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/Search",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechnicalSpecialistSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/Info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/Info",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechnicalSpecialistInfo"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/BasicInfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/BasicInfo",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechnicalSpecialistBasicInfo"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists?Epin={ePin}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists?Epin={ePin}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecialist"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/StampInfos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/StampInfos",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecialistStamp"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/ContactInfos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/ContactInfos",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistContact"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/PayRateSchedules",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/PayRateSchedules",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistPaySchedule"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/PayRateSchedules/{PayScheduleId}/PayRates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/PayRateSchedules/{PayScheduleId}/PayRates",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistPayRate"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/PayRateSchedules/0/PayRates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/PayRates",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechnicalSpecilistPayRateGetByePin"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/Taxonomies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/Taxonomies",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistTaxonomy"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/InternalTrainings",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/InternalTrainings",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistInternalTraining"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/Competencies",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/Competencies",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistCompetancy"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/TechnicalSpecialistTrainingAndCompetency/{TechnicalSpecialistTrainingAndCompetencyId}/TechnicalSpecialistTrainingAndCompetencyType",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/api/technicalSpecialists/{ePin}/TechnicalSpecialistTrainingAndCompetency/{TechnicalSpecialistTrainingAndCompetencyId}/TechnicalSpecialistTrainingAndCompetencyType",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistTrainingAndCompetencyType"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/CustomerApprovalInfos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/CustomerApprovalInfos",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistCustomerApproval"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/WorkHistoryInfos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/WorkHistoryInfos",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistWorkHistory"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/EducationalQualifications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/EducationalQualifications",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistEducation"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/CodeAndStandards",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/CodeAndStandards",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistCodeAndStandard"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/ComputerElectronicKnowledges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/ComputerElectronicKnowledges",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistComputerElectronic"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/LanguageCapabilities",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/LanguageCapabilities",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistLanguage"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/CommodityEquipmenKnowledges",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/CommodityEquipmenKnowledges",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistCommodityAndEquipment"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/Trainings",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/Trainings",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistTraining"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/Certifications",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/Certifications",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistCertification"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=TS&moduleRefCode={ePin}&subModuleRefCode=-1",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecilistDocuments?moduleCode=TS&moduleRefCode={ePin}&subModuleRefCode=-1",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecialistDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=TS&moduleRefCode={ePin}&subModuleRefCode=0",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecilistDocuments?moduleCode=TS&moduleRefCode={ePin}&subModuleRefCode=0",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecialistSensitiveDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/TimeOffRequests",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialists/{ePin}/TimeOffRequests",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "TechnicalSpecilistTimeOffRequests"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{ePin}/Notes?RecordType=TSComment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecilist/{ePin}/Notes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistNotes"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{draftId}/draft",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecilists/{draftId}/draft",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TechnicalSpecilistDraft"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/{ePin}/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/{ePin}/detail",
+      "UpstreamHttpMethod": [ "Put", "Post", "Delete" ],
+      "Key": "TechSpecialistDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/TechnicalSpecialistCalendar",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/TechnicalSpecialistCalendar",
+      "UpstreamHttpMethod": [ "Get", "Put", "Post", "Delete" ],
+      "Key": "TechnicalSpecialistCalendar"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/TechnicalSpecialistCalendar/GetCalendarByTechnicalSpecialistId",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/TechnicalSpecialistCalendar/GetCalendarByTechnicalSpecialistId",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "TechnicalSpecialistCalendarByTechId"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/GenerateBatchForExportCV",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/GenerateBatchForExportCV",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "Key": "TechnicalSpecialistFileExport",
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/ExportCV",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/ExportCV",
+      "UpstreamHttpMethod": [
+        [ "Get", "Post" ]
+      ],
+      "Key": "TechnicalSpecialistFileExport",
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/ExportCV",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/ExportCV",
+      "UpstreamHttpMethod": [
+        [ "Get", "Post" ]
+      ],
+      "Key": "TechnicalSpecialistFileExport",
+      "DangerousAcceptAnyServerCertificateValidator": true,
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/documents/exportCVasZIP",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/exportCVasZIP",
+      "UpstreamHttpMethod": [ "Post" ]
+      //   "Key": "TechnicalSpecialistFileExport"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/documents/ExportCV?isChevron={isChevron}&exportCVFrom={exportCVFrom}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/ExportCV?isChevron={isChevron}&exportCVFrom={exportCVFrom}",
+      "UpstreamHttpMethod": [ "Post" ]
+      // "Key": "TechnicalSpecialistFileExport"
+    },
+
+    //Assignment
+    {
+      "DownstreamPathTemplate": "/api/assignments/GetAssignments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/GetAssignments",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/GetAssignments?assignmentId={assignmentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/GetAssignments?assignmentId={assignmentId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentGet"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/search",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SearchAssignment"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/detail",
+      "UpstreamHttpMethod": [ "Put", "Post", "Delete" ],
+      "Key": "AssignmentDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "Assignments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments?assignmentId={assignmentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments?assignmentId={assignmentId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Assignment"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/contractschedules",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/contractschedules",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentContractSchedule"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/taxonomy",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/taxonomy",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentTaxonomy"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/technicalSpecialists",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/technicalSpecialists",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentTechnicalSpecialist"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/subsuppliers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/subsuppliers",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentSubSupplier"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/referencetypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/referencetypes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentReference"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/instructions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/instructions",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentInstructions"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/additionalExpenses",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/additionalExpenses",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentAdditionalExpenses"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/intercompanydiscounts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/intercompanydiscounts",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentInterCompanyDiscounts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/contributionCalculations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/contributionCalculations",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentContributionCalculators"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/notes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=ASGMNT&moduleRefCode={assignmentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/assignmentdocuments?moduleCode=ASGMNT&moduleRefCode={assignmentId}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "AssignmentDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments?IsInactiveAssignmentOnly=true&AssignmentStatus=P",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/inactive",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "InactiveAssignments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/budgets",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/budgets",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentBudgets"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentid}/technicalSpecialists/schedules/GetTechSpecRateSchedule",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentid}/technicalSpecialists/schedules/GetTechSpecRateSchedule",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechnicalSpecialistRateSchedules"
+    },
+    {
+      "DownstreamPathTemplate": "/api/assignments/{assignmentId}/subsuppliers/GetSubSupplierForVisit",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/subsuppliers/GetSubSupplierForVisit",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentSubSupplierForVisit"
+    },
+
+    //Visit
+    {
+      "DownstreamPathTemplate": "/api/visits",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Visits"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetVisits?VisitAssignmentId={visitAssignmentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/GetVisits?VisitAssignmentId={visitAssignmentId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Visit"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/documents/GetAssignmentVisitDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/documents/GetAssignmentVisitDocuments",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentVisitDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetVisitForDocumentApproval",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/GetVisitForDocumentApproval",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "VisitDocumentApproval"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/GetTimesheetForDocumentApproval",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/GetTimesheetForDocumentApproval",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TimesheetDocumentApproval"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/documents/GetSupplierPoVisitDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/documents/GetSupplierPoVisitDocuments",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SupplierPOVisitDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/documents/GetVisitDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/documents/GetVisitDocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "VisitDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetSearchVisits",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/GetSearchVisits",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SearchVisit"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetVisitByID?visitId={visitId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/GetVisitByID?visitId={visitId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "VisitByID"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/detail/TechnicalSpecialistWithGrossMargin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/detail/TechnicalSpecialistWithGrossMargin",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "VisitTechnicalSpecialistWithGrossMargin"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/technicalSpecialistAccountItemTime",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/technicalSpecialistAccountItemTime",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitTechSpecialistTime"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/technicalSpecialistAccountItemExpense",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/technicalSpecialistAccountItemExpense",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitTechSpecialistExpenses"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/technicalSpecialistAccountItemTravel",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/technicalSpecialistAccountItemTravel",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitTechSpecialistTravel"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/technicalSpecialistAccountItemConsumables",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/technicalSpecialistAccountItemConsumables",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitTechSpecialistConsumables"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/references",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/references",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "VisitReferences"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/supplierperformance",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/supplierperformance",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitSupplierPerformance"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/intercompanydiscounts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/intercompanydiscounts",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitInterCompanyDiscounts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=VST&moduleRefCode={visitId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/VisitDocuments?moduleCode=VST&moduleRefCode={visitId}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/notes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "VisitNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetFinalVisitId",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/GetFinalVisitId",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "FinalVisitId"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetVisitValidationData",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/GetVisitValidationData",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "VisitValidationData"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetIntertekWorkHistoryReport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/IntertekWorkHistoryReport",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "VisitIntertekWorkHistoryReport"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/detail",
+      "UpstreamHttpMethod": [ "Post", "Put", "Delete" ],
+      "Key": "VisitDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetHistoricalVisits",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/GetHistoricalVisits",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "HistoricalVisits"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/GetTemplate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/GetTemplate",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetTemplate"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/detail/approve",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/detail/approve",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "Key": "VisitApprove"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/detail/reject",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/detail/reject",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "Key": "VisitReject"
+    },
+    {
+      "DownstreamPathTemplate": "/api/visits/{visitId}/detail/CustomerReportNotification",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/detail/CustomerReportNotification",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "VisitCustomerReportNotification"
+    },
+
+    //Timesheet
+    {
+      "DownstreamPathTemplate": "/api/timesheets",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Timesheets"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/GetTimesheets?TimesheetAssignmentId={timesheetAssignmentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/GetTimesheets?TimesheetAssignmentId={timesheetAssignmentId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TimesheetGet"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/documents/GetAssignmentTimesheetDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/documents/GetAssignmentTimesheetDocuments",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AssignmentTimesheetDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/SearchTimesheets",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/SearchTimesheets",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "SearchTimesheets"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/GetTimesheetDetail?timesheetId={timesheetId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheet?timesheetId={timesheetId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "Timesheet"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/detail/TechnicalSpecialistWithGrossMargin",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/detail/TechnicalSpecialistWithGrossMargin",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TechnicalSpecialistWithGrossMargin"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/technicalSpecialistAccountItemTime",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/technicalSpecialistAccountItemTime",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TimesheetTechSpecialistTime"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/technicalSpecialistAccountItemExpense",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/technicalSpecialistAccountItemExpense",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TimesheetTechSpecialistExpenses"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/technicalSpecialistAccountItemTravel",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/technicalSpecialistAccountItemTravel",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TimesheetTechSpecialistTravel"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/technicalSpecialistAccountItemConsumables",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/technicalSpecialistAccountItemConsumables",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TimesheetTechSpecialistConsumables"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/referencetypes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/referencetypes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TimesheetReferences"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?moduleCode=TIME&moduleRefCode={timesheetId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents?moduleCode=TIME&moduleRefCode={timesheetId}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TimesheetDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/notes",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "Key": "TimesheetNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/detail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/detail",
+      "UpstreamHttpMethod": [ "Post", "Put", "Delete" ],
+      "Key": "TimesheetDetail"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/technicalSpecialist",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/technicalSpecialist",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "TimesheetTechSpecialist"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/detail/approve",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/detail/approve",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "Key": "TimesheetApprove"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/detail/reject",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/detail/reject",
+      "UpstreamHttpMethod": [ "Post", "Put" ],
+      "Key": "TimesheetReject"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/{timesheetId}/detail/customerReportNotification",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/detail/customerReportNotification",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "TimesheetCustomerReportNotification"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/GetTimesheetValidationData",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/timesheets/GetTimesheetValidationData",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TimesheetValidationData"
+    },
+    {
+      "DownstreamPathTemplate": "/api/timesheets/GetExpenseChargeExchangeRates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/GetExpenseChargeExchangeRates",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "GetExpenseChargeExchangeRates"
+    },
+
+    //Document
+    {
+      "DownstreamPathTemplate": "/api/documents/pending",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/dcuments/pending",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "PendingDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/ChangeStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/ChangeStatus",
+      "UpstreamHttpMethod": [ "Put" ],
+      "Key": "ChangeDocumentStatus"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/{moduleType}/download?documentUniqueName={documentUniqueName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/{moduleType}/download?documentUniqueName={documentUniqueName}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "DownloadDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/UniqueName",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/UniqueName",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "UniqueName"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/{moduleType}/UploadFileAsStream?documentUniqueName={documentUniqueName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/{moduleType}/UploadFileAsStream?documentUniqueName={documentUniqueName}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "UploadDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/{moduleType}/Paste?referenceCode={referenceCode}&copyDocumentUniqueName={documentUniqueName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/{moduleType}/Paste?referenceCode={referenceCode}&copyDocumentUniqueName={documentUniqueName}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "PasteDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "Key": "DeletDocument"
+    },
+
+    //Document Pendind Approval
+    {
+      "DownstreamPathTemplate": "/api/documents?IsForApproval=true&status=C",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents?IsForApproval=true&status=C",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetDocumentToApprove"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents?IsForApproval=true&status=C&documentUniqueName={uniqueName}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents?IsForApproval=true&status=C&documentUniqueName={uniqueName}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetSingleDocument"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documentApproval",
+      "UpstreamHttpMethod": [ "Get", "Put" ],
+      "Key": "DocumentApproval"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/GetCustomerName",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documentApproval/GetCustomerName",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "DocumentCustomerName"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/UploadEmailDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/UploadEmailDocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "UploadEmailDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/UploadDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/UploadDocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "UploadDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/EmailAttachmentDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/EmailAttachmentDocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "EmailAttachmentDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/DocumentContent/DeleteOrphandDocuments",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/DocumentContent/DeleteOrphandDocuments",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "DeleteOrphandDocuments"
+    },
+    {
+      "DownstreamPathTemplate": "/api/DocumentContent/FetchOnlyTextFromFile",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/DocumentContent/FetchOnlyTextFromFile",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "FetchOnlyTextFromFile"
+    },
+    {
+      "DownstreamPathTemplate": "/api/documents/GenerateCV",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5104
+        }
+      ],
+      "UpstreamPathTemplate": "/documents/GenerateCV",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "GenerateCV"
+    },
+    //Budget Section
+    {
+      "DownstreamPathTemplate": "/api/Home/contract/budgetinfo",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Home/budgets",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "HomeBudget"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Home/TS/mytasks",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Home/TS/mytasks",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "MyTasks"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Home/mySearches",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Home/mySearches",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "MySearches"
+    },
+    {
+      "DownstreamPathTemplate": "/api/audit",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/audit",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "Audit"
+    },
+    {
+      "DownstreamPathTemplate": "/api/audit/AuditEvent",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/audit/AuditEvent",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "Key": "AuditEvent"
+    },
+    {
+      "DownstreamPathTemplate": "/api/audit/AuditLog",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/audit/AuditLog",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "Key": "AuditLog"
+    },
+    {
+      "DownstreamPathTemplate": "/api/audit/Search",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/audit/Search",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "AuditSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/audit/Module",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/audit/Module",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "AuditModule"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{Moduletype}/{DraftType}/drafts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/{Moduletype}/{DraftType}/drafts",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "Draft"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Home/TS/myTasksAssignUsers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Home/TS/myTasksAssignUsers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "MyTasksAssignUsers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Home/{moduleCode}/mytasksReassign",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/Home/{moduleCode}/mytasksReassign",
+      "UpstreamHttpMethod": [ "Put" ],
+      "Key": "MyTasksReassign"
+    },
+
+    //Quick Search
+    {
+      "DownstreamPathTemplate": "/api/Resources?SearchType=Quick",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/quicksearch",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "QuickSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Resources/Search?SearchType=Quick",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/quickSearchs/search",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "QuickResourceSearch"
+    },
+    //pre-Assignment Search
+    {
+      "DownstreamPathTemplate": "/api/Resources?SearchType=PreAssignment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/preAssignmentSearch",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "PreAssignmentSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "maps.googleapis.com",
+          "Port": 443
+        }
+      ],
+      "AddQueriesToRequest": {
+        "key": "Claims[apikey] > value"
+      },
+      "UpstreamPathTemplate": "/directions",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GoogleMapDirectionService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Resources/Search?SearchType=PreAssignment",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/preAssignmentSearchs/Search",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "PreAssignmentResourceSearch"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Resources/GeoLocation",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/preAssignmentSearchs/GeoLocation",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "ResourceSearchGeoLocation"
+    },
+    //ARS Search
+    {
+      "DownstreamPathTemplate": "/api/Resources/assignment/info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/ARS/Assignment/Info",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ARSAssignmentInfo"
+    },
+    // D - 875
+    {
+      "DownstreamPathTemplate": "/api/Resources/Notes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/ARS/Notes",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "ARSResourceNotes"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Resources?SearchType=ARS",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/ARS",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "Key": "ARS"
+    },
+    //GRM Reports Search
+    {
+      "DownstreamPathTemplate": "/api/reports/wonLost",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/reports/wonLost",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "reportswonLost"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companySpecificMatrixReport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companySpecificMatrixReport",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "companySpecificMatrixReport"
+    },
+    {
+      "DownstreamPathTemplate": "/api/companySpecificMatrixReport/export",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/companySpecificMatrixReport/export",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "companySpecificMatrixReportExport"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TechnicalSpecialists/GetTSBasedOnCompany",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/TechnicalSpecialists/GetTSBasedOnCompany",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "GetTSBasedOnCompany"
+    },
+    {
+      "DownstreamPathTemplate": "/api/calendarScheduleDetails",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/calendarScheduleDetails",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "calendarScheduleDetails"
+    },
+    {
+      "DownstreamPathTemplate": "/api/taxonomyReport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/taxonomyReport",
+      "UpstreamHttpMethod": [ "Post" ],
+      "Key": "taxonomyReport"
+    },
+    {
+      "DownstreamPathTemplate": "/api/technicalSpecialists/{Pin}/Taxonomies/IsTaxonomyHistoryExists",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/technicalSpecialist/{Pin}/IsTaxonomyHistoryExists",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "TaxonomyHistory"
+    },
+    //Added for Evolution Reports
+    {
+      "DownstreamPathTemplate": "/api/projects/GetProjectBasedOnStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/GetProjectBasedOnStatus",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetProjectBasedOnStatus"
+    },
+    {
+      "DownstreamPathTemplate": "/api/admin/users/ssrsCoordinators",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5103
+        }
+      ],
+      "UpstreamPathTemplate": "/users/ssrsCoordinators",
+      "UpstreamHttpMethod": [ "post" ],
+      "Key": "ssrsCoordinators"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/customerCoordinator",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/customerCoordinator",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "customersCustomerCoordinator"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/visitTimesheetCustomers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/visitTimesheetCustomers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "visitTimesheetCustomers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/visitTimesheetUnapprovedCustomers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/visitTimesheetUnapprovedCustomers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "visitTimesheetUnapprovedCustomers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/visitTimesheetKPICustomers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/visitTimesheetKPICustomers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "visitTimesheetKPICustomers"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/visitTimesheetKPIContracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/visitTimesheetKPIContracts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "visitTimesheetKPIContracts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/projects/GetProjectKPI",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/projects/GetProjectKPI",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "GetProjectKPI"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/visitTimesheetContracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/visitTimesheetContracts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "visitTimesheetContracts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/visitTimesheetUnApprovedContracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/visitTimesheetUnApprovedContracts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "visitTimesheetUnApprovedContracts"
+    },
+    {
+      "DownstreamPathTemplate": "/api/contracts/customerContracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5101
+        }
+      ],
+      "UpstreamPathTemplate": "/contracts/customerContracts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "customerContracts"
+    }
+  ],
+  "Aggregates": [
+    //Company Details
+    {
+      "ReRouteKeys": [
+        "Company",
+        "CompanyOffices",
+        "CompanyDivisions",
+        "CompanyCostCenters",
+        "CompanyDocuments",
+        "CompanyEmailTemplates",
+        "CompanyExpectedMargins",
+        "CompanyInvoiceInfo",
+        "CompanyNotes",
+        "CompanyPayrolls",
+        "CompanyPeriods",
+        //"CompanyQualifications",
+        "CompanyTaxes"
+      ],
+      "UpstreamPathTemplate": "/companies/{companyCode}/detail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "CompanyAggreator"
+    },
+
+    //Customer Details
+    {
+      "ReRouteKeys": [
+        "Customer",
+        "CustomerAddress",
+        "CustomerContact",
+        "CustomerAccReference",
+        "CustomerAssignmentReference",
+        "CustomerDocument",
+        "CustomerNote"
+      ],
+      "UpstreamPathTemplate": "/customers/detail?customerCode={customerCode}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "CustomerAggregator"
+    },
+
+    //Contract Details
+    {
+      "ReRouteKeys": [
+        "Contract",
+        "ContractExchangeRates",
+        "ContractInvoiceAttachments",
+        "ContractReferenceTypes",
+        "ContractSchedules",
+        "ContractRates",
+        "ContractDocuments",
+        "ContractNotes"
+      ],
+      "UpstreamPathTemplate": "/contracts/detail?ContractNumber={contractNumber}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "ContractAggregator"
+    },
+
+    //Project Details
+    {
+      "ReRouteKeys": [
+        "Project",
+        "ProjectInvoiceAttachments",
+        "ProjectInvoiceReferences",
+        "ProjectDocuments",
+        "ProjectNotes",
+        "ProjectClientNotifications"
+      ],
+      "UpstreamPathTemplate": "/projects/{projectNumber}/detail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "ProjectAggregator"
+    },
+
+
+
+    //Assignment Details
+    {
+      "ReRouteKeys": [
+        "AssignmentGet",
+        "AssignmentContractSchedule",
+        "AssignmentTaxonomy",
+        "AssignmentTechnicalSpecialist",
+        "AssignmentSubSupplier",
+        "AssignmentReference",
+        "AssignmentInstructions",
+        "AssignmentAdditionalExpenses",
+        "AssignmentInterCompanyDiscounts",
+        "AssignmentContributionCalculators",
+        "AssignmentNotes",
+        "AssignmentDocuments"
+      ],
+      "UpstreamPathTemplate": "/assignments/{assignmentId}/detail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "AssignmentAggregator"
+    },
+
+    //Timesheet Details
+    {
+      "ReRouteKeys": [
+        "Timesheet",
+        "TechnicalSpecialistWithGrossMargin",
+        "TimesheetTechSpecialistTime",
+        "TimesheetTechSpecialistExpenses",
+        "TimesheetTechSpecialistTravel",
+        "TimesheetTechSpecialistConsumables",
+        "TimesheetReferences",
+        "TimesheetDocuments",
+        "TimesheetNotes"
+      ],
+      "UpstreamPathTemplate": "/timesheets/{timesheetId}/detail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "TimesheetAggregator"
+    },
+
+    //Visit Details
+    {
+      "ReRouteKeys": [
+        "VisitByID",
+        "VisitTechnicalSpecialistWithGrossMargin",
+        "VisitTechSpecialistTime",
+        "VisitTechSpecialistExpenses",
+        "VisitTechSpecialistTravel",
+        "VisitTechSpecialistConsumables",
+        "VisitReferences",
+        "VisitSupplierPerformance",
+        "VisitInterCompanyDiscounts",
+        "VisitDocuments",
+        "VisitNotes"
+      ],
+      "UpstreamPathTemplate": "/visits/{visitId}/detail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "VisitAggregator"
+    },
+
+    //Supplier Details
+    {
+      "ReRouteKeys": [
+        "Supplier",
+        "SupplierContacts",
+        "SupplierDocuments",
+        "SupplierNotes"
+      ],
+      "UpstreamPathTemplate": "/suppliers/{supplierNumber}/detail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "SupplierAggregator"
+    },
+
+    //Supplier PO Details
+    {
+      "ReRouteKeys": [
+        "SupplierPOs",
+        "SupplierPOSubSupplier",
+        "SupplierPODocuments",
+        "SupplierPONotes"
+      ],
+      "UpstreamPathTemplate": "/supplierPOs/{SupplierPOId}/detail",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "SupplierPOAggregator"
+    },
+
+    //Technical Specialist Details
+    {
+      "ReRouteKeys": [
+        "TechnicalSpecialist",
+        "TechnicalSpecialistStamp",
+        "TechnicalSpecilistContact",
+        "TechnicalSpecilistPaySchedule",
+        "TechnicalSpecilistPayRateGetByePin",
+        "TechnicalSpecilistTaxonomy",
+        "TechnicalSpecilistInternalTraining",
+        "TechnicalSpecilistCompetancy",
+        "TechnicalSpecilistCustomerApproval",
+        "TechnicalSpecilistWorkHistory",
+        "TechnicalSpecilistEducation",
+        "TechnicalSpecilistCodeAndStandard",
+        "TechnicalSpecilistComputerElectronic",
+        "TechnicalSpecilistLanguage",
+        "TechnicalSpecilistCommodityAndEquipment",
+        "TechnicalSpecilistTraining",
+        "TechnicalSpecilistCertification",
+        "TechnicalSpecialistDocuments",
+        "TechnicalSpecialistSensitiveDocuments",
+        "TechnicalSpecilistNotes"
+      ],
+      "UpstreamPathTemplate": "/technicalspecialist/detail?ePin={ePin}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "TechnicalSpecialistAggregator"
+    },
+
+
+    //Home : Don't change sequence
+    {
+      "ReRouteKeys": [
+        "Contracts",
+        "Assignments",
+        "InactiveAssignments",
+        "Visits",
+        "Timesheets",
+        "DocumentApproval",
+        "MyTasks",
+        "MySearches"
+      ],
+      "UpstreamPathTemplate": "/dashboard",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "DashboardCountAggregator"
+    }
+  ]
+}

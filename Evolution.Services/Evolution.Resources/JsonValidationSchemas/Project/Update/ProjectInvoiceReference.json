@@ -1,0 +1,53 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ProjectInvoiceReferenceTypeId": {
+        "type": "integer"
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "ReferenceType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "DisplayOrder": {
+        "type": "integer"
+      },
+      "IsVisibleToAssignment": {
+        "type": [ "boolean", "null" ]
+      },
+      "IsVisibleToVisit": {
+        "type": [ "boolean", "null" ]
+
+      },
+      "IsVisibleToTimesheet": {
+        "type": [ "boolean", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [
+      "ProjectInvoiceReferenceTypeId",
+      "ReferenceType",
+      "DisplayOrder",
+      "RecordStatus"
+    ]
+  }
+}

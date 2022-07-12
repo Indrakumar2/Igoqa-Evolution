@@ -1,0 +1,30 @@
+{
+    "columnDefs": [
+        {
+            "headerCheckboxSelectionFilteredOnly": true,
+            "checkboxSelection": true,
+            "suppressFilter": true,
+            "width": 40
+        },
+        {
+            "headerName": "Code",
+            "field": "customerCode",
+            "tooltipField": "customerCode",
+            "filter": "agTextColumnFilter",
+            "width": 300
+        },
+        {
+            "headerName": "Name",
+            "field": "customerName",
+            "tooltipField": "customerName",
+            "filter": "agTextColumnFilter",
+            "width":300
+        }
+    ],
+    "enableFilter": true,
+    "enableSorting": true,
+    "pagination": false,
+    "gridHeight": 30,
+    "clearFilter":true, 
+    "exportFileName":"Customer Search"
+}

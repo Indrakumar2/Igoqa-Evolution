@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Validations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Assignment.Infrastructure\Evolution.Assignment.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Common\Evolution.Common.csproj" />
+    <ProjectReference Include="..\Evolution.ILearn.Domain\Evolution.ILearn.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Core\Evolution.TechnicalSpecialist.Core.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Domain\Evolution.TechnicalSpecialist.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.ValidationService\Evolution.ValidationService.csproj" />
+  </ItemGroup>
+
+</Project>

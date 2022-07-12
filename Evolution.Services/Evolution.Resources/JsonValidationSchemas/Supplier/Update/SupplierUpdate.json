@@ -1,0 +1,55 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "SupplierId": {
+        "type": "integer"
+      },
+      "SupplierName": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "SupplierAddress": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 200
+      },
+      "Country": {
+        "type": "string"
+      },
+      "State": {
+        "type": "string"
+      },
+      "City": {
+        "type": [ "string", "null" ]
+      },
+      "PostalCode": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 15
+      },
+      "IsActive": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      }
+    },
+    "required": ["SupplierName","RecordStatus","SupplierId","Country","State"]
+  }
+}

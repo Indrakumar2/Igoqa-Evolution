@@ -1,0 +1,69 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "CompanyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 2,
+        "maxLength": 5
+      },
+      "Name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "DocumentType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+
+      "IsVisibleToTS": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+
+      "IsVisibleToCustomer": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+
+      "DocumentSize": {
+        "type": [ "number", "null" ]
+      },
+
+      "UploadedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+
+      "UploadDataId": {
+        "type": [ "string", "null" ]
+      },
+
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [
+      "Name",
+      "DocumentType",
+      "RecordStatus"
+    ]
+  }
+}

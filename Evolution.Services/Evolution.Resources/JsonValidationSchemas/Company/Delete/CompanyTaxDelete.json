@@ -1,0 +1,38 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "CompanyTaxId": {
+        "type": [ "integer" ]
+      },
+      "TaxName": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "CompanyTaxId",
+      "TaxName",
+      "UpdateCount",
+      "RecordStatus",
+      "LastModification",
+      "ModifiedBy"
+    ]
+  }
+}

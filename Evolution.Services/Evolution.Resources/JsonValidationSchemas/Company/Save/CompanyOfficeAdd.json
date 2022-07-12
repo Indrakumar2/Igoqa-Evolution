@@ -1,0 +1,77 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "AddressId": {
+        "type": [ "integer", "null" ]
+      },
+      "CompanyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 2,
+        "maxLength": 6
+      }, 
+      "OfficeName": {
+        "type": "string",
+        "maxLength": 50,
+        "minLength": 1
+      },
+      "FullAddress": {
+        "type": "string",
+        "maxLength": 200,
+        "minLength": 1
+      },
+      "Country": {
+        "type": "string",
+        "maxLength": 100,
+        "minLength": 1
+      },
+      "State": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "City": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "PostalCode": {
+        "type": [ "string", "null" ],
+        "maxLength": 15
+
+      },
+      "AccountRef": {
+        "type": "string",
+        "maxLength": 15,
+        "minLength": 1
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [
+      "AddressId",
+      "OfficeName",
+      "FullAddress",
+      "Country",
+      "PostalCode",
+      "AccountRef",
+      "RecordStatus",
+      "ModifiedBy"
+    ]
+  }
+}

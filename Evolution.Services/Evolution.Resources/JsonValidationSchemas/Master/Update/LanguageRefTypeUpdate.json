@@ -1,0 +1,42 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "LanguageReferenceTypeId": {
+          "type":  "integer" 
+        },
+        "ReferenceType": {
+          "ReferenceType": "string"
+        },
+        "Language": {
+          "type":  "string"
+        },
+        "Text": {
+          "type": ["string","null"]
+        },
+        
+        "UpdateCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ModifiedBy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LastModifiedOn": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "RecordStatus": {
+          "enum": [ "M" ]
+        }
+      },
+      "required": ["LanguageReferenceTypeId","ReferenceType","Language","RecordStatus"]
+    }
+  }
+  

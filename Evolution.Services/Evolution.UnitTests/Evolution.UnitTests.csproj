@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UnitTestCases\Companies\**" />
+    <Compile Remove="UnitTestCases\Contracts\**" />
+    <Compile Remove="UnitTestCases\Contract\**" />
+    <Compile Remove="UnitTestCases\Customers\**" />
+    <Compile Remove="UnitTestCases\Masters\**" />
+    <EmbeddedResource Remove="UnitTestCases\Companies\**" />
+    <EmbeddedResource Remove="UnitTestCases\Contracts\**" />
+    <EmbeddedResource Remove="UnitTestCases\Contract\**" />
+    <EmbeddedResource Remove="UnitTestCases\Customers\**" />
+    <EmbeddedResource Remove="UnitTestCases\Masters\**" />
+    <None Remove="UnitTestCases\Companies\**" />
+    <None Remove="UnitTestCases\Contracts\**" />
+    <None Remove="UnitTestCases\Contract\**" />
+    <None Remove="UnitTestCases\Customers\**" />
+    <None Remove="UnitTestCases\Masters\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="15.8.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="Moq" Version="4.10.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Api\Evolution.Api.csproj" />
+    <ProjectReference Include="..\Evolution.AuthorizationService\Evolution.AuthorizationService.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Core\Evolution.Company.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Domain\Evolution.Company.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Infrastructure\Evolution.Company.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Core\Evolution.Customer.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Infrastructure\Evolution.Customer.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.DbRepository\Evolution.DbRepository.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Core\Evolution.Master.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Infrastructure\Evolution.Master.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mocks\Data\Assignment\Domain\" />
+    <Folder Include="Mocks\Data\Customers\Domain\" />
+  </ItemGroup>
+
+</Project>

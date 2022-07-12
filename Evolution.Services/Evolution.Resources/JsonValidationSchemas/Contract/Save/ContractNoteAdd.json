@@ -1,0 +1,51 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "Notes": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+
+      },
+      "CreatedBy": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 50
+
+      },
+      "CreatedOn": {
+
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [
+      "Notes",
+      "CreatedBy",
+      "CreatedOn",
+      "RecordStatus"
+    ]
+  }
+
+
+}

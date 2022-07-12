@@ -1,0 +1,55 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": [ "integer" ]
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "CreatedBy": {
+        "type": [ "string", "null" ]
+      },
+      "Note": {
+        "type": [ "string" ],
+        "minLength": 1
+      },
+      "NoteType": {
+        "type": [ "string", "null" ],
+        "enum": [
+          "InternalTraining",
+          "Competency",
+          "Certificate",
+          "Training",
+          "TSComment"
+        ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "NoteTypeId": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+
+    },
+    "required": [ "Epin", "RecordStatus", "Note", "Id" ]  
+
+  }
+  }
+

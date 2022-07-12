@@ -1,0 +1,74 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContactId": {
+        "type": "integer"
+      },
+      "CustomerAddressId": {
+        "type": "integer"
+      },
+      "Salutation": {
+        "type": [ "string", "null" ]
+      },
+      "Position": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "ContactPersonName": {
+        "type": "string"
+      },
+      "Landline": {
+        "type": "string"
+      },
+      "Fax": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "Mobile": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "Email": {
+        "type": [ "string", "null" ]
+      },
+      "OtherDetail": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "LastModifiedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      }
+    },
+    "required": [
+      "ContactId",
+      "CustomerAddressId", 
+      "RecordStatus"
+    ]
+  }
+}

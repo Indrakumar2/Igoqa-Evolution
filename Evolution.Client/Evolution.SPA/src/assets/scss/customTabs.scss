@@ -1,0 +1,53 @@
+
+.tabHeadContainer{
+    position: relative;   
+    background-color: $default-bg-color; 
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    .tabControls{
+        position: absolute;
+        z-index: 9;
+    }
+    .tabPrevBtn{
+        left: 2px;
+        top: 6px;
+    }
+    .tabNextBtn{
+        right: 5px;
+        top: 6px;
+    }
+    .customTabs{
+        display:-webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        overflow-x: hidden !important;
+        // width: 95%;
+    }
+}
+.tabs{
+    .indicator{
+        display: none;
+    }
+    .tab{
+        a.active{
+            color: $interaction-color !important;
+            font-family: $calibri-bold !important;
+            border-bottom:solid 5px $interaction-color;
+        }
+        a{
+            color: $font-title-color !important;            
+            border-bottom:solid 5px $default-bg-color;
+            &:focus{
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+.tabContainer{
+    .tabBody{
+        display: none;
+    }
+    .tabBody.active{
+        display: block;
+    }
+}

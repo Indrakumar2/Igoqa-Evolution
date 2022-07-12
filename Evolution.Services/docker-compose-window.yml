@@ -1,0 +1,134 @@
+version: '3.5'
+
+services:       
+    evolution.authorizationservice:
+      image: evolution/authorizationservice:${TAG:-R3.0.1}
+      build:
+        context: .
+        dockerfile: Evolution.AuthorizationService/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3 
+            window: 120s
+        resources:
+            limits: 
+                memory: 2g
+    evolution.api:
+      image: evolution/api:${TAG:-R3.0.1}
+      build:
+        context: .
+        dockerfile: Evolution.Api/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+        resources:
+            limits: 
+                memory: 10g
+    evolution.api1:
+      image: evolution/api:${TAG:-R3.0.1}
+      build:
+        context: .
+        dockerfile: Evolution.Api/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+        resources:
+            limits: 
+                memory: 10g
+    evolution.api2:
+      image: evolution/api:${TAG:-R3.0.1}
+      build:
+        context: .
+        dockerfile: Evolution.Api/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+        resources:
+            limits: 
+                memory: 10g
+    evolution.api.gateway:
+      image: evolution/api.gateway:${TAG:-R3.0.1}
+      volumes:
+        - D:/Evolution2Gatewaylog:C:/app/logs
+      build:
+        context: .
+        dockerfile: Evolution.Web.Gateway/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+        resources:
+            limits: 
+                memory: 4g
+    alert.email:
+      image: alert/email.console:${TAG:-R3.0.1}
+      build:
+        context: .
+        dockerfile: Evolution.Email.Notification/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+    evolution.email.expiry_notification:
+      image: alert/email.expirynotification:${TAG:-R3.0.1}
+      build:
+        context: .
+        dockerfile: Evolution.Email.ExpiryNotification/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+    evolution.document.deleteorphandocument:
+      image: evolution.document.deleteorphandocument:${TAG:-R3.0.1} 
+      build:
+        context: .
+        dockerfile: Evolution.Document.DeleteOrphanDocument/Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+    evolution.document.mongosync.new:
+      image: evolution.document.mongosync.new:${TAG:-R3.0.1} 
+      build:
+        context: .
+        dockerfile: Evolution.Document.MongoSync/Dockerfile_sync_new
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+    evolution.document.mongosync.failed:
+      image: evolution.document.mongosync.failed:${TAG:-R3.0.1} 
+      build:
+        context: .
+        dockerfile: Evolution.Document.MongoSync/Dockerfile_sync_failed
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s
+networks:
+  default:
+    external:
+      name: nat

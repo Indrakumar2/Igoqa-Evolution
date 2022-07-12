@@ -1,0 +1,1087 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="CVExport\**" />
+    <EmbeddedResource Remove="CVExport\**" />
+    <None Remove="CVExport\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="JsonValidationSchemas\Assignment\Delete\AssignmentContractScheduleDelete.json" />
+    <None Remove="JsonValidationSchemas\Assignment\Delete\AssignmentContributionCalculationDelete.json" />
+    <None Remove="JsonValidationSchemas\Assignment\Save\AssignmentContractScheduleAdd.json" />
+    <None Remove="JsonValidationSchemas\Assignment\Save\AssignmentContributionCalculationAdd.json" />
+    <None Remove="JsonValidationSchemas\Assignment\Update\AssignmentContractScheduleUpdate.json" />
+    <None Remove="JsonValidationSchemas\Assignment\Update\AssignmentContributionCalculationUpdate.json" />
+    <None Remove="JsonValidationSchemas\Customer\Delete\CustomerAssignmentReference.json" />
+    <None Remove="JsonValidationSchemas\Customer\Delete\CustomerContact.json" />
+    <None Remove="JsonValidationSchemas\Customer\Delete\CustomerNote.json" />
+    <None Remove="JsonValidationSchemas\Document\Delete\DocumentUniqueNameDelete.json" />
+    <None Remove="JsonValidationSchemas\Document\Save\DocumentApprovalAdd.json" />
+    <None Remove="JsonValidationSchemas\Document\Save\DocumentUniqueNameAdd.json" />
+    <None Remove="JsonValidationSchemas\Document\Update\DocumentApprovalUpdate.json" />
+    <None Remove="JsonValidationSchemas\Document\Update\DocumentUniqueNameUpdate.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="JsonValidationSchemas\Assignment\Delete\AssignmentContractScheduleDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Assignment\Delete\AssignmentContributionCalculationDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Assignment\Save\AssignmentContractScheduleAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Assignment\Save\AssignmentContributionCalculationAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Assignment\Update\AssignmentContractScheduleUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Assignment\Update\AssignmentContributionCalculationUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyDivisionCostCenterDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyDivisionDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyDocumentDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyExpectedMarginDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyInvoiceTextDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyNoteDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyOfficeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyPayrollPeriodDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyPayrollDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyQualificationDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyTaxDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Delete\CompanyDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyDivisionAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyDivisionCostCenterAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyDocumentAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyExpectedMarginAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyInvoiceTextAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyNoteAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyOfficeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyPayrollAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyPayrollPeriodAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyQualificationAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyEmailTemplateAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Save\CompanyTaxAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyDivisionCostCenterUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyDivisionUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyDocumentUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyExpectedMarginUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyInvoiceTextUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyNoteUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyOfficeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyPayrollPeriodUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyPayrollUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyQualificationUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyTaxUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Company\Update\CompanyUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Delete\CustomerAddress.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Delete\CustomerAssignmentReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Delete\CustomerContact.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Delete\CustomerNote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Save\Customer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Save\CustomerAccountReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Save\CustomerAddress.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Save\CustomerAssignmentReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Save\CustomerContact.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Save\CustomerNote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Update\Customer.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Update\CustomerAccountReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Update\CustomerAddress.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Update\CustomerAssignmentReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Update\CustomerContact.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Customer\Update\CustomerNote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Document\Delete\DocumentUniqueNameDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Document\Save\DocumentUniqueNameAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Document\Save\DocumentApprovalAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Document\Update\DocumentApprovalUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JsonValidationSchemas\Document\Update\DocumentUniqueNameUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="JsonValidationSchemas\Timesheet\Delete\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\logoCV.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentAdditionalExpenseDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentContributionRevenueCostDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentInterCompanyDiscountDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentReferenceDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentSubSupplierTSDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentSubSupplierDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentTaxonomyDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentTechnicalSpecialistDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Delete\AssignmentTechnicalSpecialistScheduleDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentContributionRevenueCostAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentNoteAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentSubSupplierAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentAdditionalExpenseAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentInterCompanyDiscountAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentReferenceAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentSubSupplierTSAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentTaxonomyAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentTechnicalSpecialistAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Save\AssignmentTechnicalSpecialistScheduleAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentAdditionalExpenseUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentContributionRevenueCostUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentInterCompanyDiscountUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentRefrenceUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentSubSupplierTSUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentSubSupplierUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentTaxonomyUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentTechnicalSpecialistScheduleUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentTechnicalSpecialistUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Assignment\Update\AssignmentUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractDocumentDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractExchangeRateDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractInvoiceAttachmentDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractInvoiceReferenceDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractNoteDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractScheduleDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Delete\ContractScheduleRateDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractDocumentAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractExchangeRateAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractInvoiceAttachmentAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractInvoiceReferenceAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractNoteAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractScheduleAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Save\ContractScheduleRateAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractDocumentUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractExchangeRateUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractInvoiceAttachmentUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractInvoiceReferenceUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractNoteUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractScheduleRateUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractScheduleUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Contract\Update\ContractUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Document\Delete\DocumentDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Document\Save\DocumentAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Document\Update\DocumentUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Draft\Delete\Draft.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Draft\Save\Draft.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Draft\Update\Draft.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Email\Delete\Email.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Email\Save\Email.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Email\Update\Email.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Home\Delete\MyTaskDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Home\Save\MyTaskAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Home\Update\MyTaskUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Delete\CountryDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Delete\CountyDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Save\CountyAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Save\CountryAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Update\CountryUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Update\CountyUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Delete\ProjectClientNotification.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Delete\ProjectDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Delete\ProjectDocument.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Delete\ProjectInvoiceAttachment.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Delete\ProjectInvoiceReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Delete\ProjectNote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Save\ProjectAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Save\ProjectClientNotification.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Save\ProjectDocument.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Save\ProjectInvoiceAttachment.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Save\ProjectInvoiceReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Save\ProjectNote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Update\ProjectClientNotification.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Update\ProjectDocument.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Update\ProjectInvoiceAttachment.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Update\ProjectInvoiceReference.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Update\ProjectNote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Project\Update\ProjectUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\ResourceSearch\Delete\ResourceSearch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\ResourceSearch\Save\OverrideResource.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\ResourceSearch\Save\ResourceSearch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\ResourceSearch\Update\OverrideResource.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\ResourceSearch\Update\ResourceSearch.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Delete\ActivityDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Delete\ModuleDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Delete\RoleDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Delete\UserDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Delete\UserTypeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Delete\UserRoleDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Save\ActivityAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Save\ModuleAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Save\RoleAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Save\UserAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Save\UserTypeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Save\UserRoleAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Update\ActivityUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Update\ModuleUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Update\RoleUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Update\UserTypeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Update\UserRoleUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Security\Update\UserUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SqlAuditLog\Save\SqlAditLogDetailAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SqlAuditLog\Save\SqlAuditLogAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Delete\SuppierPONote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Delete\SupplierPo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Delete\SupplierPODocuments.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Delete\SupplierPOSubSupplier.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Save\SuppierPONote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Save\SupplierPo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Save\SupplierPODocuments.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Save\SupplierPOSubSupplier.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Update\SuppierPONote.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Update\SupplierPo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Update\SupplierPODocuments.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\SupplierPO\Update\SupplierPOSubSupplier.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Delete\SupplierContactDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Delete\SupplierDocumentDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Delete\SupplierNoteDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Delete\SupplierDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Save\SupplierAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Save\SupplierContactAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Save\SupplierDocumentAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Save\SupplierNoteAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Update\SupplierContactUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Update\SupplierDocumentUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Update\SupplierNoteUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Supplier\Update\SupplierUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechCodeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialist.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistCalendarDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistCommodityEquipmentKnowledgeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistCertification.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistContactDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistCompetency.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistCustomerApprovalDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistDraft.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistInternalTraining.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistLanguageCapabilityDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistNoteDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistPayRate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistStamp.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistTaxonomy.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistTimeOffRequestDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistTraining.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechnicalSpecialistTrainingAndCompetencyType.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechPayScheduleDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechQualificationDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechSpecialistComputerElectronicKnowledgeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Delete\TechSpecilaistWorkHistoryDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistCalendarAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechCodeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistCompetency.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistContactAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistDraft.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistInternalTraining.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistLanguageCapabilityAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistNoteAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistPayRate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistStampAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistTaxonomy.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistCommodityEquipmentKnowledgeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistTimeOffrequestAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistTraining.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistCertification.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechnicalSpecialistTrainingAndCompetencyType.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechQualificationAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechPayScheduleAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechSpecialComputerElectronicKnowledgeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechSpecialistCustomerApprovalAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Save\TechSpecialistWorkHistoryAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechCodeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialist.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistCalendarUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistCertification.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistCommodityEquipmentKnowledgeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistCompetency.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistContactUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistCustomerApprovalUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistDraft.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistInternalTraining.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistLanguageCapabilityUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistNoteUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistPayRate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistStamp.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistTaxonomy.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistTimeOffRequestUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistTraining.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistTrainingAndCompetencyType.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechnicalSpecialistUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechPayScheduleUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechQualificationUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechSpecialistComputerElectronicKnowledgeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\TechnicalSpecialist\Update\TechSpecialistWorkHistoryUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TechSpecItemConsumableDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TechSpecItemExpenseDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TechSpecItemTimeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TechSpecItemTravelDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TimesheetDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TechSpecItemConsumableAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TechSpecItemExpenseAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TechSpecItemTravelAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TechSpecItemTimeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TimesheetAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TechSpecItemConsumableUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TechSpecItemExpenseUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TechSpecItemTimeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TechSpecItemTravelUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TimesheetUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitDocumentDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitReferenceDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitSupplierPerformanceDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitTechSpecItemConsumableDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitTechSpecItemDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitTechSpecItemExpenseDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitTechSpecItemTimeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Delete\VisitTechSpecItemTravelDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitDocumentAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitNoteAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitReferenceAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitSupplierPerformanceAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitTechSpecItemAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitTechSpecItemConsumableAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitTechSpecItemExpenseAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitTechSpecItemTimeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Save\VisitTechSpecItemTravelAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitDocumentUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitReferenceUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitSupplierPerformanceUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitTechSpecItemConsumableUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitTechSpecItemExpenseUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitTechSpecItemTimeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitTechSpecItemTravelUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitTechSpecItemUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Visit\Update\VisitUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	  <None Update="SQLQueries\Delete\Visit_Detail\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Timesheet_Detail\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract_Detail\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract_ExchangeRate\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract_InvoiceAttachment\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract_InvoiceReference\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract_Note\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract_ScheduleRate\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Contract_Schedule\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Customer_AccountReference\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Customer_Address\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Customer_AssignmentReference\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Customer_Contact\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Customer_Note\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Project\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Project_Detail\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Assignment_Detail\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Security\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\Supplier_Detail\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="SQLQueries\Delete\SupplierPO_Detail\Delete.SQL">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TimesheetNoteDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TimesheetReferenceDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Delete\TimesheetTechSpecDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TimesheetNoteAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TimesheetReferenceAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Save\TimesheetTechSpecAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TimesheetNoteUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TimesheetReferenceUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Timesheet\Update\TimesheetTechSpecUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Save\LanguageRefTypeAdd.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Update\LanguageRefTypeUpdate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="JsonValidationSchemas\Master\Delete\LanguageRefTypeDelete.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

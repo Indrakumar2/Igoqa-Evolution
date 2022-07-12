@@ -1,0 +1,74 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+
+      "Moduletype": {
+        "type": [ "string", "null" ],
+        "maxLength": 20
+      },
+      "Description": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "SerilizableObject": {
+        "type": [ "string", "null" ]
+
+      },
+      "SerilizationType": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "DraftId": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "AssignedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "AssignedTo": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "AssignedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "CreatedBy": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "CreatedTo": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "RecordStatus"
+    ]
+  }
+}

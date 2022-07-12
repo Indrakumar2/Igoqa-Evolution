@@ -1,0 +1,40 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "ReferenceType": {
+        "type": "string"
+      },
+      "ReferenceValue": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "D" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      },
+      "AssignmentReferenceTypeId": {
+        "type": "integer"
+      }
+    },
+    "required": ["AssignmentId","ReferenceType","RecordStatus","AssignmentReferenceTypeId"]
+  }
+}

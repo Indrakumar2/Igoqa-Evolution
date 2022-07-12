@@ -1,0 +1,71 @@
+﻿{
+  "type": "array", 
+  "items": {
+    "type": "object",
+    "properties": {
+      "Address": {
+        "type": "string"
+      },
+      "Country": {
+        "type": "string"
+      },
+      "County": {
+        "type": "string"
+      },
+      "City": {
+        "type": "string"
+      },
+      "PostalCode": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "EUVatPrefix": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "VatTaxRegNumber": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "AddressId": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": "string"
+      },
+      "LastModifiedOn": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N", "M", "D" ]
+      }
+    },
+    "required": [
+      "Address",
+      "AddressId",
+      "UpdateCount",
+      "ModifiedBy",
+      "RecordStatus",
+      "Country",
+      "County",
+      "City"
+    ]
+  }
+}

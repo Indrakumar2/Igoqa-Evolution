@@ -1,0 +1,86 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "VisitTechnicalSpecialistAccountTravelId": {
+        "type": "number"
+      },
+      "VisitId": {
+        "type": "number"
+      },
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "VisitTechnicalSpecialistId": {
+        "type": "number"
+      },
+      "ExpenseDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ChargeExpenseType": {
+        "type": "string"
+      },
+      "ExpenseDescription": {
+        "type": [ "string", "null" ]
+      },
+      "IsInvoicePrintExpenseDescription": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "ChargeUnit": {
+        "type": [ "number", "null" ]
+      },
+      "ChargeRate": {
+        "type": [ "string", "null" ]
+      },
+      "ChargeRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayUnit": {
+        "type": [ "number", "null" ]
+      },
+      "PayRateCurrency": {
+        "type": [ "string", "null" ]
+      },
+      "PayRate": {
+        "type": [ "number", "null" ]
+      },
+      "ContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "D" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+
+    },
+    "required": [
+      "VisitTechnicalSpecialistAccountTravelId",
+      "VisitId",
+      "AssignmentId",
+      "VisitTechnicalSpecialistId",
+      "ExpenseDate",
+      "ChargeExpenseType",
+      "PayUnit",
+      "PayRate",
+      "RecordStatus"
+    ]
+  }
+}

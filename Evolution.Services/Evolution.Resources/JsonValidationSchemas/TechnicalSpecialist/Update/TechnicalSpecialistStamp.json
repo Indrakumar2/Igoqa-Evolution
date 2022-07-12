@@ -1,0 +1,65 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Epin": {
+        "type": "integer",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "StampInfoId": {
+        "type": [ "integer" ]
+      },
+      "IsSoftStamp": {
+        "type": [ "boolean" ],
+        "enum": [ true, false ]
+      },
+      "CountryName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "StampNumber": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      },
+      "IssuedDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "LastModifiedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "IsSoftStamp",
+      "StampNumber",
+      "CountryName",
+      "Epin",
+      "Id",
+      "IssuedDate",
+      "RecordStatus"
+    ]
+  }
+}

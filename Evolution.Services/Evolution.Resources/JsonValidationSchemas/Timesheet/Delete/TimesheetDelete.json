@@ -1,0 +1,79 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "TimesheetId": {
+        "type": "integer"
+      },
+      "TimesheetAssignmentId": {
+        "type": "integer"
+      },
+      "TimesheetStatus": {
+        "type": [ "string", "null" ],
+        "enum": [ "A", "C", "J", "O", "N", "R" ]
+      },
+      "TimesheetStartDate": {
+        "type": [ "string" ],
+        "format": "date-time"
+      },
+      "TimesheetEndDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "TimesheetDatePeriod": {
+        "type": [ "string", "null" ],
+        "maxLength": 30
+      },
+      "TimesheetExpectedCompleteDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "TimesheetReference1": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "TimesheetReference2": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "TimesheetReference3": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "TimesheetCompletedPercentage": {
+        "type": [ "integer", "null" ]
+      },
+      "IsApprovedByContractCompany": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "TimesheetReviewBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+      "TimesheetReviewDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "D" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [ "TimesheetId", "TimesheetAssignmentId", "TimesheetStatus", "TimesheetStartDate", "RecordStatus" ]
+  }
+}

@@ -1,0 +1,53 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "AssignmentContractRateScheduleId": {
+        "type": ["integer"]
+      },
+      "AssignmentId": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ContractScheduleId": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ContractScheduleName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "AssignmentContractRateScheduleId",
+      "RecordStatus",
+      "ModifiedBy"
+    ]
+  }
+}

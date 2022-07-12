@@ -1,0 +1,113 @@
+.adminContractRatesModal {
+    top: 10% !important;
+    left: 0% !important;
+    width: 80% !important;
+}
+.deleteChargeRates {
+    width: 30% !important;
+}
+
+.chargeTypeOption {
+    color: $font-danger-color
+}
+
+ //ITK LIVE def 651 scroll issue fix
+ .chargeRateGrid {
+    .reactAgGrid .customRow .ag-cell{
+     #isDescriptionPrintedOnInvoice{
+            left: 675px !important;
+        }
+        padding-left: 9px !important; 
+        padding-right: 0px !important;
+        
+    }
+    .reactAgGrid {
+        .ag-header-cell-text{
+            font-size: 0.77rem;
+        }
+        .ag-react-container{
+            .datePickerHolder .react-datepicker-wrapper .react-datepicker__input-container 
+            input {
+                background-size: 14px !important;
+            }
+            .input-field.col {
+                padding: 0px !important;
+            }
+        }
+        .ag-root-wrapper{
+            .ag-root-wrapper-body{
+                .ag-root{
+                    .ag-body{
+                        .ag-body-viewport-wrapper{ 
+                            .ag-body-viewport { 
+                                overflow-x: hidden !important;
+                                .ag-body-container.ag-layout-auto-height{ 
+                                    max-height: none !important;
+                                    .ag-row{
+                                        .ag-cell[col-id='chargeType']{
+                                            .ag-react-container{
+                                                  
+                                                  .col{
+                                                    width:10em !important;
+                                                    padding-right: 0em !important
+                                                  }
+                                            }
+                                        }
+                                        .ag-cell[col-id='percentage']{
+                                            .ag-react-container{
+                                                  .col{
+                                                    padding-right: 0em !important; 
+                                                    width: 4em !important
+                                                  }
+                                            }
+                                        }
+                                        .ag-cell[col-id='effectiveFrom']{
+                                            .ag-react-container{
+                                                  .col{
+                                                    width: 8em;
+                                                    padding-right: 0em !important;
+                                                }
+                                            }
+                                        }
+                                        .ag-cell[col-id='effectiveTo']{
+                                            .ag-react-container{
+                                                  .col{
+                                                    width: 8em;
+                                                    padding-right: 0em !important;
+                                                }
+                                            }
+                                        }
+                                        .ag-cell[col-id='expenseType']{
+                                            .ag-react-container{
+                                                  .col{
+                                                    width: 8.7em;
+                                                    padding-right: 0em !important;
+                                                }
+                                            }
+                                        }
+                                        .ag-cell[col-id='expenseType']{
+                                            .ag-react-container{
+                                                  .col{
+                                                    width: 8.7em;
+                                                    padding-right: 0em !important;
+                                                }
+                                            }
+                                        }
+                                        .ag-cell[col-id='rate']{
+                                            .ag-react-container{
+                                                  .col{
+                                                    width: 6.6em;
+                                                    padding-right: 0em !important;
+                                                }
+                                            }
+                                        }
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }       
+    }
+}

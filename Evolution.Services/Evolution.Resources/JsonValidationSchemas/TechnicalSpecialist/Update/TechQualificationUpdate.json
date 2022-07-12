@@ -1,0 +1,71 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": "integer"
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "Qualification": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "Institution": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "Address": {
+        "type": [ "string", "null" ],
+        "maxLength": 200
+      },
+      "CountryName": {
+        "type": [ "string", "null" ],
+        "maxLength": 200
+      },
+      "CountyName": {
+        "type": [ "string", "null" ],
+        "maxLength": 200
+      },
+      "CityName": {
+        "type": [ "string", "null" ],
+        "maxLength": 200
+      },
+      "FromDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ToDate": {
+        "type": [ "string" ],
+        "format": "date-time"
+      },
+      "Percentage": {
+        "type": [ "number", "null" ]
+      },
+      "Place": {
+        "type": [ "string", "null" ],
+        "maxLength": 100
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 150
+      }
+    },
+    "required": [ "Id", "Epin", "Qualification", "Institution", "ToDate", "RecordStatus" ]
+  }
+}

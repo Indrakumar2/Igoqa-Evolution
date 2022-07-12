@@ -1,0 +1,71 @@
+﻿  {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "integer"
+        },
+        "DocumentName": {
+          "type": [ "string", "null" ],
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "DocumentType": {
+          "type": [ "string", "null" ],
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "DocumentSize": {
+          "type": [ "integer", "null" ]
+        },
+        "IsVisibleToTS": {
+          "type": "boolean",
+          "enum": [ true, false ]
+        },
+        "IsVisibleToCustomer": {
+          "type": "boolean",
+          "enum": [ true, false ]
+        },
+        "IsVisibleOutOfCompany": {
+          "type": "boolean",
+          "enum": [ true, false ]
+        },
+        "Status": {
+          "type": [ "string", "null" ],
+          "enum": [ "CR", "IN", "C", "CL", "F", "APP", "R" ]
+        },
+        "DocumentUniqueName": {
+          "type": "string"
+        },
+        "ModuleCode": {
+          "type": [ "string", "null" ],
+          "enum": [ "None", "ASGMNT", "CNT", "COMP", "CUST", "PRJ", "SUP", "SUPPO", "TS", "VST", "TIME" ,"null" ]
+        },
+        "ModuleRefCode": {
+          "type": [ "string", "null" ]
+        },
+        "CreatedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "UpdateCount": {
+          "type": [ "integer", "null" ]
+        },
+        "RecordStatus": {
+          "enum": [ "M" ]
+        },
+        "LastModification": {
+          "type": [ "string", "null" ],
+          "format": "date-time"
+        },
+        "ModifiedBy": {
+          "type": [ "string", "null" ]
+        }
+
+
+      },
+      "required": [ "DocumentUniqueName", "RecordStatus", "Id" ]
+    }
+  }
+

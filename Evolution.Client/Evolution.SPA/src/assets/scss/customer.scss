@@ -1,0 +1,85 @@
+.searchIcon{
+    position: absolute;
+    right: 12px;   
+}
+.extranetAccountModal {
+    top: 3% !important;
+    left: 0% !important;
+    width: 90% !important;
+    max-height: 75% !important;
+    .reactAgGrid{
+        .ag-root-wrapper{
+            .ag-root-wrapper-body{
+                .ag-root{
+                    .ag-body {
+                        .ag-body-viewport-wrapper{
+                            width: 100%;
+                            min-width: 100%;
+                            flex: 1 1;
+                            overflow-y: auto !important;
+                            max-height: 42vh !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .relative{
+        position: relative;
+        >div.row{height: 50px;
+            width: 100%;            
+            display: inline-block;
+        }
+        .customBtn{
+            position: absolute;
+            right: 0;
+            top: 13px;
+        }
+    }  
+    .customCard.width{
+        width:49.5%!important;
+        margin-right:0.5%!important;
+    }
+    .tabs .tab {
+        display: inline-block;
+        text-align: center;
+        line-height: 48px;
+        height: 48px;
+        padding: 0;
+        margin: 0;
+        text-transform: capitalize!important;
+        a.active{
+            color: $interaction-color !important;
+            font-family: $calibri-bold !important;
+            border-bottom:solid 5px $interaction-color;
+            background-color:#FFC700 !important;
+        }
+        a{
+            color: $font-title-color !important;            
+            border-bottom:solid 5px $default-bg-color;
+            &:focus{
+                background-color: #FFC700 !important;
+            }
+        }
+    }   
+}
+.extranetModalContent{
+    max-height: 400px;
+    overflow-y: scroll;
+    min-height: 100px;
+}
+/* Style the search field */
+.customerSearchBox {
+    float: left;
+    width: 90% !important;
+}
+  
+  /* Style the submit button */
+.customerSearchButton {
+    float: left;
+    width: 10%;
+    border-left: none;
+    // button{
+    //     margin-top:2rem!important;
+    // }
+}

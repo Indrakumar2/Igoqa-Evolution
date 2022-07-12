@@ -1,0 +1,43 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "VisitId": {
+        "type": "number"
+      },
+      "SupplierPerformance": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 100
+      },
+      "NCRReference": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "NCRCloseOutDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [ "VisitId", "SupplierPerformance", "NCRReference", "RecordStatus" ]
+  }
+}

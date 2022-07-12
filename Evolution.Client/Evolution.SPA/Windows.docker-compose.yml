@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:       
+    igoqa.evolution.spa:
+      cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      image: evo2igoqa/spa:${TAG:-3.0.1}
+      build:
+        context: .
+        dockerfile: Windows.Evolution.SPA.Dockerfile
+      deploy:
+        restart_policy:
+            condition: on-failure
+            delay: 5s
+            max_attempts: 3
+            window: 120s        
+networks:
+  default:
+    external:
+      name: nat

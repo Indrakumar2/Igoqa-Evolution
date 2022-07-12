@@ -1,0 +1,40 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5104",
+      "sslPort": 0
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SQLDatabase": "Evo2DecUAT", //Evolution2Dec //Evo2DecUAT
+        "SQLServer": "192.168.54.108", //10.10.11.130 //192.168.54.108
+        "SQLUser": "sa", //otr //sa
+        "SQLPassword": "Ev02sql16", //otrmi //Ev02sql16
+        "SQLMaxPoolSize": "500",
+        "SQLConnectionTimeout": "180",
+        "MongoDbIp": "192.168.54.108",
+        "MongoDbPort": "27017",
+        "MongoDbName": "EvolutionDocuments",
+        "ApplicationGatewayURL": "http://localhost:5100/"
+      }
+    },
+    "Evolution.Document.Api": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "api/values",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5002"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": "integer"
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "Name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "DocumentType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+
+      "IsVisibleToTS": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+
+      "IsVisibleToCustomer": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+
+      "DocumentSize": {
+        "type": [ "number", "null" ]
+      },
+
+      "UploadedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+
+      "UploadDataId": {
+        "type": [ "string", "null" ]
+      },
+
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+
+      "RecordStatus": {
+        "enum": [ "M" ]
+      }
+    },
+    "required": [
+      "Id",
+      "Name",
+      "DocumentType",
+      "RecordStatus"
+    ]
+  }
+}

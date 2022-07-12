@@ -1,0 +1,19 @@
+﻿  {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": { 
+        "DocumentUniqueName": {
+          "type": "string"
+        }, 
+        "RecordStatus": {
+          "enum": [ "D" ]
+        },
+        "ModifiedBy": {
+          "type": [ "string", "null" ]
+        } 
+      },
+      "required": [ "DocumentUniqueName", "RecordStatus", "ModifiedBy"]
+    }
+  }
+

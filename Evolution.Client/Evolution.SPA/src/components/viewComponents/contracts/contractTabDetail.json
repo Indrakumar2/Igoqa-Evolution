@@ -1,0 +1,75 @@
+[
+
+    {
+
+      "tabHeader":"General Details",
+
+      "tabBodyComponent":"/contracts/generalDetails",
+
+      "isActive":true
+
+    },  
+    {
+
+        "tabHeader":"Invoicing Defaults",
+  
+        "tabBodyComponent":"/contracts/invoicingDefaults",
+  
+        "isActive":false
+  
+      },
+      {
+
+        "tabHeader":"Fixed Exchange Rates",
+  
+        "tabBodyComponent":"/contracts/fixedExchangeRates",
+  
+        "isActive":false
+  
+      },
+      {
+
+        "tabHeader":"Rate Schedules",
+  
+        "tabBodyComponent":"/contracts/rateSchedule",
+  
+        "isActive":false
+  
+      },
+      {
+
+        "tabHeader":"Documents",
+  
+        "tabBodyComponent":"/contracts/documents",
+  
+        "isActive":false
+  
+      },
+      {
+
+        "tabHeader":"Projects",
+  
+        "tabBodyComponent":"/contracts/projects",
+  
+        "isActive":false
+  
+      },
+      {
+
+        "tabHeader":"Notes",
+  
+        "tabBodyComponent":"/contracts/notes",
+  
+        "isActive":false
+  
+      },
+      {
+
+        "tabHeader":"Change Log",
+  
+        "tabBodyComponent":"/contracts/changeLog",
+  
+        "isActive":false
+  
+      }
+  ]

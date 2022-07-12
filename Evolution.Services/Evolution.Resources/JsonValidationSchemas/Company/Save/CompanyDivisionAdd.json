@@ -1,0 +1,52 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+
+      "CompanyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 6
+      },
+
+      "DivisionCode": {
+        "type": [ "string", "null" ]
+      },
+
+      "DivisionName": {
+        "type": "string"
+      },
+
+      "DivisionAcReference": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      },
+
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+
+      "RecordStatus": {
+        "enum": [ "N" ]
+      }
+    },
+    "required": [
+      "CompanyCode",
+      "DivisionName",
+      "DivisionAcReference",
+      "RecordStatus"
+    ]
+  }
+}

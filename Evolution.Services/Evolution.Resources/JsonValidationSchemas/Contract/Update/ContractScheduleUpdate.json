@@ -1,0 +1,48 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContractNumber": {
+        "type": "string"
+
+      },
+      "ScheduleId": {
+        "type": "integer"
+      },
+      "ScheduleName": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 200
+      },
+      "ScheduleNameForInvoicePrint": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 20
+      },
+      "ChargeCurrency": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "BaseScheduleName": {
+        "type": [ "string", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [ "ScheduleName", "ChargeCurrency", "RecordStatus", "ScheduleId" ]
+  }
+}

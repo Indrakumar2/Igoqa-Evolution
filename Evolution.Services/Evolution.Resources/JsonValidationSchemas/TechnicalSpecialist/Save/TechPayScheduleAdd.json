@@ -1,0 +1,45 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "PayScheduleName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "PayScheduleNote": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 200
+      },
+      "PayCurrency": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 5
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 150
+      }
+    },
+    "required": [ "Epin", "PayScheduleName", "RecordStatus", "PayCurrency" ]
+  }
+}

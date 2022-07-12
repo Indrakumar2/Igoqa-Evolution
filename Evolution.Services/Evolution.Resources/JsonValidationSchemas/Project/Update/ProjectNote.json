@@ -1,0 +1,48 @@
+{
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "properties": {
+      "ProjectNoteId": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "Notes": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 4000
+      },
+      "CreatedBy": {
+        "type": "string"
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      }
+    },
+    "required": [
+      "ProjectNoteId",
+      "Notes",
+      "UpdateCount",
+      "CreatedBy",
+      "RecordStatus"
+    ]
+  }
+}

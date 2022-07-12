@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Extensions\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <None Remove="Extensions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Contracts\Budget.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Models\Contracts\ContractInvoiceReferenceType.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.AuditLog.Domain\Evolution.AuditLog.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Common\Evolution.Common.csproj" />
+    <ProjectReference Include="..\Evolution.Customer.Domain\Evolution.Customer.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.DbRepository\Evolution.DbRepository.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Domain\Evolution.Document.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

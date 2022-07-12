@@ -1,0 +1,32 @@
+.customCreateDiv{
+    // position: relative;
+    // top: 22px;
+    margin-top:2rem;
+}
+
+.add-text{
+    font-size:12px;
+}  
+
+.companyPageContainer{
+    .collapsible{
+        .collapsible-header{
+            background-color: #fff;
+        }
+        .collapsible-body{
+            padding: 0.5rem;
+            background-color: #fff;
+        }
+    }
+}
+
+.invoiceDetailsPopUp{
+    z-index: 1003 !important;
+}
+//Remove below code
+// #createPayrollPeriod{
+//     min-height: 350px;
+// }
+.edit-size{
+    font-size: 26px;
+}

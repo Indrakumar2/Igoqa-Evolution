@@ -1,0 +1,103 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "CompanyCode": {
+        "type": "string"
+      },
+      "CompanyName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "SourceId": {
+        "type": "integer"
+      },
+      "DocumentId": {
+        "type": "integer"
+      },
+      "SourceModuleName": {
+        "type": "string"
+      },
+      "TargetId": {
+        "type": "integer"
+      },
+      "TargetModuleName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "CoordinatorName": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "DocumentName": {
+        "type": "string"
+      },
+      "UploadedDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ApprovedDate": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "Status": {
+        "type": "string"
+      },
+      "DocumentType": {
+        "type": "string"
+      },
+      "DocumentSize": {
+        "type": "string"
+      },
+      "TechVisible": {
+        "type": "string"
+      },
+      "Entity": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "UpdateCount": {
+        "type": "integer"
+      },
+      "ModifiedBy": {
+        "type": "string"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "CompanyCode",
+      "SourceId",
+      "SourceModuleName",
+      "CoordinatorName",
+      "DocumentName",
+      "UploadedDate",
+      "Status",
+      "DocumentType",
+      "DocumentSize",
+      "UpdateCount",
+      "ModifiedBy",
+      "LastModification",
+      "RecordStatus"
+    ]
+  }
+}

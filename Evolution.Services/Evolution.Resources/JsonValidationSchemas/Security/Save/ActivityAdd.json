@@ -1,0 +1,33 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "ApplicationName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "ActivityCode": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 15
+      },
+      "ActivityName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "Description": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      }
+    },
+    "required": [ "ApplicationName","ActivityCode", "ActivityName", "RecordStatus" ]
+  }
+}

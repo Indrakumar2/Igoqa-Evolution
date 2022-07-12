@@ -1,0 +1,139 @@
+{
+    // Use IntelliSense to find out which attributes exist for C# debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Evolution.API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Evolution.Api/bin/Debug/netcoreapp2.2/Evolution.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Evolution.Api",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart",
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                },
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "SQLDatabase": "Evolution2_Dev",
+                "SQLServer": "192.168.54.108",
+                "SQLUser": "sa",
+                "SQLPassword": "sa123",
+                "SecurityAppName": "Evolution2",
+                "MongoDbIp": "192.168.54.118",
+                "MongoDbPort": "5300",
+                "MongoDbName": "EvolutionDocuments",
+                "ASPNETCORE_URLS": "http://localhost:5101/"
+            }
+        },
+        {
+            "name": "Evolution.AuthorizationService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Evolution.AuthorizationService/bin/Debug/netcoreapp2.2/Evolution.AuthorizationService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Evolution.AuthorizationService",
+            "stopAtEntry": false,
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "IsIpValidationRequire": "True",
+                "LockUserAfterFailedAttemptCount": "3",
+                "TempLockDurationInMinutes": "2",
+                "SQLDatabase": "Evolution2_Dev",
+                "SQLServer": "192.168.54.108",
+                "SQLUser": "sa",
+                "SQLPassword": "sa123",
+                "IsSandBoxEnvironment": "true",
+                "LdapUrl": "netserv.local",
+                "LdapServerPort": "0",
+                "LdapDomainName": "netserv",
+                "LdapUser": "demo.demo",
+                "LdapPswd": "demo",
+                "ASPNETCORE_URLS": "http://localhost:5102/"
+            }
+        },
+        {
+            "name": "Evolution.Document.Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Evolution.Document.Api/bin/Debug/netcoreapp2.2/Evolution.Document.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Evolution.Document.Api",
+            "stopAtEntry": false,
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "SQLDatabase": "Evolution2_Dev",
+                "SQLServer": "192.168.54.108",
+                "SQLUser": "sa",
+                "SQLPassword": "sa123",
+                "ASPNETCORE_URLS": "http://localhost:5104/"
+            }
+        },
+        {
+            "name": "Evolution.Web.Gateway",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Evolution.Web.Gateway/bin/Debug/netcoreapp2.2/Evolution.Web.Gateway.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Evolution.Web.Gateway",
+            "stopAtEntry": false,
+            "launchBrowser": {
+                "enabled": true,
+                "args": "${auto-detect-url}",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start ${auto-detect-url}"
+                }
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5100/"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Evolution",
+            "configurations": [
+                "Evolution.API",
+                "Evolution.AuthorizationService",
+                "Evolution.Web.Gateway",
+                "Evolution.Document.Api"
+            ]
+        }
+    ]
+}

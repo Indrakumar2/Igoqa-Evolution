@@ -1,0 +1,50 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "TechnicalSpecialistTimeOffRequestId": {
+        "type": [ "integer", "null" ]
+      },
+      "TechnicalSpecialistId": {
+        "type": "integer"
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "LeaveCategoryType": {
+        "type": "string"
+      },
+      "TimeOffFrom": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "TimeOffThrough": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "Comments": {
+        "type": [ "string", "null" ]
+      },
+      "ApprovalStatus": {
+        "type": [ "string", "null" ]
+      },
+      "ApprovedBy": {
+        "type": [ "string", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+
+
+    },
+    "required": [ "LeaveCategoryType", "TechnicalSpecialistId", "TimeOffFrom", "TimeOffThrough", "RecordStatus" ]
+  }
+}

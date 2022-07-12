@@ -1,0 +1,63 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "MyTaskId": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "Moduletype": {
+        "type": "string"
+      },
+      "TaskType": {
+        "type": "string"
+      },
+      "TaskRefCode": {
+        "type": "string"
+      },
+      "AssignedBy": {
+        "type": "string"
+      },
+      "AssignedTo": {
+        "type": "string"
+      },
+      "Description": {
+        "type": [ "string", "null" ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "Moduletype",
+      "TaskType",
+      "RecordStatus",
+      "TaskRefCode",
+      "AssignedBy",
+      "AssignedTo"
+    ]
+  }
+}

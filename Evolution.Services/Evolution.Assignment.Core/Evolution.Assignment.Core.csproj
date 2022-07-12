@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resolver\BaseInterCoDiscount.cs" />
+    <Compile Remove="Services\AssignmentContributionRevenueCostService.cs" />
+    <Compile Remove="Services\AssignmentDetailService - Copy.cs" />
+    <Compile Remove="Services\AssignmentSubSupplierTSService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Assignment.Domain\Evolution.Assignment.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Automapper.Resolver\Evolution.Automapper.Resolver.csproj" />
+    <ProjectReference Include="..\Evolution.Common\Evolution.Common.csproj" />
+    <ProjectReference Include="..\Evolution.Contract.Domain\Evolution.Contract.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Home.Domain\Evolution.Home.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Logging\Evolution.Logging.csproj" />
+    <ProjectReference Include="..\Evolution.Master.Domain\Evolution.Master.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.NumberSequence.InfraStructure\Evolution.NumberSequence.InfraStructure.csproj" />
+    <ProjectReference Include="..\Evolution.Project.Domain\Evolution.Project.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Supplier.Domain\Evolution.Supplier.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.SupplierPO.Domain\Evolution.SupplierPO.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Domain\Evolution.TechnicalSpecialist.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Timesheet.Domain\Evolution.Timesheet.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Visit.Domain\Evolution.Visit.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Web.Gateway\Evolution.Web.Gateway.csproj" />
+	 <ProjectReference Include="..\Evolution.SupplierPO.Domain\Evolution.SupplierPO.Domain.csproj"/>
+
+  </ItemGroup>
+
+</Project>

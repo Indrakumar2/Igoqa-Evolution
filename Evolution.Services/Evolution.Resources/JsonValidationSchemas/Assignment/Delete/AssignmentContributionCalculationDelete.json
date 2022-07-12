@@ -1,0 +1,119 @@
+﻿{
+  "definitions": {
+    "contributionRevenueCosts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "AssignmentContributionRevenueCostId": {
+            "type": [ "integer", "null" ]
+          },
+          "AssignmentContributionCalculationId": {
+            "type": [ "integer", "null" ]
+          },
+          "Type": {
+            "type": [ "string" ],
+            "enum": [ "A", "B" ]
+          },
+          "Value": {
+            "type": [ "number" ]
+          },
+          "Description": {
+            "type": [ "string" ],
+            "maxLength": 100
+          },
+          "UpdateCount": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "RecordStatus": {
+            "enum": [ "D" ]
+          },
+          "LastModification": {
+            "type": [ "string", "null" ],
+            "format": "date-time"
+          },
+          "ModifiedBy": {
+            "type": [ "string", "null" ],
+            "maxLength": 50
+          }
+        },
+        "required": [
+          "Type",
+          "Value",
+          "Description",
+          "AssignmentContributionCalculationId",
+          "AssignmentContributionRevenueCostId",
+          "RecordStatus"
+        ]
+      }
+    }
+  },
+
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "AssignmentContCalculationId": {
+        "type": [
+          "integer"
+        ]
+      },
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "TotalContributionValue": {
+        "type":  "number"
+      },
+      "ContractHolderPercentage": {
+        "type": "number"
+      },
+      "OperatingCompanyPercentage": {
+        "type": [ "number", "null" ]
+      },
+      "CountryCompanyPercentage": {
+        "type": [ "number", "null" ]
+      },
+      "ContractHolderValue": {
+        "type": [ "number", "null" ]
+      },
+      "OperatingCompanyValue": {
+        "type": [ "number", "null" ]
+      },
+      "CountryCompanyValue": {
+        "type": [ "number", "null" ]
+      },
+      "MarkupPercentage": {
+        "type": [ "number", "null" ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "AssignmentContCalculationId",
+      "AssignmentId",
+      "TotalContributionValue",
+      "ContractHolderPercentage",
+      "ContractHolderValue"
+    ]
+  }
+}

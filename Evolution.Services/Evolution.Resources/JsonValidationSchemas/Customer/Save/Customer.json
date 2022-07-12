@@ -1,0 +1,58 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "CustomerCode": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "CustomerName": {
+        "type": "string"
+      },
+      "ParentCompanyName": {
+        "type": "string"
+      },
+      "MIIWAId": {
+        "type": "integer"
+      },
+      "MIIWAParentId": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "Active": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "ModifiedBy": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "LastModifiedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "N", "M", "D" ]
+      }
+    },
+    "required": [
+      "CustomerName",
+      "ParentCompanyName",
+      "MIIWAId",
+      "Active",
+      "RecordStatus"
+    ]
+  }
+}

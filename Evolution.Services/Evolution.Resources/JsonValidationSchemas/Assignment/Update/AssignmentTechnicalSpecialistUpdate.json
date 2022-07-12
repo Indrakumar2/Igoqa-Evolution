@@ -1,0 +1,100 @@
+﻿{
+  "definitions": {
+
+    "technicalSpecialistSchedules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "AssignmentTechnicalSpecialistScheduleId": {
+            "type": [ "integer" ,"null"]
+          },
+          "ContractScheduleId": {
+            "type": [ "integer" ]
+          },
+          "ContractScheduleName": {
+            "type": [ "string" ]
+          },
+          "AssignmentTechnicalSpecilaistId": {
+            "type": [ "integer", "null" ]
+          },
+          "TechnicalSpecialistPayScheduleId": {
+            "type": [ "integer" ]
+          },
+          "TechnicalSpecialistPayScheduleName": {
+            "type": [ "string" ]
+          },
+          "scheduleNoteToPrintOnInvoice": {
+            "type": [ "string", "null" ]
+          },
+          "RecordStatus": {
+            "enum": [ "N", "M", "D" ]
+          },
+          "UpdateCount": {
+            "type": [ "integer", "null" ]
+          },
+          "LastModification": {
+            "type": [ "string", "null" ],
+            "format": "date-time"
+          },
+          "ModifiedBy": {
+            "type": [ "string", "null" ],
+            "maxLength": 50,
+            "minLength": 0
+          }
+        },
+        "required": [
+          "ContractScheduleId",
+          "ContractScheduleName",
+          "TechnicalSpecialistPayScheduleId",
+          "TechnicalSpecialistPayScheduleName",
+          "RecordStatus"
+        ]
+      }
+    }
+  },
+
+
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "TechnicalSpecialistName": {
+        "type": "string"
+      },
+      "IsActive": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "IsSupervisor": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "M" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [ "RecordStatus", "AssignmentId", "TechnicalSpecialistName", "AssignmentTechnicalSpecialistSchedules" ]
+  }
+}

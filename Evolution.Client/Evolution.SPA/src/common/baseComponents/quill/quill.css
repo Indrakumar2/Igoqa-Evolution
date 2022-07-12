@@ -1,0 +1,9 @@
+.ql-picker{
+    min-width: 150px;
+}
+.quill .ql-container .ql-editor p strong{font-weight:600!important;}
+
+.color {
+    background-color: #f8ad0a !important;
+    overflow: visible !important;
+}

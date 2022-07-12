@@ -1,0 +1,38 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "CompanyQualificationId": {
+        "type": "integer"
+      },
+      "Qualification": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "CompanyQualificationId",
+      "Qualification",
+      "UpdateCount",
+      "RecordStatus",
+      "LastModification",
+      "ModifiedBy"
+    ]
+  }
+}

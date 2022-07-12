@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+
+  "definitions": {
+    "companyMessage": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": [ "integer", "null" ]
+        },
+        "MsgIdentifier": {
+          "type": "string"
+        },
+        "MsgType": {
+          "type": "string"
+        },
+        "MsgText": {
+          "type": "string"
+        },
+        "IsDefaultMsg": {
+          "type": "boolean"
+        },
+        "IsActive": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "CompanyCode": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 5
+      },
+      "InvoiceSummarryText": {
+        "type": "string"
+      },
+      "InvoiceInterCompDescription": {
+        "type": "string"
+      },
+      "InvoiceInterCompDraftText": {
+        "type": "string"
+      },
+      "InvoiceInterCompText": {
+        "type": "string"
+      },
+      "InvoiceDescriptionText": {
+        "type": "string"
+      },
+      "InvoiceDraftText": {
+        "type": "string"
+      },
+      "InvoiceHeader": {
+        "type": "string"
+      },
+      "InvoiceLogoName": {
+        "type": "string"
+      },
+      "TechSpecialistExtranetComment": {
+        "type": "string"
+      },
+      "CustomerExtranetComment": {
+        "type": "string"
+      },
+      "ReverseChargeDisclaimer": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "InvoiceRemittances": {
+        "type": "array",
+        "properties": {
+          "$ref": "#/definitions/companyMessage"
+        }
+      },
+      "InvoiceFooters": {
+        "type": "array",
+        "properties": {
+          "$ref": "#/definitions/companyMessage"
+        }
+      }
+    },
+    "required": [
+      "RecordStatus"
+    ]
+  }
+}

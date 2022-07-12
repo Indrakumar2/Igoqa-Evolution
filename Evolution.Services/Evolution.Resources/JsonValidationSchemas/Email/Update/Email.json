@@ -1,0 +1,78 @@
+﻿{
+  "definitions": {
+    "EmailAddress": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "DisplayName": {
+            "type": [ "string", "null" ]
+          },
+          "Address": {
+            "type": [ "string", "null" ]
+          }
+        }
+      }
+    }
+  },
+
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "Subject": {
+        "type": [ "string" ],
+        "maxLength": 160
+      },
+      "Content": {
+        "type": [ "string" ]
+      },
+      "IsUseHtmlFormat": {
+        "type": [ "boolean", "null" ]
+      },
+      "EmailStatus": {
+        "type": [ "string", "null" ],
+        "maxLength": 24
+      },
+      "StatusReason": {
+        "type": [ "string", "null" ]
+      },
+      "LastAttemptOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "RetryCount": {
+        "type": [ "integer", "null" ]
+      },
+      "ModuleCode": {
+        "type": [ "string" ],
+        "maxLength": 10
+      },
+      "ModuleEmailRefCode": {
+        "type": [ "string" ],
+        "maxLength": 100
+      },
+      "EmailType": {
+        "type": [ "string" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "ToAddresses",
+      "BccAddresses",
+      "Subject",
+      "Content",
+      "ModuleCode",
+      "ModuleEmailRefCode"
+    ]
+  }
+}

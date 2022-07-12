@@ -1,0 +1,123 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [
+      "object"
+    ],
+    "properties": {
+      "VisitSupplier": {
+        "type": [ "string", "null" ]
+      },
+      "SupplierId": {
+        "type": [ "integer", "null" ]
+      },
+      "VisitAssignmentId": {
+        "type": [ "integer" ]
+      },
+      "VisitNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "VisitStatus": {
+        "type": [ "string", "null" ]
+      },
+      "VisitReportNumber": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 100
+      },
+      "VisitStartDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "VisitEndDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "VisitDatePeriod": {
+        "type": [ "string", "null" ]
+      },
+      "VisitExpectedCompleteDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "VisitReportSentToCustomerDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "VisitReference1": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "VisitReference2": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "VisitReference3": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "VisitNotificationReference": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "VisitCompletedPercentage": {
+        "type": [ "integer", "null" ]
+      },
+      "VisitApprovedByContractCompany": {
+        "type": [ "string", "null" ]
+      },
+      "SkeltonVisit": {
+        "type": [ "string", "null" ]
+      },
+      "ParentVisitId": {
+        "type": [ "number", "null" ]
+      },
+      "IsFinalVisit": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "VisitRejectionReason": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 1000
+      },
+      "VisitReviewStatusByClient": {
+        "type": [ "string", "null" ]
+      },
+      "VisitReviewedByClient": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "VisitReviewDateByClient": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "N" ]
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [
+      "VisitAssignmentId",
+      "VisitStartDate",
+      "RecordStatus"
+    ]
+  }
+}

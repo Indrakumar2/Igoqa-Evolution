@@ -1,0 +1,85 @@
+﻿{
+  "definitions": {
+    "assignmentSubSupplierTs": {
+      "type": ["array","null" ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "AssignmentSubSupplierTSId": {
+            "type": [ "integer", "null" ]
+          },
+          "AssignmentSubSupplierId": {
+            "type": [ "integer", "null" ]
+          },
+          "Epin": {
+            "type": [ "integer" ]
+          },
+          "RecordStatus": {
+            "enum": [ "N", "M", "D", null ]
+          },
+          "UpdateCount": {
+            "type": [ "integer", "null" ]
+          },
+          "ModifiedBy": {
+            "type": [ "string", "null" ]
+          }
+        },
+        "required": [
+          "Epin"
+
+        ]
+      }
+    }
+  },
+
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+
+      "AssignmentId": {
+        "type": "integer"
+      },
+      "SubSupplierId": {
+        "type": [ "integer", "null" ]
+      },
+      "SubSupplierName": {
+        "type": [ "string", "null" ]
+      },
+      "SubSupplierContactId": {
+        "type": [ "integer", "null" ]
+      },
+      "SubSupplierContactName": {
+        "type": [ "string", "null" ]
+      },
+      "MainSupplierContactName": {
+        "type": [ "string", "null" ]
+      },
+      "MainSupplierContactId": {
+        "type": [ "integer", "null" ]
+      },
+
+      "AssignmentSubSupplierTS": {
+        "$ref": "#/definitions/assignmentSubSupplierTs"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [
+      "AssignmentId",
+      "RecordStatus"
+    ]
+  }
+}

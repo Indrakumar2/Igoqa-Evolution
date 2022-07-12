@@ -1,0 +1,147 @@
+version: '3.5'
+
+x-aspnetcore-variables: &aspnetcore-variables
+    ASPNETCORE_ENVIRONMENT : igoqa 
+
+x-certificate-variables: &certificate-variables 
+    ASPNETCORE_URLS : https://+:443;http://+:80
+    ASPNETCORE_Kestrel__Certificates__Default__Password : ${ASPNETCORE_KESTREL_CERTIFICATE_PASSWORD}
+    ASPNETCORE_Kestrel__Certificates__Default__Path : ${ASPNETCORE_KESTREL_CERTIFICATE_PATH}
+    
+x-sqldb-variables: &sql-database-connection
+    SQLDatabase : Evolution2Dec
+    SQLServer : 172.22.6.2
+    SQLUser : otr
+    SQLPassword : otrmi
+    SQLMaxPoolSize : 500
+    SQLConnectionTimeout : 180
+    
+x-mongodb-variables: &mongo-database-connection
+    MongoDbIp : 172.22.6.15
+    MongoDbPort : 27017
+    MongoDbName : EvolutionDocuments
+
+x-ldap-variables: &ldap-connection
+    IsSandBoxEnvironment : "false"
+    LdapUrl : otr-dc.otr-ict.chn 
+    LdapServerPort : 389
+    LdapDomainName : otr-ict.chn
+    LdapUser : test2
+    LdapPswd : dummy@123 
+    LdapServiceAccountDn : CN=Users,DC=otr-ict,DC=chn
+    LdapSearchBase : DC=otr-ict,DC=chn
+    EnableSecureSocketLayer : "false"
+    IsIpValidationRequire : "true"
+    LockUserAfterFailedAttemptCount : 10
+
+x-smtp-variables: &smtp-connection
+    EmailServerName : igosolutions-eu.mail.protection.outlook.com
+    EmailServerPort : 25
+    EmailUsername : donotreply-IGOQA@igosolutions.eu
+    EmailUserPassword : no@need
+    IsEmailUseSslWrappedConnection : "false"
+    IsSandBoxEnvironment : "false"
+    SandBoxEnvirnonmentTOEmail : toevo2test@gmail.com
+    SandBoxEnvirnonmentCCEmail : ccevo2igo@gmail.com
+    SyncIntervalInMinutes : 5
+    IsAuthenticationRequired : "false"
+
+x-app-security-code-variables: &app-security-code-variables
+    SecurityAppName : Evolution2
+    Evolution2_SPA_Client_Audience_code : Evo2SPA
+
+x-app-url-variables: &app-url-variables
+    ApplicationURL : https://172.22.6.15:6200/
+    ApplicationGatewayURL : https://172.22.6.15:8080/
+
+x-google-service-key-variables: &google-service-key
+    GoogleApiKey : AIzaSyCQzyRlp5GL2AOv4HnL2LWpaPuXKUT2rNA
+
+x-dependent-resource-variables: &dependent-resource-variables 
+    ExtranetURL : https://evolution.moodyint.com/DLive/extranet/Client/Visit.aspx?Id= 
+    ResourceExtranetURL : https://evolution.moodyint.com/Test/Extranet/Login.aspx
+
+x-app-pagination-variables: &app-pagination-variables
+    AbsoluteExpiration : 1
+    SlidingExpiration : 30
+    VisitRecordSize : 1500
+    TimesheetRecordSize : 1500
+    AssignmentRecordSize : 1500
+    ProjectRecordSize : 1500
+    SupplierPORecordSize : 1500
+    ChunkSize : 20000
+
+services:
+    igoqa.evolution.api.gateway:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *certificate-variables
+            <<: *google-service-key
+            <<: *sql-database-connection 
+            AllowedOrigins : https://172.22.6.15:6200
+        ports:
+            - "8080:443"
+
+    igoqa.evolution.api:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *certificate-variables
+            <<: *sql-database-connection
+            <<: *app-security-code-variables
+            <<: *mongo-database-connection
+            <<: *dependent-resource-variables
+            <<: *google-service-key
+            <<: *app-url-variables
+            <<: *app-pagination-variables
+            <<: *ldap-connection 
+        ports: 
+            - "443"
+            
+    igoqa.evolution.admin.api:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *certificate-variables
+            <<: *sql-database-connection
+            <<: *app-security-code-variables
+            <<: *mongo-database-connection
+            <<: *dependent-resource-variables
+            <<: *google-service-key
+            <<: *app-url-variables
+            <<: *app-pagination-variables
+            <<: *ldap-connection 
+        ports: 
+            - "443"
+
+    igoqa.evolution.authorizationservice:
+        environment:
+            <<: *aspnetcore-variables
+            <<: *certificate-variables
+            <<: *sql-database-connection
+            <<: *ldap-connection  
+        ports: 
+            - "443"
+
+    igoqa.evolution.email:
+        stdin_open: true
+        tty: true
+        environment:
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection 
+            <<: *smtp-connection
+            <<: *app-url-variables 
+
+    igoqa.evolution.email.expiry_notification:
+        stdin_open: true
+        tty: true
+        environment:
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+
+    igoqa.evolution.document.deleteorphandocument:
+        stdin_open: true
+        tty: true
+        environment:             
+            <<: *aspnetcore-variables
+            <<: *sql-database-connection
+            <<: *app-url-variables
+            TaskRunIntervalInMinute : 1

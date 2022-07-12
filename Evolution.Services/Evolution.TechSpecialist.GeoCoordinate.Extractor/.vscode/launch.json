@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/Evolution.GeoCoordinate.Extractor.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "env": {
+                "SQLDatabase": "Evolution2_Dev",
+                "SQLServer": "192.168.54.108",
+                "SQLUser": "sa",
+                "SQLPassword": "sa123",
+                "MongoDbName": "EvolutionDocuments",
+                "MongoDbPort": "5300",
+                "GoogleApiKey": "AIzaSyDZSVnT-Oaft2Stx72a_OG0DN8_Z-9-d48",
+                "MongoSyncIntervalInMinute": "10",
+                "MongoDbIp": "192.168.54.118",
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}

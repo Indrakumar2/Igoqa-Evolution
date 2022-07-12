@@ -1,0 +1,25 @@
+.aboutModal {
+    width: 25% !important;
+    .aboutLogo {
+        background: $brand-color;
+        img {
+            width: 55%;
+        }
+    }
+    
+}
+@media only screen and (max-width: 1124px){
+    .aboutModal {
+        width: 35% !important;
+    }
+}
+@media only screen and (max-width: 786px){
+    .aboutModal {
+        width: 55% !important;
+    }
+}
+@media only screen and (max-width: 600px){
+    .aboutModal {
+        width: 70% !important;
+    }
+}

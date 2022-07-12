@@ -1,0 +1,47 @@
+[
+    {
+      "tabHeader":"Active Assignments",
+      "isActive":true,
+      "tabBodyComponent":"/assignments"
+    },
+    {
+      "tabHeader":"Inactive Assignments",
+      "isActive":false,
+      "tabBodyComponent":"/inactiveAssignments"
+    },
+    {
+      "tabHeader":"Visit Status and Approval",
+      "isActive":false,
+      "tabBodyComponent":"/visitStatus"
+    },
+    {
+      "tabHeader":"Timesheets Pending Approval",
+      "isActive":false,
+      "tabBodyComponent":"/timesheet"
+    },
+    {
+      "tabHeader":"Contracts Near Expiry",
+      "isActive":false,
+      "tabBodyComponent":"/contractsNearExpiry"
+    },
+    {
+      "tabHeader":"Document Aproval",
+      "isActive":false,
+      "tabBodyComponent":"/documentApproval"
+    },
+    {
+      "tabHeader":"Budget Monetary",
+      "isActive":false,
+      "tabBodyComponent":"/budgetMonetary"
+    },
+    {
+      "tabHeader":"Budget Hours",
+      "isActive":false,
+      "tabBodyComponent":"/BudgetHours"
+    },
+    {
+      "tabHeader":"Documentation Information",
+      "isActive":false,
+      "tabBodyComponent":"/documentation"
+    }
+  ]

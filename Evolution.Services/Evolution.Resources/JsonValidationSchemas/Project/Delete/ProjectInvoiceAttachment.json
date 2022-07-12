@@ -1,0 +1,40 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ProjectInvoiceAttachmentId": {
+        "type": "integer"
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "DocumentType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [
+      "ProjectInvoiceAttachmentId",
+      "DocumentType",
+      "RecordStatus"
+    ]
+  }
+} 

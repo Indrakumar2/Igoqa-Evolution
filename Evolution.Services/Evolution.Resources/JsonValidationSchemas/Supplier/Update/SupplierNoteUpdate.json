@@ -1,0 +1,45 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "SupplierNoteId": {
+        "type": "integer"
+      },
+      "SupplierId": {
+        "type": "integer"
+      },
+      "SupplierName": {
+        "type": "string"
+      },
+      "Notes": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      },
+      "CreatedBy": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "CreatedOn": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [ "SupplierId", "CreatedBy", "Notes","RecordStatus","SupplierNoteId"]
+  }
+}

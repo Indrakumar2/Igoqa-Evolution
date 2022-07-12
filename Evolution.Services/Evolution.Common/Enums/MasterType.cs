@@ -1,0 +1,86 @@
+﻿namespace Evolution.Common.Enums
+{
+    public enum MasterType
+    {
+        AssignmentLifeCycle = 1,
+        AssignmentStatus = 2,
+        AssignmentType = 3,
+        ClassOfShares = 4,
+        CreditNoteReason = 5,
+        Delegation = 6,
+        ExpenseType = 7,
+        IndustrySector = 8,
+        InterCompanyType = 9,
+        InvoicePaymentTerms = 10,
+        ManagedServicesType = 11,
+        ProjectType = 12,
+        QualificationType = 13,
+        Region = 14,
+        ReviewAndModerationProcess = 15,
+        Salutation = 16,
+        ServiceType = 17,
+        StandardFilmSize = 18,
+        StandardFilmType = 19,
+        StandardInspectionGroupCode = 20,
+        StandardInspectionType = 21,
+        StandardItemSize = 22,
+        StandardItemThickness = 23,
+        SupplierPerformanceType = 24,
+        TaxonomyCategory = 25,
+        TechnicalDiscipline = 26,
+        UnpaidStatus = 27,
+        VisitStatus = 28,
+        Currency = 29,
+        AssignmentReferenceType = 30,
+        PayrollType = 31,
+        Division = 32,
+        CompanyMarginType = 33,
+        TechnicalSpecialistStatus = 34,
+        ExpenseTypeHour = 35,
+        StandardChargeSchedule = 36,
+        DocumentType = 37,
+        ModuleType = 38,
+        PayrollExportPrefix = 39,
+        Logo = 40,
+        ProfileAction=41,
+        Commodity=42,
+        Equipment=43,
+        SubDivision=44,
+        ProfileStatus=45,
+        EmploymentType=46,
+        CodeStandard=47,
+        ComputerKnowledge = 48,
+        Certifications = 49,
+        Trainings = 50,
+        Competency =51,
+        InternalTraining=52,
+        Language=53,
+        LeaveCategoryType=54,
+        DispositionType=55,
+        Documentation=56,
+        TSStampCountryCode = 61,
+        HistoryTable = 58,
+        UnusedReasons = 62
+    }
+
+    public enum DocumentModuleType
+    {
+        Assignment = 3255,
+        Company = 3256,
+        Contract = 3257,
+        Customer = 3258,
+        Document_Library = 3259,
+        Project = 3260,
+        Supplier = 3261,
+        Supplier_PO = 3262,
+        Technical_Specialist = 3263,
+        Visit = 3264
+    }
+
+    public enum ContractStatus
+    {
+        All,
+        Open,
+        Closed, 
+    }
+}

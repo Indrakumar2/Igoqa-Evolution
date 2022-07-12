@@ -1,0 +1,20 @@
+﻿{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "Id": { "type": "integer" },
+        "Epin": {
+          "type": "integer"
+        }
+       
+      },
+      "required": [  "Epin", "RecordStatus","Id" ]
+    }
+  }
+
+
+
+
+
+

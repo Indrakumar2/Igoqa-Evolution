@@ -1,0 +1,72 @@
+{
+    "columnDefs": [
+        {
+            "headerName": "Contract Number",
+            "field": "contractNumber",
+            "filter": "agTextColumnFilter",            
+            "cellRenderer":   "HyperLink",
+            "cellRendererParams":
+            {
+                "dataToRender":"contractNumber"
+
+            }
+        },
+        {
+            "headerName": "Customer Name",
+            "field": "contractCustomerName",
+            "filter": "agTextColumnFilter"
+        },
+        {
+            "headerName": "Customer Contract Number",
+            "field": "customerContractNumber",
+            "filter": "agTextColumnFilter"
+        },
+        {   
+            "headerName": "Start Date",
+            "field": "contractStartDate",
+            "filter": "agDateColumnFilter",           
+            "cellRenderer": "DateComponent",
+            "cellRendererParams": {
+                "dataToRender": "contractStartDate"
+            }
+        },
+        {
+            "headerName": "End Date",
+            "field": "contractEndDate",
+            "filter": "agDateColumnFilter" ,          
+            "cellRenderer": "DateComponent",
+            "cellRendererParams": {
+                "dataToRender": "contractEndDate"
+            }
+        },
+        {
+            "headerName": "CRM REF",
+            "field": "contractCRMReference",
+            "filter": "agNumberColumnFilter",
+            "filterParams": {
+                "inRangeInclusive":true
+            }    
+        },
+        {
+            "headerName": "Contract Structure",
+            "field": "contractStructure",
+            "filter": "agTextColumnFilter"
+        },
+        {
+            "headerName": "Contract near Expiry",
+            "field": "contractFutureDays",
+            "filter": "agTextColumnFilter"
+        }
+    ],
+    "defaultColDef": {
+        "width": 80
+      },
+    "enableFilter":true, 
+    "enableSorting":true, 
+    "pagination": true,
+    "searchable":true,
+    "gridActions":true,
+    "gridTitlePanel":true,
+    "gridHeight":65,
+    "exportFileName":" Contracts Near Expiry"
+}

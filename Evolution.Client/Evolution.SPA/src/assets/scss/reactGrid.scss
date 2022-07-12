@@ -1,0 +1,222 @@
+.reactAgGrid{
+	//height: 55vh;
+	//overflow-y: auto;
+	font-family: $calibri-bold;
+width: 100%; 
+.oddRowColor{
+	background-color: $oddRowBackground;
+}
+select{
+	display: block;
+}
+.customRow{
+  font-family: $calibri-regular;
+  color: $default-font-color;
+		//font-size: $small-font;
+		font-size: 0.8rem;
+		font-family: $calibri-bold;
+		//font-weight: 700;
+  .ag-cell{
+	  line-height: 30px !important;
+  }
+}
+.ag-header-cell-text{
+		font-family: $calibri-bold;     
+	  color: $font-title-color;					
+		font-size: 0.97rem;
+		font-weight: normal;    
+   //font-weight: 900;
+}
+.dangerTag {
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 7px;
+		border-left-color: $bg-grey;
+		border-top-color: $bg-grey;
+	}
+	&:before {
+		border-color: transparent;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-radius: 0;
+		border-width: 5px;
+		border-left-color: $error !important;
+		border-top-color: $error !important;
+	}
+}
+.auditRowHighlight{
+	background-color: #70c19a
+}
+.defaultTag {
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: 7px;
+		border-left-color: transparent;
+		border-top-color: transparent;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-radius: 0;
+		border-width: 5px;
+		border-left-color: transparent;
+		border-top-color: transparent;
+	}
+}
+.chargeTypeText {
+	color: $error
+}
+.loader {
+	display: inline-block;
+	position: relative;
+	width: 64px;
+	height: 64px;
+	div {
+		display: inline-block;
+		position: absolute;
+		left: 6px;
+		width: 13px;
+		background: $interaction-color;
+		animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+		&:nth-child(1) {
+			left: 6px;
+			animation-delay: -0.24s;
+		}
+		&:nth-child(2) {
+			left: 26px;
+			animation-delay: -0.12s;
+		}
+		&:nth-child(3) {
+			left: 45px;
+			animation-delay: 0;
+		}
+	}
+}
+.noRecords{
+	color: $interaction-color;
+	border:solid 1px $interaction-color;
+	border-radius: 3px;
+	padding: 10px;
+}
+  @keyframes loader {
+	0% {
+	  top: 6px;
+	  height: 51px;
+	}
+	50%, 100% {
+	  top: 19px;
+	  height: 26px;
+	}
+  }
+  .ag-root{
+		margin-bottom:0;
+		.ag-header{
+				//height: 40px!important;
+				min-height: 40px!important;
+				
+				.ag-header-container{
+				
+						.ag-header-cell-menu-button{
+							.ag-icon-menu {
+							display: block;
+							height: 36px;
+					}} 
+				
+						.ag-header-row{
+								height: 40px!important;
+						}
+						.ag-header-cell{
+								line-height: 40px!important;
+						}
+						.ag-header-cell-resize::after{
+								margin-top: 8px!important;
+						}
+						div.ag-header-row:nth-child(2){
+								 //top:0px!important;
+						}
+				} 
+				
+		}
+}
+[type="radio"] {
+	&:not(:checked) {
+		position: relative;
+		opacity: 1;
+	}
+	&:checked {
+		position: relative;
+		opacity: 1;
+	}
+}
+.ag-layout-auto-height.ag-body-container {
+min-height: 85px;
+}
+.ag-layout-auto-height.ag-overlay-no-rows-wrapper {
+padding-top: 35px;
+}
+.ag-menu{
+overflow: inherit!important;
+max-height: inherit;
+}
+
+///Search grids group field value should be in entire row changes
+.ag-row-group-expanded
+.gridTextNoWrapEllipsis 
+///.ag-row-group-indent-0 
+///.ag-group-value
+{
+display: inline-block;
+width: 100% !important; 
+white-space: nowrap;
+overflow:hidden !important;
+text-overflow: ellipsis;
+line-height: 10px !important;
+}
+}
+.pagerInput{
+width: 40px;
+}
+.value {
+margin-right: 10px;
+width: 30px;
+display: inline-block;
+text-align: center;
+padding-right: 2px;
+}
+
+.middelContainer {
+margin: 0;
+position: absolute !important;
+top: 50%;
+left: 50%;
+margin-right: -50%;
+transform: translate(-50%, -50%);
+}
+.ag-header-icon.ag-sort-order{
+display: none;
+}
+
+// class added for ITKQA D300 (Dots appear next to check box in Grid row)
+.ag-theme-material .ag-selection-checkbox span{
+	margin-right: -25px !important;
+}

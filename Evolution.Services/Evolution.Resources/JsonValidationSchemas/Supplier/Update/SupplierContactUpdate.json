@@ -1,0 +1,63 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "SupplierContactId": {
+        "type": "integer"
+      },
+      "SupplierContactName": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "SupplierTelephoneNumber": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "SupplierFaxNumber": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "SupplierMobileNumber": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "SupplierEmail": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "OtherContactDetails": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 150
+      },
+      "SupplierId": {
+        "type": "integer"
+      },
+      "SupplierName": {
+        "type": "string"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 150
+      }
+    },
+    "required": [ "SupplierId", "SupplierContactName", "RecordStatus","SupplierContactId","SupplierTelephoneNumber" ]
+  }
+}

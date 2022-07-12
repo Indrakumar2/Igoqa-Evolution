@@ -1,0 +1,60 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": [ "object" ],
+    "properties": {
+      "AssignmentAdditionalExpenseId": { "type": [ "integer" ] },
+      "Description": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "CurrencyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 10
+      },
+      "ExpenseType": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "PerUnitRate": {
+        "type": [ "number" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "TotalUnit": {
+        "type": [ "number" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "IsAlreadyLinked": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      },
+      "AssignmentId": { "type": [ "integer" ] },
+      "CompanyName": {
+        "type": [ "string", "null" ]
+      },
+      "UpdateCount": {
+        "type": [
+          "integer",
+          "null"
+        ]
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50
+      }
+    },
+    "required": [ "AssignmentAdditionalExpenseId", "RecordStatus"]
+  }
+}

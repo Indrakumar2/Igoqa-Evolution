@@ -1,0 +1,25 @@
+{
+  "profiles": {
+    "Evolution.Email.Notification": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SQLDatabase": "Evolution2_QA",
+        "SQLServer": "192.168.54.108",
+        "SQLUser": "dev007",
+        "SQLPassword": "dev007",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "EmailServerName": "ns21.interactivedns.com",
+        "EmailServerPort": "465",
+        "EmailUsername": "demo@smnnetserv.com",
+        "EmailUserPassword": "password123",
+        "IsEmailUseSslWrappedConnection": "true",
+        "IsSandBoxEnvironment": "true",
+        "SandBoxEnvirnonmentTOEmail": "toevo2test@gmail.com",
+        "SandBoxEnvirnonmentCCEmail": "ccevo2igo@gmail.com",
+        "SyncIntervalInMinutes": "5",
+        "IsAuthenticationRequired": "false",
+        "ApplicationGatewayURL": "http://localhost:5100/"
+      }
+    }
+  }
+}

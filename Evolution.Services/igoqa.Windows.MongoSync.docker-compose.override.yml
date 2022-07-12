@@ -1,0 +1,31 @@
+version: '3.5'
+
+x-aspnetcore-variables: &aspnetcore-variables
+    ASPNETCORE_ENVIRONMENT : igoqa 
+
+x-sqldb-variables: &sql-database-connection
+    SQLDatabase : Evolution2Dec
+    SQLServer : 172.22.6.2
+    SQLUser : otr
+    SQLPassword : otrmi
+    SQLMaxPoolSize : 500
+    SQLConnectionTimeout : 180
+    
+x-mongodb-variables: &mongo-database-connection
+    MongoDbIp : 10.1.1.100
+    MongoDbPort : 27017
+    MongoDbName : EvolutionDocuments
+    
+services:
+    igoqa.evolution.document.mongosync:
+        stdin_open: true
+        tty: true
+        environment:
+            <<: *aspnetcore-variables        
+            <<: *sql-database-connection            
+            <<: *mongo-database-connection
+            TaskRunIntervalInMinute : 1
+            ApplicationGatewayURL : https://10.1.1.100:8080/
+            DocumentTitle : EvolutionLiveDocuments2017JantoMar
+            ModifiedBy : Migration
+

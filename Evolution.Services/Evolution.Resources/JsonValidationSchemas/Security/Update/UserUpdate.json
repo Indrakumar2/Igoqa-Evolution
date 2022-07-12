@@ -1,0 +1,73 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "type": "array",
+  "items": {
+    "type": "object" ,
+    "properties": {
+      "ApplicationName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "UserName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "LogonName": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "Email": {
+        "type": [ "string" ],
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "PhoneNumber": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "CompanyCode": {
+        "type": [ "string", "null" ],
+        "minLength": 1,
+        "maxLength": 50
+      },
+      "CompanyOfficeName": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 100
+      },
+      "AuthenticationMode": {
+        "type": "string",
+        "enum": [ "UP", "AD" ]
+      },
+      "SecurityQuestion1": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 255
+      },
+      "SecurityQuestion1Answer": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 255
+      },
+      "IsActive": {
+        "type": "boolean",
+        "enum": [ true, false ]
+      },
+      "Culture": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 10
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "M" ]
+      }
+    },
+    "required": [ "ApplicationName", "UserName", "LogonName", "Email", "CompanyCode", "AuthenticationMode", "IsActive", "RecordStatus" ]
+  }
+}

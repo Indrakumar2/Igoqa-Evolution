@@ -1,0 +1,27 @@
+version: '3.5'
+
+x-sqldb-variables: &sql-database-connection
+    SQLDatabase : Evolution2Dec
+    SQLServer : 172.22.6.2
+    SQLUser : otr
+    SQLPassword : otrmi
+    SQLMaxPoolSize : 500
+    SQLConnectionTimeout : 180
+    
+x-mongodb-variables: &mongo-database-connection
+    MongoDbIp : 172.22.6.15
+    MongoDbPort : 27017
+    MongoDbName : EvolutionDocuments
+    
+services:
+    evolution.document.mongosync:
+        stdin_open: true
+        tty: true
+        environment:             
+            <<: *sql-database-connection            
+            <<: *mongo-database-connection
+            TaskRunIntervalInMinute : 1
+            ApplicationGatewayURL : https://172.22.6.15:8080/
+            DocumentTitle : EvolutionLiveDocuments2017JantoMar
+            ModifiedBy : Migration
+

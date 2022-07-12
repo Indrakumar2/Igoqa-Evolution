@@ -1,0 +1,164 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContractBudgetMonetaryValue": {
+        "type": "number"
+      },
+      "ContractBudgetMonetaryCurrency": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "ContractBudgetMonetaryWarning": {
+        "type": [ "integer", "null" ]      
+      },
+      "ContractBudgetHours": {
+        "type": "number"
+      },
+      "ContractBudgetHoursWarning": {
+        "type": [ "integer", "null" ]
+      }, 
+      "IsParentContractInvoiceUsed": {
+        "type": [ "boolean", "null" ],
+        "enum": [ true, false, null ]
+      }, 
+      "ParentContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "ParentCompanyOffice": {
+        "type": [ "string", "null" ]
+      },
+      "ParentContractDiscount": {
+        "type": [ "number", "null" ]
+      },
+      "ParentContractHolder": {
+        "type": [ "string", "null" ]
+      }, 
+      "FrameworkCompanyOfficeName": {
+        "type": [ "string", "null" ]
+      }, 
+      "FrameworkContractNumber": {
+        "type": [ "string", "null" ]
+      },
+      "FrameworkContractHolder": {
+        "type": [ "string", "null" ]
+      },
+      "IsCRM": {
+        "type": "boolean",
+        "enum": [ true, false, null ]
+      },
+      "ContractCRMReference": {
+        "type": [ "number", "null" ],
+        "minLength": 10,
+        "maxLength": 0
+
+      },
+      "ContractCRMReason": {
+        "type": [ "string", "null" ],
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "ContractClientReportingRequirement": {
+        "type": [ "string", "null" ]
+      },
+      "ContractOperationalNote": {
+        "type": [ "string", "null" ]
+      },
+      "ContractInvoicePaymentTerms": { "type": [ "string", "null" ] },
+      "ContractCustomerContact": { "type": "string" },
+      "ContractCustomerContactAddress": { "type": "string" },
+      "ContractCustomerInvoiceContact": { "type": "string" },
+      "ContractCustomerInvoiceAddress": { "type": "string" },
+      "ContractInvoiceRemittanceIdentifier": { "type": [ "string", "null" ] },
+      "ContractSalesTax": { "type": "string" },
+      "ContractWithHoldingTax": { "type": [ "string", "null" ] },
+      "ContractInvoicingCurrency": {
+        "type": "string",
+        "maxLength": 50,
+        "minLength": 0
+      },
+      "ContractInvoiceGrouping": {
+        "type": "string",
+        "enum": [ "Project", "Assignment", "Reference" ],
+        "maxLength": 10,
+        "minLength": 0
+      },
+      "ContractInvoiceFooterIdentifier": { "type": [ "string", "null" ] },
+      "ContractInvoiceInstructionNotes": { "type": [ "string", "null" ] },
+      "ContractInvoiceFreeText": { "type": [ "string", "null" ] },
+      "ContractConflictOfInterest": { "type": [ "string", "null" ] },
+      "IsFixedExchangeRateUsed": {
+        "type": ["boolean","null"],
+        "enum": [ true, false, null ]
+      },
+      "IsRemittanceText": {
+        "type": ["boolean","null"],
+        "enum": [ true, false , null]
+      },
+      "ContractInvoicingCompanyCode": { "type": [ "string", "null" ] },
+      "ContractInvoicingCompanyName": { "type": [ "string", "null" ] },
+
+      "ContractNumber": { "type": "string" },
+      "ContractHoldingCompanyCode": { "type": "string" },
+      "ContractHoldingCompanyName": { "type": "string" },
+      "ContractCustomerCode": { "type": "string" },
+      "ContractCustomerName": { "type": "string" },
+      "CustomerContractNumber": { "type": "string" },
+      "ContractStartDate": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ContractEndDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ContractType": {
+        "type": "string",
+        "enum": [ "FRW", "STD", "IRF", "PAR", "CHD" ],
+        "maxLength": 3,
+        "minLength": 3
+      },
+      "ContractStatus": {
+        "type": "string",
+        "enum": [ "C", "O" ],
+        "maxLength": 1,
+        "minLength": 1
+
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ] 
+      },
+      "RecordStatus": {
+        "enum": [ "D" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [
+      "CustomerContractNumber",
+      "ContractCustomerCode",
+      "IsCRM",
+      "ContractType",
+      "ContractBudgetMonetaryValue",
+      "ContractBudgetMonetaryCurrency",
+      "ContractBudgetHours",
+      "ContractStartDate",
+      "ContractStatus",
+      "RecordStatus",
+      "ContractCustomerContact",
+      "ContractCustomerInvoiceContact",
+      "ContractCustomerContactAddress"
+    ]
+
+  }
+    
+}

@@ -1,0 +1,40 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "TimesheetId": {
+        "type": "integer"
+      },
+      "ReferenceType": {
+        "type": "string"
+      },
+      "ReferenceValue": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 50
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "type": "string",
+        "enum": [ "M" ]
+      },
+
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      },
+      "TimesheetReferenceId": {
+        "type": "integer"
+      }
+    },
+    "required": [ "TimesheetId", "ReferenceType", "RecordStatus", "TimesheetReferenceId" ]
+  }
+}

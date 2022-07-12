@@ -1,0 +1,45 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ContractNumber": {
+        "type": "string"
+      },
+      "ExchangeRateId": {
+        "type": "integer"
+      },
+      "FromCurrency": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "ToCurrency": {
+        "type": "string",
+        "minLength": 0,
+        "maxLength": 60
+      },
+      "EffectiveFrom": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "ExchangeRate": {
+        "type": "number"
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "M" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [ "FromCurrency", "ToCurrency", "ExchangeRate", "EffectiveFrom", "RecordStatus", "ExchangeRateId" ]
+  }
+}

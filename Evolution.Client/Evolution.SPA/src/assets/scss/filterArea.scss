@@ -1,0 +1,10 @@
+.filterArea{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 56px !important;
+}
+@media only screen and (max-width: 601px){
+    .filterArea{
+        top: 49px !important;
+    }
+}

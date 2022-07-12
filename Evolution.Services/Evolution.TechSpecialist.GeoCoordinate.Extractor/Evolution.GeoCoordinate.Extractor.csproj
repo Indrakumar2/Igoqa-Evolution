@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="gmaps-api-net" Version="0.25.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Evolution.Common\Evolution.Common.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Core\Evolution.Company.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Domain\Evolution.Company.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Company.Infrastructure\Evolution.Company.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.DbRepository\Evolution.DbRepository.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Domain\Evolution.Document.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.Google.Core\Evolution.Google.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Google.Model\Evolution.Google.Model.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Core\Evolution.TechnicalSpecialist.Core.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Domain\Evolution.TechnicalSpecialist.Domain.csproj" />
+    <ProjectReference Include="..\Evolution.TechnicalSpecialist.Infrastructure\Evolution.TechnicalSpecialist.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Document.Infrastructure\Evolution.Document.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Home.Core\Evolution.Home.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Home.Infrastructure\Evolution.Home.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Core\Evolution.Security.Core.csproj" />
+    <ProjectReference Include="..\Evolution.Security.Infrastructure\Evolution.Security.Infrastructure.csproj" />
+    <ProjectReference Include="..\Evolution.AuditLog.Core\Evolution.AuditLog.Core.csproj" />
+    <ProjectReference Include="..\Evolution.AuditLog.Infrastructure\Evolution.AuditLog.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

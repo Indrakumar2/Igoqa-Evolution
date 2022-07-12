@@ -1,0 +1,49 @@
+{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "ReferenceType": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "ProjectNumber": {
+        "type": [ "integer", "null" ]
+      },
+      "DisplayOrder": {
+        "type": "integer"
+      },
+      "IsVisibleToAssignment": {
+        "type": [ "boolean", "null" ]
+      },
+      "IsVisibleToVisit": {
+        "type": [ "boolean", "null" ]
+
+      },
+      "IsVisibleToTimesheet": {
+        "type": [ "boolean", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ],
+        "maxLength": 50,
+        "minLength": 0
+      }
+    },
+    "required": [
+      "ReferenceType",
+      "DisplayOrder",
+      "RecordStatus"
+    ]
+  }
+}

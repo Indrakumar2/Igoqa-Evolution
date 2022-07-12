@@ -1,0 +1,75 @@
+﻿{
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "TrainingName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "TrainingRefId": {
+        "type": [ "string", "null" ]
+      },
+      "Duration": {
+        "type": [ "string" ],
+        "minLength": 1
+      },	  
+      "Id": {
+        "type": [ "integer", "null" ]
+      },
+      "Epin": {
+        "type": "integer"
+      },
+      "IsExternal": {
+        "type": [ "boolean", "null" ]
+      },
+      "Description": {
+        "type": [ "string", "null" ]
+      },
+	   "EffeciveDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ExpiryDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "VerificationStatus": {
+        "type": [ "string", "null" ]
+      },
+      "VerificationDate": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      }, 
+      "VerifiedBy": {
+        "type": [ "string", "null" ]
+      },
+      "VerificationType": {
+        "type": [ "string", "null" ]
+      },
+      "Notes": {
+        "type": [ "string", "null" ]
+      },
+      "RecordType": {
+        "type": [ "string", "null" ]
+      }, 
+      "DisplayOrder": {
+        "type": [ "integer", "null" ]
+      },
+      "UpdateCount": {
+        "type": [ "integer", "null" ]
+      },
+      "RecordStatus": {
+        "enum": [ "N" ]
+      },
+      "LastModification": {
+        "type": [ "string", "null" ],
+        "format": "date-time"
+      },
+      "ModifiedBy": {
+        "type": [ "string", "null" ]
+      }
+    },
+    "required": [ "Epin", "RecordStatus", "TrainingName", "Duration" ]
+  }
+}
